@@ -31,7 +31,7 @@
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.02);
     border-bottom: 1px dashed rgb(168, 168, 168);
-    padding: 30px 20px;
+    padding: 25px 20px;
 }
 
 .closeSidenav{
@@ -43,7 +43,6 @@
 .closeSidenav:hover{
 
     cursor: pointer;
-    color: rgb(0, 119, 255);
 }
 
 .brand{

@@ -108,7 +108,7 @@
     .categories_grid{
 
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        margin-top: 20px;
+        margin-top: 40px;
     }
     
     .search_parentFlex{
