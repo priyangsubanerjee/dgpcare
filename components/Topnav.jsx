@@ -40,7 +40,7 @@ function Topnav() {
             <div className={styles.navitems}>
                 <Link href="/"><GoIcons.GoHome className={checkActivePah('/')}/></Link>
                 <Link href="/savedResources"><BsIcons.BsBookmarkHeart className={checkActivePah('/savedResources')}/></Link>
-                <Link href="/recentFeeds"><BsIcons.BsNewspaper className={checkActivePah('/recentFeeds')}/></Link>
+                <Link href="/Feeds"><BsIcons.BsNewspaper className={checkActivePah('/Feeds')}/></Link>
                 <Link href="/notifications"><VscIcons.VscBellDot className={checkActivePah('/notifications')}/></Link>
             </div>
 
