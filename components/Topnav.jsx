@@ -1,7 +1,6 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai'
 import * as BiIcons from 'react-icons/bi'
-import * as GoIcons from 'react-icons/go'
 import * as VscIcons from 'react-icons/vsc'
 import * as BsIcons from 'react-icons/bs'
 import styles from '../styles/Topnav.module.css'
@@ -38,7 +37,7 @@ function Topnav() {
             </span>
 
             <div className={styles.navitems}>
-                <Link href="/"><GoIcons.GoHome className={checkActivePah('/')}/></Link>
+                <Link href="/"><BiIcons.BiCategoryAlt className={checkActivePah('/')}/></Link>
                 <Link href="/savedResources"><BsIcons.BsBookmarkHeart className={checkActivePah('/savedResources')}/></Link>
                 <Link href="/Feeds"><BsIcons.BsNewspaper className={checkActivePah('/Feeds')}/></Link>
                 <Link href="/notifications"><VscIcons.VscBellDot className={checkActivePah('/notifications')}/></Link>
