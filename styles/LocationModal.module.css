@@ -1,0 +1,134 @@
+.modal{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    animation: fadeIn 0.1s ease-in-out;
+}
+
+.modal_card{
+
+    width: 500px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.highlighted{
+
+    background: rgba(0, 119, 255, 0.055);
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: rgba(0, 119, 255, 1);
+    font-weight: 500;
+}
+
+.body{
+
+    font-size: 14px;
+    line-height: 1.9;
+    color: gray;
+}
+
+.buttons_flex{
+
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.send_locationRequest{
+
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: rgba(0, 119, 255, 1);
+    color: white;
+    font-size: 15px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send_locationRequest:hover{
+
+    background: rgb(0, 106, 228);
+}
+
+.close_modal{
+
+    display: flex;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    background: rgb(232, 232, 232);
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.close_modal:hover{
+
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.close_modalButton{
+
+    margin-left: auto;
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.close_modalButton:hover{
+
+    color: rgb(0, 0, 0);
+}
+
+
+/* Fade in animation */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .modal{
+
+        bottom: 0;
+        height: 100vh;
+    }
+
+    .modal_card{
+
+        width: 90%;
+        position: fixed;
+        border-radius: 10px;
+    }
+    
+}

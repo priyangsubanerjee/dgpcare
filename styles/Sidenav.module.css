@@ -1,0 +1,116 @@
+.sidenav{
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    transition: 0.5s;
+    animation: fadeIn 0.3s;
+}
+
+.sidenavCard{
+
+    width: 350px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #fff;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenavCardHeader{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.02);
+    border-bottom: 1px dashed rgb(168, 168, 168);
+    padding: 30px 20px;
+}
+
+.closeSidenav{
+
+    font-size: 25px;
+    transition: all 0.3s;
+}
+
+.closeSidenav:hover{
+
+    cursor: pointer;
+    color: rgb(0, 119, 255);
+}
+
+.brand{
+
+    font-weight: 600;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.sidenavCardLinks{
+
+    margin: 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.sidenavCardLink{
+
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 20px 25px;
+    color: black;
+    cursor: pointer;
+}
+
+.sidenavCardLink:hover{
+
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.sidenavCardLinkIcon{
+
+    color: inherit;
+}
+
+.sidenavCardLinkText{
+
+    margin-left: 20px;
+    color: inherit;
+}
+
+.active{
+
+    color: rgb(0, 119, 255);
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity: 0;
+    }
+
+    to{
+
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    .sidenavCard{
+
+        width: 80%;
+    }
+}
