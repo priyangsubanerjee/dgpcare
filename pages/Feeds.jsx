@@ -18,7 +18,7 @@ export async function getStaticProps() {
 
     return {
       props: { res },
-      revalidate: 10 // In seconds 
+      revalidate: 5,
     }
 }
 
@@ -31,6 +31,7 @@ function Feeds({res}) {
 
             if(item.title.includes('covid') || item.title.includes('corona') || item.title.includes('covid-19') || item.description.includes('covid') || item.description.includes('corona') || item.description.includes('covid-19')){
 
+                console.log(item.publishedAt);
                 return item;
             }
         }

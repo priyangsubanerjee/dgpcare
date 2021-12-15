@@ -1,0 +1,97 @@
+.resourceCard{
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.resourceProviderIcon{
+
+    font-size: 20px;
+}
+
+.resourceProviderName{
+
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.resourceProviderDescription{
+
+    font-size: 13px;
+    color: gray;
+    margin-top: 10px;
+    line-height: 1.9;
+}
+
+.resourceActionFlex{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.resourceMailButton{
+
+    margin-left: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.resourceMailButton:hover{
+
+    color: rgba(0, 119, 255, 1);
+}
+
+.resourceCallButton{
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 10px;
+    height: auto;
+    width:  auto;
+    background: rgba(0, 0, 0, 0.01);
+    border-radius: 5px;
+}
+
+.resourceCallButton:hover{
+
+    color: rgba(0, 119, 255, 1);
+    background: rgba(0, 119, 255, 0.05);
+}
+
+.resourceShareButton{
+
+    font-size: 18px;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.resourceShareButton:hover{
+
+    color: rgba(0, 119, 255, 1);
+}
+
+.resourceBookmarkButton{
+
+    margin-left: auto;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.resourceBookmarkButton:hover{
+
+    color: rgba(0, 119, 255, 1);
+}
+
+@media screen and (max-width: 768px){
+
+       
+}
