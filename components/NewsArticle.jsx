@@ -10,7 +10,7 @@ function NewsArticle({article}) {
             <p className={styles.articleDescription}>{article.description.substring(0, 97)+'...'}</p>
             <p className={styles.articleDate}></p>
             <div className={styles.moreFlex}>
-                <a rel='noopener' target="_blank" href={article.url}>
+                <a rel='noreferrer' target="_blank" href={article.url}>
                     <button className={styles.articleReadMore}>Read more</button>
                 </a>
                 
