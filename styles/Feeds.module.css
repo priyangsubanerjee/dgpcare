@@ -1,6 +1,7 @@
 .container{
 
     padding: 40px;
+    user-select: none;
 }
 
 .header{
@@ -99,3 +100,5 @@
 
     margin-top: 30px;
 }
+
+

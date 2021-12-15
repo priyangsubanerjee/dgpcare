@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/RecentFeeds.module.css'
+import styles from '../styles/Feeds.module.css'
 import * as BsIcons from 'react-icons/bs'
 import NewsArticle from '../components/NewsArticle';
 import * as HiIcons from 'react-icons/hi'
@@ -17,7 +17,8 @@ export async function getStaticProps() {
                 })
 
     return {
-      props: { res }
+      props: { res },
+      revalidate: 10 // 10 seconds 
     }
 }
 
@@ -30,7 +31,7 @@ function Feeds({res}) {
             return item;
         }
 
-        else if(item.description.includes('Coronavirus') || item.description.includes('covid') || item.description.includes('COVID') || item.description.includes('COVID-19') || item.description.includes('covid-19') || item.description.includes('corona') || item.description.includes('Corona') || item.description.includes('coronavirus') || item.description.includes('Coronavirus')) {
+        if(item.description.includes('Coronavirus') || item.description.includes('covid') || item.description.includes('COVID') || item.description.includes('COVID-19') || item.description.includes('covid-19') || item.description.includes('corona') || item.description.includes('Corona') || item.description.includes('coronavirus') || item.description.includes('Coronavirus')) {
                 
                 return item;
         }
