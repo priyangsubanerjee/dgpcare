@@ -102,3 +102,34 @@
 }
 
 
+@media screen and (max-width: 600px){
+
+    .container{
+
+        padding: 20px;
+        padding-bottom: 60px;
+    }
+
+    .header_text{
+
+        font-size: 17px;
+    }
+
+    .about{
+
+        font-size: 12px;
+        line-height: 1.9;
+        margin-top: 15px;
+    }
+
+    .search_flex{
+
+        width: 100%;
+    }
+
+    .search_flex .search_input{
+
+        font-size: 14px;
+    }
+    
+}

@@ -24,6 +24,7 @@ export async function getStaticProps() {
 
 function Feeds({res}) {
 
+
     const data = res.articles.filter(function(item) {
 
         if(item.title.includes('Coronavirus') || item.title.includes('covid') || item.title.includes('COVID') || item.title.includes('COVID-19') || item.title.includes('covid-19') || item.title.includes('corona') || item.title.includes('Corona') || item.title.includes('coronavirus') || item.title.includes('Coronavirus')) {
