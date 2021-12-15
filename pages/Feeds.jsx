@@ -18,7 +18,7 @@ export async function getStaticProps() {
 
     return {
       props: { res },
-      revalidate: 10 // 10 seconds 
+      revalidate: 10 // In seconds 
     }
 }
 
@@ -27,16 +27,15 @@ function Feeds({res}) {
 
     const data = res.articles.filter(function(item) {
 
-        if(item.title.includes('Coronavirus') || item.title.includes('covid') || item.title.includes('COVID') || item.title.includes('COVID-19') || item.title.includes('covid-19') || item.title.includes('corona') || item.title.includes('Corona') || item.title.includes('coronavirus') || item.title.includes('Coronavirus')) {
+        if(item.title != null && item.description != null && item.publishedAt != null && item.url != null){
 
-            return item;
-        }
+            if(item.title.includes('covid') || item.title.includes('corona') || item.title.includes('covid-19') || item.description.includes('covid') || item.description.includes('corona') || item.description.includes('covid-19')){
 
-        if(item.description.includes('Coronavirus') || item.description.includes('covid') || item.description.includes('COVID') || item.description.includes('COVID-19') || item.description.includes('covid-19') || item.description.includes('corona') || item.description.includes('Corona') || item.description.includes('coronavirus') || item.description.includes('Coronavirus')) {
-                
                 return item;
+            }
         }
     })
+
     const [feed, setFeed] = useState(data)
     const [search, setSearch] = useState('')
 
