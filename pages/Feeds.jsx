@@ -63,7 +63,7 @@ function Feeds({res}) {
 
             <div>
                 <span className={styles.header}>
-                    <BsIcons.BsNewspaper style={{fontSize:'20px'}}/>
+                    <BsIcons.BsNewspaper style={{}}/>
                     <span className={styles.header_text}>Recent Feeds</span>
                 </span>
                 <span className={styles.about}>Getting you the latest developments of <Link href="/"><span className={styles.highlightedLink}>Covid-19</span></Link>  from all over India.</span>
