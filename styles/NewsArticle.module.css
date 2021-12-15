@@ -6,6 +6,8 @@
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .articleCard:hover{
