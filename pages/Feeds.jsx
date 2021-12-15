@@ -21,7 +21,7 @@ export async function getStaticProps() {
     }
 }
 
-function recentFeeds({res}) {
+function Feeds({res}) {
 
     const data = res.articles.filter(function(item) {
 
@@ -93,4 +93,4 @@ function recentFeeds({res}) {
     )
 }
 
-export default recentFeeds
+export default Feeds
