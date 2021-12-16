@@ -1,6 +1,7 @@
 const resources = [
 
     {
+        "id": "1",
         "name" : "Ami Tiwari",
         "email" : "abc@gmail.com",
         "phone" : "1234567890",
@@ -9,6 +10,7 @@ const resources = [
     },
 
     {
+        "id": "2",
         "name" : "Jethalal Champaklal Gada",
         "email" : "abc@gmail.com",
         "phone" : "1234567890",

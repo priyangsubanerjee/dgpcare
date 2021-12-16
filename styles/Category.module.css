@@ -32,7 +32,8 @@
     font-size: 14px;
     color: gray;
     margin-top: 20px;
-    display: block
+    display: block;
+    line-height: 2;
 }
 
 .highLightedRed{

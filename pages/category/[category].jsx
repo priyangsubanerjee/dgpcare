@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 import resources from '../../database/resources'
 import styles from '../../styles/Category.module.css'
 import * as MdIcons from 'react-icons/md'
@@ -14,6 +15,31 @@ function Category() {
     const { category } = router.query
     var query = category
 
+    const [savedCards, setSavedCards] = useState(() => {
+
+        if(typeof window !== 'undefined'){
+
+            if(localStorage.getItem('savedCards')){
+
+                console.log("Array found in localStorage")
+                return JSON.parse(localStorage.getItem('savedCards'))
+            }else{
+
+                return []
+            }
+
+        }else{
+
+            return []
+        }
+    })
+
+    useEffect(() => {
+        
+        localStorage.setItem('savedCards', JSON.stringify(savedCards))
+        
+    }, [savedCards])
+
     return (
         <div className={styles.container} >
             <div className={styles.queryInfo}>
@@ -27,10 +53,18 @@ function Category() {
             </div>
 
             <div className={styles.resourceGrid}>
-                <ResourceCard/>
-                <ResourceCard/>
-                <ResourceCard/>
-                <ResourceCard/>
+                {
+
+                    resources.map(resource => {
+
+                        if(resource.category === query){
+
+                            return <ResourceCard resource={resource} saveCards={savedCards} setSavedCard={setSavedCards}/>
+
+                        }
+
+                    })
+                }
             </div>
         </div>
     )

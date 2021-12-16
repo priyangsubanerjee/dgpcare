@@ -88,6 +88,10 @@ function Feeds({res}) {
                     })
                 }
 
+                {
+                    feed.length === 0 && <span className={styles.emptyMessage}><BsIcons.BsStarFill className={styles.emptyIcon}/>No updates for now! <Link href='/'><span style={{marginLeft:'10px', padding:'5px 10px'}} className={styles.highlightedLink}>View categories</span></Link></span>
+                }
+
             </div>
 
             
