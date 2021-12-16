@@ -38,7 +38,7 @@ function Topnav() {
 
             <div className={styles.navitems}>
                 <Link href="/"><BiIcons.BiCategoryAlt className={checkActivePah('/')}/></Link>
-                <Link href="/SavedResurces"><BsIcons.BsBookmarkHeart className={checkActivePah('/SavedResources')}/></Link>
+                <Link href="/savedResurces"><BsIcons.BsBookmarkHeart className={checkActivePah('/savedResources')}/></Link>
                 <Link href="/Feeds"><BsIcons.BsNewspaper className={checkActivePah('/Feeds')}/></Link>
                 <Link href="/notifications"><VscIcons.VscBellDot className={checkActivePah('/notifications')}/></Link>
             </div>
