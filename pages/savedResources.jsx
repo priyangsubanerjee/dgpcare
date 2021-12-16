@@ -68,7 +68,7 @@ function SavedResources() {
                 }
 
                 {
-                    savedCards.length === 0 && <span className={styles.emptyMessage}><BsIcons.BsStarFill className={styles.emptyIcon}/>You have nothing saved ! <Link href='/'><span className={styles.highlightedLink}>View categories</span></Link></span>
+                    savedCards.length === 0 && <span className={styles.emptyMessage}><BsIcons.BsStarFill className={styles.emptyIcon}/>You have notshing saved ! <Link href='/'><span className={styles.highlightedLink}>View categories</span></Link></span>
                 }
 
             </div>
