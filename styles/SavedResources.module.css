@@ -1,5 +1,7 @@
 .container{
 
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
     padding: 40px;
 }
 
@@ -124,4 +126,27 @@
     margin-right: 10px;
     font-size: 20px;
     color: rgba(128, 128, 128, 0.3);
+}
+
+@media screen and (max-width: 600px){
+
+    .container{
+
+        padding: 20px;
+    }
+
+    .resourceGrid{
+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .search_flex{
+
+        width: 100%;
+    }
+
+    .emptyMessage{
+
+        font-size: 12px;
+    }
 }
