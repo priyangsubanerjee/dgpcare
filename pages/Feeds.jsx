@@ -8,7 +8,8 @@ import { useState, useEffect } from 'react';
 
 export async function getStaticProps() {
 
-    var url = 'https://newsapi.org/v2/top-headlines?' + 'country=in&' +'apiKey=29fee419e271480198a1c034ef68273c';
+    var apiKey = process.env.NEWS_API_KEY;
+    var url = 'https://newsapi.org/v2/top-headlines?' + 'country=in&' +'apiKey=' + apiKey
     var req = new Request(url);
     var res = await fetch(req)
                 .then(function(response) {
@@ -24,14 +25,12 @@ export async function getStaticProps() {
 
 function Feeds({res}) {
 
-
     const data = res.articles.filter(function(item) {
 
         if(item.title != null && item.description != null && item.publishedAt != null && item.url != null){
 
             if(item.title.includes('covid') || item.title.includes('corona') || item.title.includes('covid-19') || item.description.includes('covid') || item.description.includes('corona') || item.description.includes('covid-19')){
 
-                console.log(item.publishedAt);
                 return item;
             }
         }
