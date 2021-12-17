@@ -31,7 +31,7 @@
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.02);
     border-bottom: 1px dashed rgb(168, 168, 168);
-    padding: 25px 20px;
+    padding: 20px 20px;
 }
 
 .closeSidenav{
@@ -50,6 +50,7 @@
     font-weight: 600;
     margin-right: auto;
     margin-left: 20px;
+    font-size: 18px;
 }
 
 .sidenavCardLinks{
@@ -112,4 +113,5 @@
 
         width: 80%;
     }
+
 }

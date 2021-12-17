@@ -2,7 +2,7 @@ const resources = [
 
     {
         "id": "1",
-        "name" : "Ami Tiwari",
+        "name" : "Andrew",
         "email" : "abc@gmail.com",
         "phone" : "1234567890",
         "description" : "Oxygen supplier from durgaour",
@@ -11,7 +11,7 @@ const resources = [
 
     {
         "id": "2",
-        "name" : "Jethalal Champaklal Gada",
+        "name" : "Mathew",
         "email" : "abc@gmail.com",
         "phone" : "1234567890",
         "description" : "Oxygen supplier from durgaour",

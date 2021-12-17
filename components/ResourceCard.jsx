@@ -33,7 +33,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
         if(saved){
 
-            if (confirm("Remove from saved resources ?") == true) {
+            if (confirm("Remove " + resource.name.toLowerCase() + " from saved resources ?") == true) {
 
                 setSavedCard(saveCards.filter(card => card.id !== resource.id))
                 setSavedCard(saveCards.filter(card => card.id !== resource.id))
@@ -58,7 +58,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
         
         <div className={styles.resourceCard}>
             <FiIcons.FiCheckCircle className={styles.resourceProviderIcon}/>
-            <span className={styles.resourceProviderName}>Lorem ipsum</span>
+            <span className={styles.resourceProviderName}>{resource.name}</span>
             <span className={styles.resourceProviderDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, esse?</span>
             <div className={styles.resourceActionFlex}>
                 <IoIcons.IoMdCall className={styles.resourceCallButton}/>
