@@ -50,7 +50,7 @@ export default function Home({categories}) {
 
 
     const [query, setQuery] = useState('')
-    const [cData, setData] = useState(categories.length>0?categories:[])
+    const [cData, setData] = useState(categories?categories:[])
 
     useEffect(() => {
         
