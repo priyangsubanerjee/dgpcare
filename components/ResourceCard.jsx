@@ -7,11 +7,13 @@ import * as HiIcons from 'react-icons/hi'
 import * as BsIcons from 'react-icons/bs'
 
 import { useState, useEffect } from 'react'
+import SimpleToast from './SimpleToast'
 
 
 function ResourceCard({resource, saveCards, setSavedCard}) {
 
     const [saved, setSaved] = useState(false)
+    const [toast, setToast] = useState(false)
 
     useEffect(() => {
 
@@ -45,9 +47,17 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
         }else{
 
+
             setSavedCard([...saveCards, resource])
             console.log("object added")
             setSaved(true)
+            setToast(true)
+
+            setTimeout(() => {
+
+                setToast(false)
+                
+            }, 3000);
 
         }
 
@@ -66,6 +76,11 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
                 <IoIcons5.IoShareSocial className={styles.resourceShareButton}/>
                 <BsIcons.BsBookmarkPlus className={styles.resourceBookmarkButton} onClick={handleSaveCard} style={{color: saved ? 'rgb(0, 119, 255)' : 'rgb(0, 0, 0)'}}/>
             </div>
+
+            {
+                toast && <SimpleToast text={resource.name + " added to saved resources !"}/>
+            }
+
         </div>
     )
 }

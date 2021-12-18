@@ -1,0 +1,42 @@
+.toastCard{
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    animation: fadeIn 0.5s;
+    transition: all 0.5s;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .toastCard {
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+        z-index: 9999;
+        bottom: 8%;
+        position: fixed;
+        padding: 15px 10px;
+        border-radius: 0;
+        right: 0;
+    }
+    
+}
