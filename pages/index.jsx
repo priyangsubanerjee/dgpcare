@@ -50,7 +50,13 @@ export default function Home({categories}) {
 
 
     const [query, setQuery] = useState('')
-    const [cData, setData] = useState(categories?categories:[])
+    const [cData, setData] = useState([])
+
+    useEffect(() => {
+
+        setData(categories)
+        
+    } , [categories])
 
     useEffect(() => {
         
@@ -97,7 +103,7 @@ export default function Home({categories}) {
             <div className={styles.categories_grid}>
                 
                 {
-                    cData.map((item, index) => {
+                    cData.map((item) => {
 
                         console.log(item.id)
 
