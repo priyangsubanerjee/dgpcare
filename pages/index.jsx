@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import {gql, GraphQLClient} from 'graphql-request'
 import styles from '../styles/Home.module.css'
 import * as BiICons from 'react-icons/bi'
-import data from '../database/data'
 import CategoryCard from '../components/CategoryCard.jsx'
 import * as HiIcons from 'react-icons/hi'
 import * as BsIcons from 'react-icons/bs'
@@ -50,9 +49,8 @@ export async function getStaticProps() {
 export default function Home({categories}) {
 
 
-    console.log(categories)
     const [query, setQuery] = useState('')
-    const [cData, setData] = useState(data)
+    const [cData, setData] = useState(categories.length>0?categories:[])
 
     useEffect(() => {
         
@@ -67,7 +65,7 @@ export default function Home({categories}) {
         }
         else {
 
-            setData(data)
+            setData(categories)
 
         }
         
