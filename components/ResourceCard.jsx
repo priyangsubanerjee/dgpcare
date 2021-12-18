@@ -59,8 +59,8 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
     }
 
     const shareData = {
-        title: 'MDN',
-        text: 'Learn web development on MDN!',
+        title: 'Careplus Resources',
+        text: 'Resource provider name :' + resource.title + '\n' + 'Phone :' + resource.phone + '\n' + 'Description :' + resource.description + '\n',
         url: 'https://developer.mozilla.org'
       }
     
@@ -75,16 +75,17 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
         window.open(`sms:${number}`)
     }
 
-    async function share(){
-
+    async function share() {
 
         try {
+            
             await navigator.share(shareData)
             alert('Shared!')
     
-          } catch(err) {
+        } catch(err) {
+
             alert(err.message)
-          }
+        }
 
     }
 
@@ -99,7 +100,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
             <div className={styles.resourceActionFlex}>
                 <IoIcons.IoMdCall className={styles.resourceCallButton} onClick={() => placeCall(resource.phone)}/>
                 <HiIcons.HiOutlineMail className={styles.resourceSmsButton} onClick={() => sendMessage(resource.phone)}/>
-                <IoIcons5.IoShareSocial className={styles.resourceShareButton} onClick={share}/>
+                <IoIcons5.IoShareSocial className={styles.resourceShareButton} onClick={() => share()}/>
                 <BsIcons.BsBookmarkPlus className={styles.resourceBookmarkButton} onClick={handleSaveCard} style={{color: saved ? 'rgb(0, 119, 255)' : 'rgb(0, 0, 0)'}}/>
             </div>
 
