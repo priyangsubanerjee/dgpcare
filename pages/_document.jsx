@@ -11,9 +11,11 @@ class MyDocument extends Document {
       <Html lang="en" translate='no'>
         <Head>
             <meta name="google" content="notranslate" />
-            <meta property="og:title" content="Dgp covid resources | Careplus" />
-            <meta property="og:description" content="All necessary C-19 resosurces now at your finger tips" />
-            <meta property="og:image" content="https://ahrefs.com/blog/wp-content/uploads/2019/12/fb-how-to-become-an-seo-expert.png" />
+            <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+            <meta property="og:description" content="How much does culture influence creative thinking?" />
+            <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
         </Head>
         <body>
           <Main />
