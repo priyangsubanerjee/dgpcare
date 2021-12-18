@@ -8,13 +8,14 @@ import Link from 'next/link'
 
 function SavedResources() {
 
+    const [query , setQuery] = useState('')
+
     const [savedCards, setSavedCards] = useState(() => {
 
         if(typeof window !== 'undefined'){
 
             if(localStorage.getItem('savedCards')){
 
-                console.log("Array found in localStorage")
                 return JSON.parse(localStorage.getItem('savedCards'))
             }else{
 
@@ -27,12 +28,28 @@ function SavedResources() {
         }
     })
 
+    const [resources, setResources] = useState(savedCards)
+
 
     useEffect(() => {
 
         localStorage.setItem('savedCards', JSON.stringify(savedCards))
+        setResources(savedCards)
     }
     , [savedCards])
+
+    useEffect(() => {
+
+        if(query.length > 0){
+
+            setResources(savedCards.filter(card => card.name.toLowerCase().includes(query.toLowerCase())))
+        }
+        else{
+
+            setResources(savedCards)
+        }
+     
+    }, [query])
 
 
     return (
@@ -49,8 +66,8 @@ function SavedResources() {
         
             <div className={styles.search_flex}>
                     <HiIcons.HiSearch className={styles.search_icon} />
-                    <input className={styles.search_input} type="text" placeholder="Search"/>
-                    <BsIcons.BsBackspace className={styles.clearQuery}/>
+                    <input className={styles.search_input} type="text" placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)}/>
+                    <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setQuery('')}/>
             </div>
 
 
@@ -58,7 +75,7 @@ function SavedResources() {
             <div className={styles.resourceGrid}>
 
                 {
-                    savedCards.map(card => {
+                    resources.map(card => {
 
                         return(
 
@@ -68,7 +85,7 @@ function SavedResources() {
                 }
 
                 {
-                    savedCards.length === 0 && <span className={styles.emptyMessage}><BsIcons.BsStarFill className={styles.emptyIcon}/>You have notshing saved ! <Link href='/'><span className={styles.highlightedLink}>View categories</span></Link></span>
+                    savedCards.length === 0 && <span className={styles.emptyMessage}>You have nothing saved ! <Link href='/'><span className={styles.highlightedLink}>View categories</span></Link></span>
                 }
 
             </div>

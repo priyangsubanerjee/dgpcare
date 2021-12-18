@@ -6,7 +6,9 @@ import * as MdIcons from 'react-icons/md'
 import * as AiIcons from 'react-icons/ai'
 import * as VscIcons from 'react-icons/vsc'
 
-function Sidenav({ setSidenav }) {
+function Sidenav({ setSidenav}) {
+
+
     return (
         <div className={styles.sidenav} onClick={(e) =>  e.target.className==styles.sidenav ? setSidenav(false): setSidenav}>
             <div className={styles.sidenavCard}>

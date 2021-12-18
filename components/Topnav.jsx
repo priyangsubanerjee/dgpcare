@@ -5,7 +5,7 @@ import * as VscIcons from 'react-icons/vsc'
 import * as BsIcons from 'react-icons/bs'
 import styles from '../styles/Topnav.module.css'
 import Modal from '../components/LocationModal.jsx'
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Sidenav from './Sidenav'
@@ -25,6 +25,7 @@ function Topnav() {
             return styles.navItem
         }
     }
+
 
     return (
 
