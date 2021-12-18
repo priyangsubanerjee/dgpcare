@@ -76,8 +76,8 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
                 <BsIcons.BsBookmarkPlus className={styles.resourceBookmarkButton} onClick={handleSaveCard} style={{color: saved ? 'rgb(0, 119, 255)' : 'rgb(0, 0, 0)'}}/>
             </div>
 
-            {
-               toast && <SimpleToast text={resource.name + " added to saved resources !"}/>
+            { 
+                toast && <SimpleToast text={resource.name + " added to saved resources !"} /> 
             }
 
         </div>
