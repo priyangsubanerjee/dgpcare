@@ -30,15 +30,12 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
     function handleSaveCard() {
 
-        console.log("clicked")
-
         if(saved){
 
-            if (confirm("Remove " + resource.name.toLowerCase() + " from saved resources ?") == true) {
+            if (confirm("Remove " + resource.title.toLowerCase() + " from saved resources ?") == true) {
 
                 setSavedCard(saveCards.filter(card => card.id !== resource.id))
                 setSavedCard(saveCards.filter(card => card.id !== resource.id))
-                console.log("object removed")
                 setSaved(false)
               } else {
                 
@@ -48,7 +45,6 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
 
             setSavedCard([...saveCards, resource])
-            console.log("object added")
             setSaved(true)
             setToast(true)
 
@@ -62,17 +58,48 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
     }
 
+    const shareData = {
+        title: 'MDN',
+        text: 'Learn web development on MDN!',
+        url: 'https://developer.mozilla.org'
+      }
+    
+
+    const placeCall = async (number) => {
+
+        window.open(`tel:${number}`)
+    }
+
+    const sendMessage = async (number) => {
+
+        window.open(`sms:${number}`)
+    }
+
+    async function share(){
+
+
+        try {
+            await navigator.share(shareData)
+            alert('Shared!')
+    
+          } catch(err) {
+            alert(err.message)
+          }
+
+    }
+
     return (
 
         
         <div className={styles.resourceCard}>
             <FiIcons.FiCheckCircle className={styles.resourceProviderIcon}/>
-            <span className={styles.resourceProviderName}>{resource.name}</span>
-            <span className={styles.resourceProviderDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, esse?</span>
+            <span className={styles.resourceProviderName}>{resource.title}</span>
+            <span className={styles.resourceProviderDescription}>{resource.description}</span>
+            <span className={styles.resourceProviderDescription}>{resource.phone}</span>
             <div className={styles.resourceActionFlex}>
-                <IoIcons.IoMdCall className={styles.resourceCallButton}/>
-                <HiIcons.HiOutlineMail className={styles.resourceMailButton}/>
-                <IoIcons5.IoShareSocial className={styles.resourceShareButton}/>
+                <IoIcons.IoMdCall className={styles.resourceCallButton} onClick={() => placeCall(resource.phone)}/>
+                <HiIcons.HiOutlineMail className={styles.resourceSmsButton} onClick={() => sendMessage(resource.phone)}/>
+                <IoIcons5.IoShareSocial className={styles.resourceShareButton} onClick={share}/>
                 <BsIcons.BsBookmarkPlus className={styles.resourceBookmarkButton} onClick={handleSaveCard} style={{color: saved ? 'rgb(0, 119, 255)' : 'rgb(0, 0, 0)'}}/>
             </div>
 
