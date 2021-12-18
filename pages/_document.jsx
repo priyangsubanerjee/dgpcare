@@ -11,11 +11,11 @@ class MyDocument extends Document {
       <Html lang="en" translate='no'>
         <Head>
             <meta name="google" content="notranslate" />
-            <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+            <meta property="og:url" content="https:careplus.vercel.app" />
             <meta property="og:type" content="article" />
-            <meta property="og:title" content="When Great Minds Don’t Think Alike" />
-            <meta property="og:description" content="How much does culture influence creative thinking?" />
-            <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+            <meta property="og:title" content="Dgp covid resources | Careplus" />
+            <meta property="og:description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et." />
+            <meta property="og:image" content="https://thumbs.dreamstime.com/b/simple-coronavirus-covid-icon-vector-illustration-your-projects-176237979.jpg" />
         </Head>
         <body>
           <Main />
