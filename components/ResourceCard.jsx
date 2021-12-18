@@ -105,7 +105,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
             </div>
 
             { 
-                toast && <SimpleToast text={resource.name + " added to saved resources !"} /> 
+                toast && <SimpleToast text={resource.title + " added to saved resources !"} /> 
             }
 
         </div>
