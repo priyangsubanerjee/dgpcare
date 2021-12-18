@@ -15,7 +15,7 @@ function NewsArticle({article}) {
                 </a>
                 
                 <BsIcons.BsShareFill className={styles.articleShare}/>
-                <span className={styles.articleSource}>{article.source.name}</span>
+                <span className={styles.articleSource}>{article.source.name.length > 20 ? article.source.name.substring(0, 17)+'...' : article.source.name}</span>
             </div>
         </div>
     )

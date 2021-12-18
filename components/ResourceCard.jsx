@@ -5,7 +5,6 @@ import * as IoIcons from 'react-icons/io'
 import * as IoIcons5 from 'react-icons/io5'
 import * as HiIcons from 'react-icons/hi'
 import * as BsIcons from 'react-icons/bs'
-
 import { useState, useEffect } from 'react'
 import SimpleToast from './SimpleToast'
 
@@ -78,7 +77,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
             </div>
 
             {
-                toast && <SimpleToast text={resource.name + " added to saved resources !"}/>
+               toast && <SimpleToast text={resource.name + " added to saved resources !"}/>
             }
 
         </div>
