@@ -91,9 +91,10 @@ function Category({data}) {
 
         if(sQuery.length > 0) {
 
-            const filtered = resources.filter(function(item) {
+            const filtered = data.filter(function(item) {
 
-                return item.name.toLowerCase().includes(sQuery.toLowerCase())
+                return item.title.toLowerCase().includes(sQuery.toLowerCase())
+
             })
 
             setResources(filtered)
@@ -124,7 +125,7 @@ function Category({data}) {
 
                 <div className={styles.search_flex}>
                     <HiIcons.HiSearch className={styles.search_icon} />
-                    <input className={styles.search_input} type="text" placeholder="Search" value={sQuery} onChange={(e) => setSquery(e.target.value)}/>
+                    <input className={styles.search_input} type="text" placeholder="Search" onChange={(e) => setSquery(e.target.value)}  value={sQuery} />
                     <BsIcons.BsBackspace className={styles.clearQuery}/>
                 </div>
 

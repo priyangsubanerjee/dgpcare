@@ -54,12 +54,12 @@
 .resourceSmsButton{
 
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
-.resourceMailButton:hover{
+.resourceSmsButton:hover{
 
     color: rgba(0, 119, 255, 1);
 }
