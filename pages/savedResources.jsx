@@ -43,7 +43,7 @@ function SavedResources() {
 
         if(query.length > 0){
 
-            setResources(savedCards.filter(card => card.name.toLowerCase().includes(query.toLowerCase())))
+            setResources(savedCards.filter(card => card.title.toLowerCase().includes(query.toLowerCase())))
         }
         else{
 
