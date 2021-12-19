@@ -37,6 +37,14 @@
     line-height: 1.9;
 }
 
+.resourceProviderCategory{
+
+    font-size: 13px;
+    color: rgb(0, 119, 255);
+    margin-top: 10px;
+    line-height: 1.9;
+}
+
 .resourceActionFlex{
     display: flex;
     align-items: center;

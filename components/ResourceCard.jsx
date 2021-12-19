@@ -13,6 +13,8 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
     const [saved, setSaved] = useState(false)
     const [toast, setToast] = useState(false)
+    const categoryMap = resource.category.split('-')
+    const categoryName = categoryMap.map(item => item.charAt(0).toUpperCase() + item.slice(1)).join(' ')
 
     useEffect(() => {
 
@@ -60,7 +62,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
     const shareData = {
         title: 'Careplus Resources',
-        text: 'Name: ' + resource.title + '\n' + 'Phone: ' + resource.phone + '\n' + 'Description: ' + resource.description + '\n\n\n',
+        text: 'Name: ' + resource.title + '\n' + 'Phone: ' + resource.phone + '\n' + 'Description: ' + resource.description + '\n' + 'Category: ' + categoryName + '/n/n/n',
         url: 'https://careplus.vercel.app'
       }
     

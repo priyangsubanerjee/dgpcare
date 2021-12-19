@@ -5,6 +5,7 @@ import * as BiICons from 'react-icons/bi'
 import CategoryCard from '../components/CategoryCard.jsx'
 import * as HiIcons from 'react-icons/hi'
 import * as BsIcons from 'react-icons/bs'
+import Head from 'next/head'
 
 
 export async function getStaticProps() {
@@ -84,43 +85,51 @@ export default function Home({categories}) {
     
     return (
 
-        <div className={styles.container}>
+        <>
+        
+            <Head>
+                <title>Home | Categories</title>
+            </Head>  
 
-            {
-                progressBar && <div className={styles.progressBar}></div>
-            }
+            <div className={styles.container}>
 
-            <>
-            <span className={styles.heading}>
-                <BiICons.BiCategoryAlt style={{marginRight:'8px'}}/>
-                Categories
-            </span>
-            <p 
-            style={{fontSize:'14px', color:'rgba(0, 0, 0, 0.5)', marginTop:'20px'}}>Select from the list of available categories.
-            </p>
-            </>
-            
-            <div className={styles.search_parentFlex}>
-                <div className={styles.search_flex}>
-                        <HiIcons.HiSearch className={styles.search_icon} />
-                        <input className={styles.search_input} type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query}/>
-                        <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setQuery('')}/>
-                </div>
-            </div>
-            
-            <div className={styles.categories_grid}>
-                
                 {
-                    cData.map((item) => {
-
-                        console.log(item.id)
-
-                        return <CategoryCard key={item.id} props={item} setProgressBar={setProgressBar}/>
-                    })
+                    progressBar && <div className={styles.progressBar}></div>
                 }
 
+                <>
+                <span className={styles.heading}>
+                    <BiICons.BiCategoryAlt style={{marginRight:'8px'}}/>
+                    Categories
+                </span>
+                <p 
+                style={{fontSize:'14px', color:'rgba(0, 0, 0, 0.5)', marginTop:'20px'}}>Select from the list of available categories.
+                </p>
+                </>
+                
+                <div className={styles.search_parentFlex}>
+                    <div className={styles.search_flex}>
+                            <HiIcons.HiSearch className={styles.search_icon} />
+                            <input className={styles.search_input} type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query}/>
+                            <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setQuery('')}/>
+                    </div>
+                </div>
+                
+                <div className={styles.categories_grid}>
+                    
+                    {
+                        cData.map((item) => {
+
+                            console.log(item.id)
+
+                            return <CategoryCard key={item.id} props={item} setProgressBar={setProgressBar}/>
+                        })
+                    }
+
+                </div>
+                
             </div>
-            
-        </div>
+
+        </>
     )
 }

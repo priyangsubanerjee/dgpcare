@@ -5,6 +5,7 @@ import NewsArticle from '../components/NewsArticle';
 import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 export async function getServerSideProps() {
 
@@ -57,43 +58,50 @@ function Feeds({res}) {
     } , [search])
 
     return (
-        <div className={styles.container}>
 
-            <div>
-                <span className={styles.header}>
-                    <BsIcons.BsNewspaper style={{}}/>
-                    <span className={styles.header_text}>Recent Feeds</span>
-                </span>
-                <span className={styles.about}>Getting you the latest developments of <Link href="/"><span className={styles.highlightedLink}>Covid-19</span></Link>  from all over India.</span>
-            </div>
+        <>
+            <Head>
+                <title>Recent Feeds</title>
+            </Head>
 
-        
-            <div className={styles.search_flex}>
-                    <HiIcons.HiSearch className={styles.search_icon} />
-                    <input className={styles.search_input} type="text" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)}/>
-                    <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setSearch('')}/>
-            </div>
+            <div className={styles.container}>
 
-            <div className={styles.feedContainer}>
-
-                {
-                    feed.map((item, index) => {
-
-                        return (
-                            
-                            <NewsArticle article={item} key={index}/>
-                        )
-                    })
-                }
-
-                {
-                    feed.length === 0 && <span className={styles.emptyMessage}>No updates for now! <Link href='/'><span style={{marginLeft:'10px', padding:'5px 10px'}} className={styles.highlightedLink}>View categories</span></Link></span>
-                }
-
-            </div>
+                <div>
+                    <span className={styles.header}>
+                        <BsIcons.BsNewspaper style={{}}/>
+                        <span className={styles.header_text}>Recent Feeds</span>
+                    </span>
+                    <span className={styles.about}>Getting you the latest developments of <Link href="/"><span className={styles.highlightedLink}>Covid-19</span></Link>  from all over India.</span>
+                </div>
 
             
-        </div>
+                <div className={styles.search_flex}>
+                        <HiIcons.HiSearch className={styles.search_icon} />
+                        <input className={styles.search_input} type="text" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)}/>
+                        <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setSearch('')}/>
+                </div>
+
+                <div className={styles.feedContainer}>
+
+                    {
+                        feed.map((item, index) => {
+
+                            return (
+                                
+                                <NewsArticle article={item} key={index}/>
+                            )
+                        })
+                    }
+
+                    {
+                        feed.length === 0 && <span className={styles.emptyMessage}>No updates for now! <Link href='/'><span style={{marginLeft:'10px', padding:'5px 10px'}} className={styles.highlightedLink}>View categories</span></Link></span>
+                    }
+
+                </div>
+
+                
+            </div>
+        </>
     )
 }
 
