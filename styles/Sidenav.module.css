@@ -116,5 +116,15 @@
 
         width: 80%;
     }
+    .sidenavCardHeader{
+
+        padding: 20px 15px;
+    }
+
+    .sidenavCardLink{
+
+        padding: 20px;
+    }
+
 
 }
