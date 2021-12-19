@@ -2,6 +2,7 @@
 
     padding: 40px;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header{

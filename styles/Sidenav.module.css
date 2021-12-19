@@ -11,6 +11,8 @@
     overflow-x: hidden;
     transition: 0.5s;
     animation: fadeIn 0.2s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .sidenavCard{

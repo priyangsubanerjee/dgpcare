@@ -6,7 +6,15 @@
     border-radius: 10px;
     padding: 20px;
     user-select: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+}
+
+.resourceCard:hover{
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border: 1px dashed rgb(0, 119, 255);
 }
 
 .resourceProviderIcon{
@@ -91,7 +99,3 @@
     color: rgba(0, 119, 255, 1);
 }
 
-@media screen and (max-width: 768px){
-
-       
-}
