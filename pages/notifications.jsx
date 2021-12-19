@@ -13,7 +13,7 @@ function notifications() {
             <Head>
                 <title>Notifications</title>
             </Head>
-            
+
             <div className={styles.container}>
                 <div>
                     <span className={styles.header}>
@@ -29,7 +29,7 @@ function notifications() {
                         <BsIcons.BsBackspace className={styles.clearQuery}/>
                 </div>
             </div>
-            </>
+        </>
     )
 }
 

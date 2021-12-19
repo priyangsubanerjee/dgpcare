@@ -14,7 +14,6 @@ class MyDocument extends Document {
             <meta name="description" content="Hey all, this is Team Care Plus, we provide information on necessary covid-19 supplies, from oxygen suppliers to free food home deliveries and more. We are leading from Durgapur, West bengal" />
             <meta name="keywords" content="Durgapur, dgp, durgapur, durgapurcovidresource, priyangsu, priyangsubanerjee, covid19, c19, coronavirus, covidresources, covid-19 resosurces, covid19resources, covid helplines, corona, dgpcovidresources, dgpcovidresource, west bengal" />
             <meta name="author" content="Priyangsu Banerjee" />
-            <meta name="robots" content="index, follow" />
             <meta name="googlebot" content="index, follow" />
 
             <meta property="og:site_name" content="Care Plus"></meta>
