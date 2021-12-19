@@ -5,8 +5,55 @@ import * as BsIcons from 'react-icons/bs'
 import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link'
 import Head from 'next/head'
+import {gql, GraphQLClient} from 'graphql-request'
 
-function notifications() {
+export async function getStaticProps() {
+
+    const url = process.env.ENDPOINT_URL
+    const GraphClient = new GraphQLClient( url , 
+
+        { 
+            headers: { 
+                
+                'Authorization': process.env.GRAPH_CMS_TOKEN 
+            } 
+    })
+
+    const query = gql`
+    
+    query{
+
+        notifications{
+         
+          title
+          content{
+            html
+          }
+        }
+      }
+      
+      
+      
+    `
+
+
+    const data = await GraphClient.request(query)
+    const categories = data.notifications
+
+    return{
+
+        props: {
+
+            categories,
+        }
+    }
+}
+
+
+function notifications({categories}) {
+
+    console.log(categories)
+
     return (
 
         <>
@@ -28,6 +75,7 @@ function notifications() {
                         <input className={styles.search_input} type="text" placeholder="Search"/>
                         <BsIcons.BsBackspace className={styles.clearQuery}/>
                 </div>
+
             </div>
         </>
     )

@@ -29,7 +29,7 @@ function Feeds({res}) {
 
         if(item.title != null && item.description != null && item.publishedAt != null && item.url != null){
 
-            if(item.title.includes('covid') || item.title.includes('corona') || item.title.includes('covid-19') || item.description.includes('covid') || item.description.includes('corona') || item.description.includes('covid-19')){
+            if(item.title.toLowerCase().includes('covid') || item.title.toLowerCase().includes('corona') || item.title.toLowerCase().includes('covid-19') || item.title.toLowerCase().includes('omicron') || item.description.toLowerCase().includes('covid') || item.description.toLowerCase().includes('corona') || item.description.toLowerCase().includes('covid-19') || item.description.toLowerCase().includes('omicron')){
 
                 return item;
             }
