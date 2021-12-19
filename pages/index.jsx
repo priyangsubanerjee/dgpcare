@@ -120,8 +120,6 @@ export default function Home({categories}) {
                     {
                         cData.map((item) => {
 
-                            console.log(item.id)
-
                             return <CategoryCard key={item.id} props={item} setProgressBar={setProgressBar}/>
                         })
                     }

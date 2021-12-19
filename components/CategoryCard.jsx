@@ -13,7 +13,7 @@ function CategoryCard({props, setProgressBar}) {
                 <span className={styles.card_title}>{props.title}</span>
                 <p className={styles.card_body}>{props.description}</p>
                 <Link href={`category/` + props.slug}>
-                    <a>
+                    <a style={{width:'fit-content'}}>
                         <button className={styles.card_button} onClick={() => setProgressBar(true)}>
                             View all <IoIcons.IoIosArrowForward style={{marginLeft:'5px'}}/>
                         </button>
