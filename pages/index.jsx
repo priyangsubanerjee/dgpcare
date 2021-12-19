@@ -53,6 +53,7 @@ export default function Home({categories}) {
 
     const [query, setQuery] = useState('')
     const [cData, setData] = useState([])
+    const [progressBar, setProgressBar] = useState(false)
 
     useEffect(() => {
 
@@ -85,6 +86,10 @@ export default function Home({categories}) {
 
         <div className={styles.container}>
 
+            {
+                progressBar && <div className={styles.progressBar}></div>
+            }
+
             <>
             <span className={styles.heading}>
                 <BiICons.BiCategoryAlt style={{marginRight:'8px'}}/>
@@ -110,7 +115,7 @@ export default function Home({categories}) {
 
                         console.log(item.id)
 
-                        return <CategoryCard key={item.id} props={item}/>
+                        return <CategoryCard key={item.id} props={item} setProgressBar={setProgressBar}/>
                     })
                 }
 

@@ -5,7 +5,7 @@ import * as IoIcons from 'react-icons/io'
 import Link from 'next/link'
 import React from 'react'
 
-function CategoryCard({props}) {
+function CategoryCard({props, setProgressBar}) {
 
     return (
         <div className={styles.category_card}>
@@ -14,7 +14,7 @@ function CategoryCard({props}) {
                 <p className={styles.card_body}>{props.description}</p>
                 <Link href={`category/` + props.slug}>
                     <a>
-                        <button className={styles.card_button}>
+                        <button className={styles.card_button} onClick={() => setProgressBar(true)}>
                             View all <IoIcons.IoIosArrowForward style={{marginLeft:'5px'}}/>
                         </button>
                     </a>
