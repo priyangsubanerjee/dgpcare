@@ -6,7 +6,7 @@ import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     var apiKey = process.env.NEWS_API_KEY;
     var url = 'https://newsapi.org/v2/top-headlines?' + 'country=in&' +'apiKey=' + apiKey
@@ -18,8 +18,7 @@ export async function getStaticProps() {
                 })
 
     return {
-      props: { res },
-      revalidate: 5,
+      props: { res }
     }
 }
 
