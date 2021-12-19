@@ -6,7 +6,7 @@ function NewsArticle({article}) {
 
     const shareData = {
         title: 'Recent Feeds',
-        text: article.title + '\n' + article.description.substring(0, 97)+'...' + '\n' +  "Source: "  + article.url + '\n\n\n',
+        text: article.title + '\n\n' + article.description.substring(0, 97)+'...' + '\n\n' +  "Source: "  + article.url + '\n\n\n',
         url: 'https://careplus.vercel.app'
       }
     
