@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 
-function about() {
+function About() {
 
 
     const[copied, setCopied] = useState(false)
@@ -80,7 +80,7 @@ function about() {
 
                     <div className={styles.faq}>
                         <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px'}}/>How do we do it ?</span>
-                        <p className={styles.faqAnswer}>We have a team of volunteer's who are working 24x7 just to verify all the data's collected from sources.</p>
+                        <p className={styles.faqAnswer}>We have a team of volunteer{`'`}s who are working 24x7 just to verify all the data{`'`}s collected from sources.</p>
                     </div>
 
                     <div className={styles.faq}>
@@ -95,7 +95,7 @@ function about() {
                     
                     <div className={styles.faq}>
                         <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px', width:'fit-content'}}/> <span>Are we earning a penny from it ?</span> </span>
-                        <p className={styles.faqAnswer}>No, because it affects all of us. Today it's someone else who is getting infected; tomorrow it could be us. We need to prevent the spread of this virus. We need to document the data so that people with knowledge can use this data to make informed decisions.</p>
+                        <p className={styles.faqAnswer}>No, because it affects all of us. Today it{`'`}s someone else who is getting infected; tomorrow it could be us. We need to prevent the spread of this virus. We need to document the data so that people with knowledge can use this data to make informed decisions.</p>
                     </div>
 
                     <div className={styles.faq}>
@@ -116,4 +116,4 @@ function about() {
     )
 }
 
-export default about
+export default About
