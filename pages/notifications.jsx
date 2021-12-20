@@ -6,8 +6,9 @@ import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link'
 import Head from 'next/head'
 import {gql, GraphQLClient} from 'graphql-request'
+import NotificationCard from '../components/NotificationCard'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
     const url = process.env.ENDPOINT_URL
     const GraphClient = new GraphQLClient( url , 
@@ -24,35 +25,33 @@ export async function getStaticProps() {
     query{
 
         notifications{
-         
           title
-          content{
-            html
-          }
+          content
+          createdAt
+          source
+          url
         }
-      }
       
-      
+      }      
       
     `
 
 
     const data = await GraphClient.request(query)
-    const categories = data.notifications
+    const notifications = data.notifications
 
     return{
 
         props: {
 
-            categories,
+            notifications,
         }
     }
 }
 
 
-function notifications({categories}) {
+function notifications({notifications}) {
 
-    console.log(categories)
 
     return (
 
@@ -75,6 +74,20 @@ function notifications({categories}) {
                         <input className={styles.search_input} type="text" placeholder="Search"/>
                         <BsIcons.BsBackspace className={styles.clearQuery}/>
                 </div>
+
+                <br />
+                <br />
+                {
+
+                    notifications.map(notification => {
+
+                        return(
+
+                            <NotificationCard key={notification.id} notification={notification}/>
+                        )
+                    })
+                }
+                
 
             </div>
         </>

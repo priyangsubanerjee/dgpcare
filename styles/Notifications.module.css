@@ -81,3 +81,24 @@
 
     color: rgb(0, 119, 255);
 }
+
+
+@media screen and (max-width: 768px){
+
+    .container{
+
+        padding: 20px;
+    }
+
+    .about{
+
+        line-height: 1.9;
+        font-size: 13px;
+    }
+
+    .search_flex{
+
+        width: 100%;
+    }
+
+}

@@ -52,6 +52,7 @@ function About() {
             </Head>
 
             <div className={styles.container}>
+                
                 <div>
                     <span className={styles.header}>
                         <BsIcons.BsLightbulb/>
@@ -60,6 +61,7 @@ function About() {
                     <span className={styles.about}>We stand with everyone fighting on the frontlines against <Link href="/"><span className={styles.highlightedRed}>Covid-19.</span></Link></span>
                     <div className={styles.hr}></div>
                 </div>
+
                 <div className={styles.about_container}>
                     <p className={styles.aboutText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum nulla a dolor architecto corrupti eum optio harum odit eius sit qui, repellat est minima aperiam in soluta id reiciendis, repellendus debitis. Commodi ipsum magnam in quidem porro asperiores vel vero hic, consequatur, aperiam, unde ea repellendus odio saepe ex!</p>
                 </div>
@@ -108,7 +110,7 @@ function About() {
                             <summary className={styles.faqSummary}>What do we do?</summary>
                             <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
                         </details>
-                    </div>
+                </div>
                
             </div>
         </>
