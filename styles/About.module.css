@@ -213,7 +213,7 @@
 
         background: linear-gradient(to right, rgb(46, 144, 255), rgb(0, 119, 255));
         width: fit-content;
-        padding: 15px;
+        padding: 20px;
         border-radius: 5px;
         color: white;
     }
