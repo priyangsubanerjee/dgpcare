@@ -33,7 +33,6 @@ function About() {
 
     }
 
-
     function copyToClipboard() {
 
         navigator.clipboard.writeText('https://dgpcovidresources.vercel.app/')
@@ -58,58 +57,59 @@ function About() {
                         <BsIcons.BsLightbulb/>
                         <span className={styles.header_text}>About us</span>
                     </span>
-                    <span className={styles.about}>We stand with everyone fighting on the frontlines against <Link href="/"><span className={styles.highlightedLink}>Covid-19</span></Link></span>
+                    <span className={styles.about}>We stand with everyone fighting on the frontlines against <Link href="/"><span className={styles.highlightedRed}>Covid-19.</span></Link></span>
+                    <div className={styles.hr}></div>
+                </div>
+                <div className={styles.about_container}>
+                    <p className={styles.aboutText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum nulla a dolor architecto corrupti eum optio harum odit eius sit qui, repellat est minima aperiam in soluta id reiciendis, repellendus debitis. Commodi ipsum magnam in quidem porro asperiores vel vero hic, consequatur, aperiam, unde ea repellendus odio saepe ex!</p>
                 </div>
 
-                <div className={styles.hr}></div>
-
-                <p className={styles.aboutBody}>
-                    This page helps you find all necessary resources near your city, ranging from ambulance service providers, oxygen suppliers, nearby hospitals, blood donors, pharmacies, telemedicine services, food services and many more. 
-                    As a very small team, we do our best to verify all resources mentioned in the app. Despite this, there might be gaps in the information provided. To that extent, we need your feedback to correct any misinformation. 
-                    If you have any suggestions, please let us know.
-                </p>
+                <div className={styles.horizontalFlex}>
+                    <div className={styles.shareContainer}>
+                        <span className={styles.shareHead}><BsIcons.BsStars/> &nbsp; Share this page?</span>
+                        <div className={styles.socialIcons}>
+                            <BsIcons.BsWhatsapp title='Whatsapp' className={styles.socialIcon}/>
+                                <BsIcons.BsFacebook title='Facebook' className={styles.socialIcon}/>
+                                <BsIcons.BsInstagram title='Instagram' className={styles.socialIcon}/>
+                                <BsIcons.BsTwitter title='Twitter' className={styles.socialIcon}/>
+                                <BsIcons.BsLinkedin title='Linkedin' className={styles.socialIcon}/>
+                        </div>
+                        <div className={styles.shareDescription}>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab accusantium et, dicta doloremque quibusdam quidem ad voluptates aperiam, quas quaerat officiis? Vitae necessitatibus cupiditate minus blanditiis debitis nam amet nisi?
+                        </div>
+                        <button className={styles.shareButton}>Share now</button>
+                    </div>
+                </div>
 
                 <div className={styles.faqContainer}>
+                        <span className={styles.faqHead}>F.A.Q{`'`}s Section</span>
 
-                    <span className={styles.faqHeader}>F.A.Qs</span>
-
-                    <div className={styles.faq}>
-                        <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px'}}/> What do we do ?</span>
-                        <p className={styles.faqAnswer}>In simple words we amplify the available resources in Durgapur so that you can find it easily and efficiently.</p>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>Who are we ?</summary>
+                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>What do we do?</summary>
+                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>What do we do?</summary>
+                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>What do we do?</summary>
+                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>What do we do?</summary>
+                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>What do we do?</summary>
+                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
+                        </details>
                     </div>
-
-                    <div className={styles.faq}>
-                        <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px'}}/>How do we do it ?</span>
-                        <p className={styles.faqAnswer}>We have a team of volunteer{`'`}s who are working 24x7 just to verify all the data{`'`}s collected from sources.</p>
-                    </div>
-
-                    <div className={styles.faq}>
-                        <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px'}}/>Who are we ?</span>
-                        <p className={styles.faqAnswer}>We are a group of dedicated volunteers who curate and verify the data coming from several sources.</p>
-                    </div>
-
-                    <div className={styles.faq}>
-                        <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px', width:'fit-content'}}/>Which cities do we serve ?</span>
-                        <p className={styles.faqAnswer}>Currently we serve Durgapur as our primary city, though we may expand with future needs.</p>
-                    </div>
-                    
-                    <div className={styles.faq}>
-                        <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px', width:'fit-content'}}/> <span>Are we earning a penny from it ?</span> </span>
-                        <p className={styles.faqAnswer}>No, because it affects all of us. Today it{`'`}s someone else who is getting infected; tomorrow it could be us. We need to prevent the spread of this virus. We need to document the data so that people with knowledge can use this data to make informed decisions.</p>
-                    </div>
-
-                    <div className={styles.faq}>
-                        <span className={styles.faqQuestion}><BiIcons.BiRightArrow style={{marginRight:'10px', fontSize:'15px', width:'fit-content'}}/> <span>What can you do ?</span> </span>
-                        <p className={styles.faqAnswer}>Share this page with your friends, colleagues, and neigbours &amp; keep them informed too!</p>
-                    </div>
-
-                    <div className={styles.linkContainer}>
-                        <span className={styles.link}><AiIcons.AiOutlineLink style={{marginRight:'10px'}}/>dgpcovidresources.vercel.app</span>
-                        <span className={styles.actionLink} style={{color: copied?'rgba(255, 255, 255)':'rgb(0, 0, 0)', background: copied?'rgb(0, 190, 0)':'rgba(0, 0, 0, 0.05)'}} onClick={copyToClipboard}><MdIcons.MdCopyAll/></span>
-                        <span className={styles.actionLink} onClick={share}><MdIcons.MdShare/></span>
-                    </div>
-                </div>
-            
+               
             </div>
         </>
        
