@@ -23,6 +23,7 @@ class MyDocument extends Document {
             <meta property="og:image" content="https://thumbs.dreamstime.com/b/simple-coronavirus-covid-icon-vector-illustration-your-projects-176237979.jpg" />
             <meta property="og:type" content="website" />
             <meta property="og:image:type" content="image/jpg"/>
+            
         </Head>
         <body>
           <Main />

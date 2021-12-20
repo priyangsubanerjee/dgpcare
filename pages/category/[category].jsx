@@ -120,7 +120,7 @@ function Category({data}) {
 
                 <div className={styles.queryInfo}>
                     <span className={styles.queryFlex}><MdIcons.MdVerified style={{color:'rgb(0, 119, 255)'}} className={styles.queryIcon}/> Available resources for <span className={styles.queryText}>{categoryName}</span></span>
-                    <span className={styles.queryAbout}>All the below shown resources are verfied by our volunteers though we dont assure for available stocks. For more details read our &nbsp; <Link href='/'><span className={styles.highLightedRed}>Terms &amp; Conditions.</span></Link> You can surely <Link href='/'><span className={styles.highLightedGreen}>Contact us</span></Link> for any assistance.</span>
+                    <span className={styles.queryAbout}>Remember we dont assure available stocks, read our &nbsp; <Link href='/'><span className={styles.highLightedRed}>Terms &amp; Conditions</span></Link> or you can <Link href='/'><span className={styles.highLightedBlue}>Contact us</span></Link> for any assistance.</span>
                 </div>
 
                 <div className={styles.search_flex}>

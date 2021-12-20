@@ -13,8 +13,8 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
     const [saved, setSaved] = useState(false)
     const [toast, setToast] = useState(false)
-    const categoryMap = resource.category.split('-')
-    const categoryName = categoryMap.map(item => item.charAt(0).toUpperCase() + item.slice(1)).join(' ')
+    const categoryMap = resource.category.trim().split('-')
+    const categoryName = categoryMap[0].charAt(0).toUpperCase() + categoryMap[0].slice(1) + ' ' + categoryMap[1].charAt(0).toUpperCase() + categoryMap[1].slice(1).substring(0, categoryMap[1].length - 2)
 
     useEffect(() => {
 
@@ -95,7 +95,10 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
         
         <div className={styles.resourceCard}>
-            <FiIcons.FiCheckCircle className={styles.resourceProviderIcon}/>
+            <span style={{display:'flex', alignItems:'center'}}>
+                <FiIcons.FiCheckCircle className={styles.resourceProviderIcon}/> <span className={styles.resourceCategory}>{categoryName}</span>
+            </span>
+            
             <span className={styles.resourceProviderName}>{resource.title}</span>
             <span className={styles.resourceProviderDescription}>{resource.description}</span>
             <span className={styles.resourceProviderDescription}>{resource.phone}</span>

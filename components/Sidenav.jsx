@@ -5,6 +5,7 @@ import * as GrIcons from 'react-icons/gr'
 import * as MdIcons from 'react-icons/md'
 import * as AiIcons from 'react-icons/ai'
 import * as VscIcons from 'react-icons/vsc'
+import Link from 'next/link'
 
 function Sidenav({ setSidenav}) {
 
@@ -31,8 +32,13 @@ function Sidenav({ setSidenav}) {
                         <span className={styles.sidenavCardLinkText}>Team members</span>
                     </li>
                     <li className={styles.sidenavCardLink}>
-                        <VscIcons.VscBook className={styles.sidenavCardLinkIcon}/>
-                        <span className={styles.sidenavCardLinkText}>Terms {'&'} Conditions</span>
+                       <Link href='/docs/about'>
+                            <a onClick={() => setSidenav(false)}>
+                                <VscIcons.VscBook className={styles.sidenavCardLinkIcon}/>
+                                <span className={styles.sidenavCardLinkText}>Terms {'&'} Conditions</span>
+                            </a>
+                       </Link>
+                        
                     </li>
                 </ul>
             </div>

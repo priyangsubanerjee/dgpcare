@@ -64,6 +64,22 @@
     border-bottom: 1px dashed rgb(0, 172, 0);
 }
 
+
+.highLightedBlue{
+
+    color: rgb(0, 119, 255);
+    background: rgba(0, 119, 255, 0.05);
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.highLightedBlue:hover{
+
+    border-bottom: 1px dashed rgb(0, 119, 255);
+}
+
+
 .search_flex{
 
     width: 50%;
