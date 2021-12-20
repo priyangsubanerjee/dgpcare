@@ -19,26 +19,41 @@ function Sidenav({ setSidenav}) {
                 </div>
 
                 <ul className={styles.sidenavCardLinks}>
-                    <li className={styles.sidenavCardLink}>
-                        <GrIcons.GrInfo className={styles.sidenavCardLinkIcon}/>
-                        <span className={styles.sidenavCardLinkText}>About us</span>
-                    </li>
-                    <li className={styles.sidenavCardLink}>
-                        <MdIcons.MdOutlineBugReport className={styles.sidenavCardLinkIcon}/>
-                        <span className={styles.sidenavCardLinkText}>Report an issue</span>
-                    </li>
-                    <li className={styles.sidenavCardLink}>
-                        <AiIcons.AiOutlineTeam className={styles.sidenavCardLinkIcon}/>
-                        <span className={styles.sidenavCardLinkText}>Team members</span>
-                    </li>
+
                     <li className={styles.sidenavCardLink}>
                        <Link href='/docs/about'>
-                            <a onClick={() => setSidenav(false)}>
+                            <a className={styles.parentLink} onClick={() => setSidenav(false)}>
+                                <GrIcons.GrInfo className={styles.sidenavCardLinkIcon}/>
+                                <span className={styles.sidenavCardLinkText}>About us</span>
+                            </a>
+                       </Link>
+                    </li>
+
+                    <li className={styles.sidenavCardLink}>
+                       <Link href='/docs/about'>
+                            <a className={styles.parentLink} onClick={() => setSidenav(false)}>
+                                <MdIcons.MdOutlineBugReport className={styles.sidenavCardLinkIcon}/>
+                                <span className={styles.sidenavCardLinkText}>Report an issue</span>
+                            </a>
+                       </Link>
+                    </li>
+
+                    <li className={styles.sidenavCardLink}>
+                       <Link href='/docs/about'>
+                            <a className={styles.parentLink} onClick={() => setSidenav(false)}>
+                                <AiIcons.AiOutlineTeam className={styles.sidenavCardLinkIcon}/>
+                                <span className={styles.sidenavCardLinkText}>Team members</span>
+                            </a>
+                       </Link>
+                    </li>
+                    
+                    <li className={styles.sidenavCardLink}>
+                       <Link href='/docs/about'>
+                            <a className={styles.parentLink} onClick={() => setSidenav(false)}>
                                 <VscIcons.VscBook className={styles.sidenavCardLinkIcon}/>
                                 <span className={styles.sidenavCardLinkText}>Terms {'&'} Conditions</span>
                             </a>
                        </Link>
-                        
                     </li>
                 </ul>
             </div>

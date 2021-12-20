@@ -1,0 +1,181 @@
+.container{
+
+    padding: 40px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header{
+
+    display: flex;
+    align-items: center;
+    color: rgb(0, 119, 255);
+}
+
+.header_text{
+
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.about{
+
+    font-size: 14px;
+    color: gray;
+    margin-top: 25px;
+    margin-left: 0px;
+    display: block;
+}
+
+.highlightedLink{
+
+    color: rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.05);
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.highlightedLink:hover{
+
+    text-decoration: underline;
+}
+
+.hr{
+
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.aboutBody{
+
+    margin-top: 30px;
+    margin-left: 0px;
+    font-size: 14px;
+    color: rgb(34, 34, 34);
+    line-height: 2;
+}
+
+.faqContainer{
+
+    margin-top: 40px;
+}
+
+.faqHeader{
+
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(0, 119, 255);
+    background: rgba(0, 119, 255, 0.05);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: block;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.faq{
+
+    margin-bottom: 40px;
+}
+
+.faqQuestion{
+
+    color: rgb(0, 119, 255);
+    display: inline-block;
+    align-items: center;
+    font-weight: 700;
+}
+
+.faqAnswer{
+
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-left: 25px;
+}
+
+.linkContainer{
+
+    display: flex;
+    align-items: center;
+}
+
+.linkContainer .link{
+
+    color: rgb(24, 24, 24);
+    font-size: 15px;
+    padding: 10px 10px;
+    border: 1px dashed rgb(184, 184, 184);
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    user-select: all;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.linkContainer .link:hover{
+
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.linkContainer .actionLink{
+
+    background: rgb(238, 238, 238);
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.linkContainer .actionLink:hover{
+
+    background: rgb(219, 219, 219);
+}
+
+@media screen and (max-width: 768px){
+
+    .container{
+
+        padding: 20px;
+        padding-bottom: 100px;
+    }
+
+    .about{
+
+        line-height: 2;
+    }
+
+    .hr{
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .aboutBody{
+
+        font-size: 13px;
+    }
+
+    .faqQuestion{
+
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .faqAnswer{
+
+        font-size: 13px;
+    }
+    
+}
