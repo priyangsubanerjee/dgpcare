@@ -51,7 +51,7 @@ export async function getStaticProps() {
 }
 
 
-function notifications({notifications}) {
+function Notifications({notifications}) {
 
     const [notificationData, setNotificationData] = useState(notifications)
     const [query, setQuery] = useState('')
@@ -114,4 +114,4 @@ function notifications({notifications}) {
     )
 }
 
-export default notifications
+export default Notifications
