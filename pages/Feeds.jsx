@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     var apiKey = process.env.NEWS_API_KEY;
     var url = 'https://newsapi.org/v2/top-headlines?' + 'country=in&' +'apiKey=' + apiKey
