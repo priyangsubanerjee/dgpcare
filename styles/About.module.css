@@ -73,7 +73,7 @@
     margin-left: 0px;
     display: block;
     line-height: 2;
-    width: 80%;
+    width: 100%;
 }
 
 
@@ -97,7 +97,7 @@
 
 .faqDetails{
 
-    background: rgba(0, 0, 0, 0.02);
+    background: rgba(0, 0, 0, 0.015);
     transition: all 0.2s ease-in-out;
 }
 
@@ -132,12 +132,11 @@
 
 .shareContainer{
 
-    width: fit-content;
     align-items: center;
     display: flex;
-    background: linear-gradient(to right, rgb(45, 143, 255), rgb(0, 105, 224));
+    background: rgba(0, 119, 255, 0.05);
     padding: 15px 20px;
-    color: white;
+    color: rgb(0, 119, 255);
     font-weight: 500;
     border-radius: 5px;
     margin-top: 40px;
@@ -147,6 +146,7 @@
 .socialIcon{
 
     margin-left: 20px;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 768px){
@@ -174,11 +174,7 @@
 
     .shareContainer{
 
-        background: linear-gradient(to right, rgb(46, 144, 255), rgb(0, 119, 255));
-        width: fit-content;
         padding: 20px;
-        border-radius: 5px;
-        color: white;
     }
 
     .socialIcons{

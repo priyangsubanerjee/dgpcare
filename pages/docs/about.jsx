@@ -7,6 +7,7 @@ import * as MdIcons from 'react-icons/md'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
+import Footer from '../../components/Footer'
 
 function About() {
 
@@ -65,36 +66,6 @@ function About() {
                 <div className={styles.about_container}>
                     <p className={styles.aboutText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum nulla a dolor architecto corrupti eum optio harum odit eius sit qui, repellat est minima aperiam in soluta id reiciendis, repellendus debitis. Commodi ipsum magnam in quidem porro asperiores vel vero hic, consequatur, aperiam, unde ea repellendus odio saepe ex!</p>
                 </div>
-
-                <div className={styles.faqContainer}>
-                        <span className={styles.faqHead}>F.A.Q Section</span>
-
-                        <details className={styles.faqDetails}>
-                            <summary className={styles.faqSummary}>Who are we ?</summary>
-                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
-                        </details>
-                        <details className={styles.faqDetails}>
-                            <summary className={styles.faqSummary}>What do we do?</summary>
-                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
-                        </details>
-                        <details className={styles.faqDetails}>
-                            <summary className={styles.faqSummary}>What do we do?</summary>
-                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
-                        </details>
-                        <details className={styles.faqDetails}>
-                            <summary className={styles.faqSummary}>What do we do?</summary>
-                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
-                        </details>
-                        <details className={styles.faqDetails}>
-                            <summary className={styles.faqSummary}>What do we do?</summary>
-                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
-                        </details>
-                        <details className={styles.faqDetails}>
-                            <summary className={styles.faqSummary}>What do we do?</summary>
-                            <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
-                        </details>
-                </div>
-
                 <div className={styles.shareContainer}>
                     <span>Share this page ?</span>&nbsp;&nbsp;&nbsp;
                     <BsIcons.BsWhatsapp className={styles.socialIcon}/>
@@ -105,8 +76,40 @@ function About() {
                     <BsIcons.BsPinterest className={styles.socialIcon}/>
                     
                 </div>
+                <div className={styles.faqContainer}>
+                        <span className={styles.faqHead}>F.A.Q Section</span>
+
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>Are you official ?</summary>
+                            <p className={styles.faqAnswer}>No.</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>What do you people do?</summary>
+                            <p className={styles.faqAnswer}>We provide our users, all the necessary contact information of an emergency covid resource.</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>What are your sources ?</summary>
+                            <p className={styles.faqAnswer}>We completely rely on our connections &amp; volunteers for getting inputs.</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>Who are you?</summary>
+                            <p className={styles.faqAnswer}>We are a group of dedicated volunteers who curate and verify the data coming from several sources.</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>Are you earning from it?</summary>
+                            <p className={styles.faqAnswer}>No, because it affects all of us. Today it's someone else who is getting infected; tomorrow it could be us.</p>
+                        </details>
+                        <details className={styles.faqDetails}>
+                            <summary className={styles.faqSummary}>Why my contact number is displayed without my concern?</summary>
+                            <p className={styles.faqAnswer}>First of all we are extremely sorry if this happened to you. Since one of our major source of information is social media, so mistakes occur quite often. You just need to mail us your issue at dgpcovidresources@gmail.com and we'll solve it asap! </p>
+                        </details>
+                </div>
+
+               
                
             </div>
+
+            <Footer/>
         </>
        
     )
