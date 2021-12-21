@@ -128,7 +128,8 @@
     font-size: 14px;
     background: white;
     line-height: 2;
-    padding: 0 15px;
+    padding: 0px 15px;
+    padding-top: 10px;
 }
 
 .shareContainer{
