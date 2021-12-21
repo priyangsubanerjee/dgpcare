@@ -119,6 +119,7 @@
     padding: 20px 15px;
     cursor: pointer;
     margin: 0;
+    line-height: 1.9;
 }
 
 .faqAnswer{
@@ -154,7 +155,6 @@
     .container{
 
         padding: 30px 20px;
-        padding-bottom: 100px;
     }
 
     .about{
