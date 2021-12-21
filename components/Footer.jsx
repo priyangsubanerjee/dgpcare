@@ -7,7 +7,7 @@ function Footer() {
         <div className={styles.footerCard}>
             <div className={styles.brandNameContainer}>
                 <span className={styles.brandName}>Dgp Covid Resources</span>
-                <span className={styles.brandUrl}>dgpcovidresources@gmail.com</span>
+                <span className={styles.brandUrl}>A crowd sourced initiative | dgpcovidresources@gmail.com</span>
 
                 <div className={styles.brandSocialIcons}>
                     <BsIcons.BsFacebook className={styles.socialIcon}/>

@@ -97,11 +97,11 @@ function About() {
                         </details>
                         <details className={styles.faqDetails}>
                             <summary className={styles.faqSummary}>Are you earning from it?</summary>
-                            <p className={styles.faqAnswer}>No, because it affects all of us. Today it's someone else who is getting infected; tomorrow it could be us.</p>
+                            <p className={styles.faqAnswer}>No, because it affects all of us. Today it&apos;s someone else who is getting infected; tomorrow it could be us.</p>
                         </details>
                         <details className={styles.faqDetails}>
                             <summary className={styles.faqSummary}>Why my contact number is displayed without my concern?</summary>
-                            <p className={styles.faqAnswer}>First of all we are extremely sorry if this happened to you. Since one of our major source of information is social media, so mistakes occur quite often. You just need to mail us your issue at dgpcovidresources@gmail.com and we'll solve it asap! </p>
+                            <p className={styles.faqAnswer}>First of all we are extremely sorry if this happened to you. Since one of our major source of information is social media, so mistakes occur quite often. You just need to mail us your issue at dgpcovidresources@gmail.com and we&apos;ll solve it asap! </p>
                         </details>
                 </div>
 
