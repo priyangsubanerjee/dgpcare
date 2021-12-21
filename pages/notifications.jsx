@@ -7,8 +7,9 @@ import Link from 'next/link'
 import Head from 'next/head'
 import {gql, GraphQLClient} from 'graphql-request'
 import NotificationCard from '../components/NotificationCard'
+import { useState, useEffect } from 'react'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     const url = process.env.ENDPOINT_URL
     const GraphClient = new GraphQLClient( url , 
@@ -52,6 +53,25 @@ export async function getServerSideProps() {
 
 function notifications({notifications}) {
 
+    const [notificationData, setNotificationData] = useState(notifications)
+    const [query, setQuery] = useState('')
+
+    useEffect(() => {
+
+        if(query.length > 0){
+
+            const filteredData = no.filter(notification => {
+
+                return notification.title.toLowerCase().includes(query.toLowerCase()) || notification.content.toLowerCase().includes(query.toLowerCase()) || notification.source.toLowerCase().includes(query.toLowerCase())
+            })
+
+            setNotificationData(filteredData)
+        }else{
+
+            setNotificationData(notifications)
+        }
+    }, [query])
+
 
     return (
 
@@ -71,7 +91,7 @@ function notifications({notifications}) {
 
                 <div className={styles.search_flex}>
                         <HiIcons.HiSearch className={styles.search_icon} />
-                        <input className={styles.search_input} type="text" placeholder="Search"/>
+                        <input className={styles.search_input} type="text" placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)}/>
                         <BsIcons.BsBackspace className={styles.clearQuery}/>
                 </div>
 
@@ -79,7 +99,7 @@ function notifications({notifications}) {
                 <br />
                 {
 
-                    notifications.map(notification => {
+                    notificationData.map(notification => {
 
                         return(
 

@@ -136,7 +136,6 @@
     align-items: center;
     display: flex;
     background: linear-gradient(to right, rgb(45, 143, 255), rgb(0, 105, 224));
-    box-shadow: 0px 0px 10px rgba(0, 119, 255, 0.2);
     padding: 15px 20px;
     color: white;
     font-weight: 500;
@@ -194,7 +193,7 @@
 
     .shareContainer{
 
-        padding: 10px;
+        padding: 15px 10px;
         font-size: 14px;
         width: 100%;
         justify-content: space-evenly;

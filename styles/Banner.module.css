@@ -1,0 +1,47 @@
+.bannerCard{
+
+    width: 100%;
+    padding: 8px 40px;
+    background: rgba(255, 44, 44, 0.08);
+    display: flex;
+    align-items: center;
+    color: rgb(255, 77, 77);
+    font-size: 13px;
+}
+
+.bannerText{
+
+    margin-left: 5px;
+}
+
+.closeBanner{
+
+    margin-left: auto;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.learnMore{
+
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.learnMore:hover{
+
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+
+    .bannerCard{
+
+        padding: 8px 20px;
+    }
+    
+}

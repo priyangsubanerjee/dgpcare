@@ -46,9 +46,7 @@ function Topnav() {
 
 
             { sidenav && <Sidenav setSidenav={setSidenav} /> }
-            {
-                modal && <Modal setModal={setModal}/>
-            }
+            { modal && <Modal setModal={setModal}/> }
 
         </div>
     )
