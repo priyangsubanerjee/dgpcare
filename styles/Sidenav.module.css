@@ -79,6 +79,8 @@
     width: 100%;
     height: 100%;
     padding: 20px 30px;
+    display: flex;
+    align-items: center;
 }
 
 .sidenavCardLink:hover{
@@ -89,6 +91,7 @@
 .sidenavCardLinkIcon{
 
     color: inherit;
+    font-size: 18px;
 }
 
 .sidenavCardLinkText{

@@ -25,6 +25,7 @@
   margin-right: 10px;
   font-size: 18px;
   display: flex;
+  width: fit-content;
   align-items: center;
   color: var(--black-primary);
 }

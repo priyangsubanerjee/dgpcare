@@ -56,7 +56,7 @@ function Topnav() {
 
         <div className={styles.topnav}>
             <AiIcons.AiOutlineMenu className={styles.menu} onClick={() => setSidenav(true)}/>
-            <Link href="/"><a><span className={styles.brand}>C-19 Resources</span></a></Link>
+            <Link href="/"><a className={styles.brand}><span>C-19 Resources</span></a></Link>
             <span className={styles.location_flex} onClick={() => setModal(!modal)}>
                 <BiIcons.BiMap className={styles.location} /> 
                 <span className={styles.location_text}>Durgapur</span>
