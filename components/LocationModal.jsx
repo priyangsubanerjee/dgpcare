@@ -23,7 +23,7 @@ function Modal({setModal}) {
                 <MdIcons.MdClose className={styles.close_modalButton} onClick={() => setModal(false)}/>
                 <GiIcons.GiModernCity style={{fontSize:'60px', marginTop:'0px'}}/>
                 <span style={{margin: '40px 0 0 0', padding:'0', fontSize:'22px', fontWeight:'600'}}>Hey there 👋</span>
-                <p style={{padding:'0', fontSize: '15px', marginTop:'10px', color:'rgba(0, 0, 0, 0.7)', fontWeight:'500'}}>Seems you want to change your <span className={styles.highlighted}>Location?</span></p>
+                <p style={{padding:'0', fontSize: '15px', marginTop:'10px', color:'rgba(0, 0, 0, 0.7)', fontWeight:'500', color:'var(--text-secondary)'}}>Seems you want to change your <span className={styles.highlighted}>Location?</span></p>
                 <p className={styles.body}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor assumenda quia obcaecati quibusdam dolorem temporibus perspiciatis corporis adipisci harum minima!</p>
                 <div className={styles.buttons_flex}>
                     <button className={styles.send_locationRequest}>Send request<RiIcons.RiSendPlaneFill style={{marginLeft:'10px'}}/></button>

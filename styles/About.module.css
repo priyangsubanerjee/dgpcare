@@ -2,6 +2,7 @@
 
     padding: 40px;
     user-select: none;
+    background: var(--bg-primary);
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -9,7 +10,7 @@
 
     display: flex;
     align-items: center;
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
 }
 
 .header_text{
@@ -22,7 +23,7 @@
 .about{
 
     font-size: 14px;
-    color: gray;
+    color: var(--text-primary);
     margin-top: 25px;
     margin-left: 0px;
     display: block;
@@ -30,8 +31,8 @@
 
 .highlightedRed{
 
-    color: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.05);
+    color: var(--red-primary);
+    background: var(--red-secondary);
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;
@@ -44,8 +45,8 @@
 
 .highlightedBlue{
 
-    color: rgb(0, 119, 255);
-    background: rgba(0, 119, 255, 0.05);
+    color: var(--blue-primary);
+    background: (--blue-secondary);
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;
@@ -61,18 +62,18 @@
     width: 100%;
     border: 0;
     height: 1px;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--hr-primary);
     margin-top: 30px;
 }
 
 .aboutText{
 
-    font-size: 16px;
-    color: rgb(63, 63, 63);
+    font-size: 15px;
+    color: var(--text-secondary);
     margin-top: 25px;
     margin-left: 0px;
     display: block;
-    line-height: 2;
+    line-height: 1.9;
     width: 100%;
 }
 
@@ -84,26 +85,26 @@
 
 .faqHead{
 
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
     font-weight: 600;
     font-size: 18px;
     display: flex;
     align-items: center;
     width: fit-content;
-    border-bottom: 1px dashed rgb(0, 119, 255);
+    border-bottom: 1px dashed var(--blue-primary);
     padding: 10px 0px;
     margin-bottom: 30px;
 }
 
 .faqDetails{
 
-    background: rgba(0, 0, 0, 0.015);
+    background: var(--faq-primary);
     transition: all 0.2s ease-in-out;
 }
 
 .faqDetails:hover{
 
-    background: rgba(0, 0, 0, 0.04);
+    background: var(--faq-secondary);
 }
 
 .faqSummary:focus{
@@ -114,7 +115,7 @@
 .faqSummary{
 
     font-size: 16px;
-    color: rgb(48, 48, 48);
+    color: var(--text-secondary);
     font-weight: 500;
     padding: 20px 15px;
     cursor: pointer;
@@ -124,9 +125,9 @@
 
 .faqAnswer{
 
-    color: gray;
+    color: var(--text-primary);
     font-size: 14px;
-    background: white;
+    background: var(--bg-primary);
     line-height: 2;
     padding: 0px 15px;
     padding-top: 10px;
@@ -134,11 +135,12 @@
 
 .shareContainer{
 
+    width: fit-content;
     align-items: center;
     display: flex;
-    background: rgba(0, 119, 255, 0.05);
+    background: var(--blue-secondary);
     padding: 15px 20px;
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
     font-weight: 500;
     border-radius: 5px;
     margin-top: 40px;

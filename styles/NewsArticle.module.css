@@ -1,6 +1,7 @@
 .articleCard{
 
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--card-border-primary);
+    background: var(--bg-primary);
     padding: 20px 20px;
     margin-bottom: 30px;
     border-radius: 5px;
@@ -12,14 +13,14 @@
 
 .articleCard:hover{
 
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-    border: 1px dashed rgb(0, 119, 255);
+    box-shadow: 0px 5px 10px var(--card-hover-shadow);
+    border: 1px dashed var(--blue-primary);
 }
 
 .articleDate{
 
     font-size: 12px;
-    color: rgba(0, 119, 255, 1);
+    color: var(--blue-primary);
     margin-bottom: 10px;
 }
 
@@ -31,12 +32,13 @@
     margin: 0;
     padding: 0;
     margin-top: 15px;
+    color: var(--black-primary);
 }
 
 .articleDescription{
 
     font-size: 14px;
-    color: #828282;
+    color: var(--text-primary);
     line-height: 1.9;
     margin: 0;
     padding: 0;
@@ -52,29 +54,31 @@
 .articleReadMore{
 
    border: none;
-   background: rgba(0, 119, 255, 0.05);
-   color: rgba(0, 119, 255, 1);
+   background: var(--blue-secondary);
+   color: var(--blue-primary);
    padding: 10px 15px;
    border-radius: 5px;
    transition: all 0.3s ease;
    cursor: pointer;
+   font-size: 13px;
 }
 
 .articleReadMore:hover{
 
-    background: rgba(0, 119, 255, 1);
-    color: #fff;
+    background: var(--blue-primary);
+    color: var(--white-primary);
 }
 
 .articleShare{
 
     margin-left: 20px;
     cursor: pointer;
+    color: var(--black-primary);
 }
 
 .articleShare:hover{
 
-    color: rgba(0, 119, 255, 1);
+    color: var(--blue-primary)
 }
 
 .articleSource{
@@ -82,8 +86,8 @@
     margin-left: auto;
     font-size: 12px;
     font-weight: 400;
-    color:rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.05);
+    color: var(--black-primary);
+    background: var(--card-hover-shadow);
     padding: 5px 10px;
     border-radius: 4px;
 }

@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border: 1px solid var(--card-border-primary);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     user-select: none;
@@ -14,25 +15,27 @@
 
 .category_card:hover{
 
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-    border: 1px dashed rgb(0, 119, 255);
+    box-shadow: 0px 5px 10px var(--card-hover-shadow);
+    border: 1px dashed var(--blue-primary);
 }
 
 .card_icon{
 
     font-size: 25px;
+    color: var(--black-primary);
     margin-bottom: 30px;
 }
 
 .card_title{
 
     font-weight: 500;
+    color: var(--black-primary);
 }
 
 .card_body{
 
     font-size: 12px;
-    color: gray;
+    color: var(--text-primary);
 }
 
 .card_button{
@@ -42,12 +45,13 @@
     padding: 10px 15px;
     border-radius: 5px;
     margin-top: 10px;
+    font-size: 13px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
-    background: rgb(241, 241, 241);
-    color: black;
+    background: var(--card-button-primary);
+    color: var(--card-button-text);
 }
 
 .card_button:hover{

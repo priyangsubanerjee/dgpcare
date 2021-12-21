@@ -4,12 +4,18 @@ import * as IoICons from 'react-icons/io5'
 import * as GrIcons from 'react-icons/gr'
 import * as MdIcons from 'react-icons/md'
 import * as AiIcons from 'react-icons/ai'
+import * as BiIcons from 'react-icons/bi'
 import * as VscIcons from 'react-icons/vsc'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
-function Sidenav({ setSidenav}) {
+function Sidenav({ setSidenav, theme, setTheme}) {
 
+    function handleTheme() {
 
+        theme === 'light' ? setTheme('dark') : setTheme('light')
+    }
+    
     return (
         <div className={styles.sidenav} onClick={(e) =>  e.target.className==styles.sidenav ? setSidenav(false): setSidenav}>
             <div className={styles.sidenavCard}>
@@ -23,7 +29,7 @@ function Sidenav({ setSidenav}) {
                     <li className={styles.sidenavCardLink}>
                        <Link href='/docs/about'>
                             <a className={styles.parentLink} onClick={() => setSidenav(false)}>
-                                <GrIcons.GrInfo className={styles.sidenavCardLinkIcon}/>
+                                <AiIcons.AiOutlineBulb className={styles.sidenavCardLinkIcon}/>
                                 <span className={styles.sidenavCardLinkText}>About us</span>
                             </a>
                        </Link>
@@ -55,6 +61,16 @@ function Sidenav({ setSidenav}) {
                             </a>
                        </Link>
                     </li>
+
+                    <li className={styles.sidenavCardLink} onClick={() => handleTheme()}>
+                        <a className={styles.parentLink}>
+                            {
+                                theme === 'light' ? <BiIcons.BiMoon className={styles.sidenavCardLinkIcon}/> : <BiIcons.BiSun className={styles.sidenavCardLinkIcon}/> 
+                            }
+                            <span className={styles.sidenavCardLinkText}>{theme=="light"?"Dark":"Light"} mode</span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>

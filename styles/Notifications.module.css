@@ -1,6 +1,7 @@
 .container{
 
     padding: 40px;
+    background: var(--bg-primary);
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -9,7 +10,7 @@
 
     display: flex;
     align-items: center;
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
 }
 
 .header_text{
@@ -22,7 +23,7 @@
 .about{
 
     font-size: 14px;
-    color: gray;
+    color: var(--text-primary);
     margin-top: 25px;
     margin-left: 0px;
     display: block;
@@ -34,7 +35,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--searchflex-primary);
     padding: 10px 15px;
     border-radius: 5px;
     margin-top: 20px;
@@ -43,12 +44,13 @@
 
 .search_flex:hover{
 
-    background: rgba(0, 0, 0, 0.06);
+    background: var(--searchflex-secondary);
 }
 
 .search_icon{
 
     font-size: 20px;
+    color: var(--text-primary);
 }
 
 .search_flex .search_input{
@@ -62,14 +64,14 @@
 
 .clearQuery{
 
-    color: gray;
+    color: var(--text-primary);
     cursor: pointer;
     font-size: 20px;
 }
 
 .clearQuery:hover{
 
-    color: rgb(0, 0, 0);
+    color: var(--black-primary);
 }
 
 .search_flex .search_input:focus, .search_flex .search_input:active{
@@ -79,7 +81,7 @@
 
 .search_flex .search_input:focus + .search_icon{
 
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
 }
 
 

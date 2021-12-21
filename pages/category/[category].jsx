@@ -119,8 +119,8 @@ function Category({data}) {
             <div className={styles.container} >
 
                 <div className={styles.queryInfo}>
-                    <span className={styles.queryFlex}><MdIcons.MdVerified style={{color:'rgb(0, 119, 255)'}} className={styles.queryIcon}/> Available resources for <span className={styles.queryText}>{categoryName}</span></span>
-                    <span className={styles.queryAbout}>Remember we dont assure available stocks, read our &nbsp; <Link href='/'><span className={styles.highLightedRed}>Terms &amp; Conditions</span></Link> or you can <Link href='/'><span className={styles.highLightedBlue}>Contact us</span></Link> for any assistance.</span>
+                    <span className={styles.queryFlex}><MdIcons.MdVerified style={{color:'var(--blue-primary)'}} className={styles.queryIcon}/><span style={{color:'var(--text-secondary)'}}> Available resources for </span> <span className={styles.queryText}>{categoryName}</span></span>
+                    <span className={styles.queryAbout} style={{color:'var(--text-primary)'}}>Remember we dont assure available stocks, read our &nbsp; <Link href='/'><span className={styles.highLightedRed}>Terms &amp; Conditions</span></Link> or you can <Link href='/'><span className={styles.highLightedBlue}>Contact us</span></Link> for any assistance.</span>
                 </div>
 
                 <div className={styles.search_flex}>

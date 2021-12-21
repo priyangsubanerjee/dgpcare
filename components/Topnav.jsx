@@ -15,6 +15,31 @@ function Topnav() {
     const [modal, setModal] = useState(false)
     const [sidenav, setSidenav] = useState(false)
 
+
+    const[theme, setTheme] = useState(() => {
+
+        if(typeof window !== 'undefined') {
+            
+            if(localStorage.getItem('theme')) {
+                return localStorage.getItem('theme')
+            }
+            else {
+                return 'light'
+            }
+        }else{
+
+            return 'light'
+        }
+    })
+
+    useEffect(() => {
+
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme)
+
+    }, [theme])
+
+
     const router = useRouter()
 
     const checkActivePah = (path) => {
@@ -45,7 +70,7 @@ function Topnav() {
             </div>
 
 
-            { sidenav && <Sidenav setSidenav={setSidenav} /> }
+            { sidenav && <Sidenav setSidenav={setSidenav} theme={theme} setTheme={setTheme} /> }
             { modal && <Modal setModal={setModal}/> }
 
         </div>

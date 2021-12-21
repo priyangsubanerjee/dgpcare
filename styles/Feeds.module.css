@@ -2,6 +2,7 @@
 
     padding: 40px;
     user-select: none;
+    background: var(--bg-primary);
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -9,7 +10,7 @@
 
     display: flex;
     align-items: center;
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
 }
 
 .header_text{
@@ -22,7 +23,7 @@
 .about{
 
     font-size: 14px;
-    color: gray;
+    color: var(--text-primary);
     margin-top: 25px;
     margin-left: 0px;
     display: block;
@@ -30,8 +31,8 @@
 
 .highlightedLink{
 
-    color: rgb(255, 0, 0);
-    background: rgba(255, 0, 0, 0.05);
+    color: var(--red-primary);
+    background: var(--red-secondary);
     padding: 5px;
     border-radius: 4px;
     cursor: pointer;
@@ -49,7 +50,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--searchflex-primary);
     padding: 10px 15px;
     border-radius: 5px;
     margin-top: 20px;
@@ -58,7 +59,7 @@
 
 .search_flex:hover{
 
-    background: rgba(0, 0, 0, 0.06);
+    background: var(--searchflex-secondary);
 }
 
 .search_icon{
@@ -77,14 +78,14 @@
 
 .clearQuery{
 
-    color: gray;
+    color: var(--text-primary);
     cursor: pointer;
     font-size: 20px;
 }
 
 .clearQuery:hover{
 
-    color: rgb(0, 0, 0);
+    color: var(--black-primary);
 }
 
 .search_flex .search_input:focus, .search_flex .search_input:active{
@@ -94,7 +95,7 @@
 
 .search_flex .search_input:focus + .search_icon{
 
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
 }
 
 .feedContainer{
@@ -108,7 +109,7 @@
     width: 100%;
     text-align: center;
     margin-top: 150px;
-    color: gray;
+    color: var(--text-primary);
     font-size: 14px;
     display: flex;
     justify-content: center;
@@ -119,7 +120,7 @@
 
     margin-right: 10px;
     font-size: 20px;
-    color: rgba(128, 128, 128, 0.3);
+    color: var(--text-secondary);
 }
 
 

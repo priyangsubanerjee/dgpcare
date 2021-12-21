@@ -1,7 +1,9 @@
 .container{
 
     padding: 40px;
+    height: 100%;
     user-select: none;
+    background: var(--bg-primary);
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -21,7 +23,7 @@
 .queryText{
 
     font-weight: 600;
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
     font-size: 18px;
     margin-left: 5px;
 }
@@ -30,7 +32,7 @@
 
 
     font-size: 14px;
-    color: gray;
+    color: var(--text-primary);
     margin-top: 20px;
     display: block;
     line-height: 2;
@@ -38,8 +40,8 @@
 
 .highLightedRed{
 
-    color: red;
-    background: rgba(255, 0, 0, 0.05);
+    color: var(--red-primary);
+    background: var(--red-secondary);
     padding: 5px;
     border-radius: 3px;
     cursor: pointer;
@@ -47,28 +49,13 @@
 
 .highLightedRed:hover{
 
-    border-bottom: 1px dashed red;
+    border-bottom: 1px dashed var(--red-primary);
 }
-
-.highLightedGreen{
-
-    color: rgb(0, 172, 0);
-    background: rgba(0, 255, 0, 0.05);
-    padding: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.highLightedGreen:hover{
-
-    border-bottom: 1px dashed rgb(0, 172, 0);
-}
-
 
 .highLightedBlue{
 
-    color: rgb(0, 119, 255);
-    background: rgba(0, 119, 255, 0.05);
+    color: var(--blue-primary);
+    background: var(--blue-secondary);
     padding: 5px;
     border-radius: 3px;
     cursor: pointer;
@@ -76,7 +63,7 @@
 
 .highLightedBlue:hover{
 
-    border-bottom: 1px dashed rgb(0, 119, 255);
+    border-bottom: 1px dashed var(--blue-primary);
 }
 
 
@@ -86,7 +73,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: rgba(0, 0, 0, 0.03);
+    background: var(--searchflex-primary);
     padding: 10px 15px;
     border-radius: 5px;
     margin-top: 20px;
@@ -95,12 +82,13 @@
 
 .search_flex:hover{
 
-    background: rgba(0, 0, 0, 0.06);
+    background: var(--searchflex-secondary);
 }
 
 .search_icon{
 
     font-size: 20px;
+    color: var(--text-primary);
 }
 
 .search_flex .search_input{
@@ -110,18 +98,19 @@
     background: transparent;
     font-size: 15px;
     width: 100%;
+    color: var(--black-primary);
 }
 
 .clearQuery{
 
-    color: gray;
+    color: var(--text-primary);
     cursor: pointer;
     font-size: 20px;
 }
 
 .clearQuery:hover{
 
-    color: rgb(0, 0, 0);
+    color: var(--black-primary);
 }
 
 .search_flex .search_input:focus, .search_flex .search_input:active{
@@ -131,7 +120,7 @@
 
 .search_flex .search_input:focus + .search_icon{
 
-    color: rgb(0, 119, 255);
+    color: var(--blue-primary);
 }
 
 .resourceGrid{
@@ -163,14 +152,6 @@
 
         font-size: 25px;
         margin-right: 10px;
-    }
-    
-    .queryText{
-    
-        font-weight: 600;
-        color: rgb(0, 119, 255);
-        font-size: 17px;
-        margin-left: 5px;
     }
     
     .queryAbout{

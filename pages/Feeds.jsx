@@ -76,7 +76,7 @@ function Feeds({res}) {
 
             
                 <div className={styles.search_flex}>
-                        <HiIcons.HiSearch className={styles.search_icon} />
+                        <HiIcons.HiSearch style={{color:'var(--text-primary)'}} className={styles.search_icon} />
                         <input className={styles.search_input} type="text" placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)}/>
                         <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setSearch('')}/>
                 </div>

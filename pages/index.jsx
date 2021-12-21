@@ -102,14 +102,14 @@ export default function Home({categories}) {
                     <BiICons.BiCategoryAlt style={{marginRight:'8px'}}/>
                     Categories
                 </span>
-                <p 
-                style={{fontSize:'14px', color:'rgba(0, 0, 0, 0.5)', marginTop:'20px'}}>Select from the list of available categories.
+                <p style={{fontSize:'14px', color:'var(--text-primary)', marginTop:'20px'}}>
+                    Select from the list of available categories.
                 </p>
                 </>
                 
                 <div className={styles.search_parentFlex}>
                     <div className={styles.search_flex}>
-                            <HiIcons.HiSearch className={styles.search_icon} />
+                            <HiIcons.HiSearch className={styles.search_icon} style={{color:'var(--text-primary)'}}/>
                             <input className={styles.search_input} type="text" placeholder="Search" onChange={(e) => setQuery(e.target.value)} value={query}/>
                             <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setQuery('')}/>
                     </div>

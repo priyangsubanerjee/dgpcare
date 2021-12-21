@@ -21,7 +21,7 @@
     height: 100%;
     padding: 0px;
     margin: 0px;
-    background-color: #fff;
+    background-color: var(--bg-primary);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -32,9 +32,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.02);
+    background: var(--faq-secondary);
     border-bottom: 1px dashed rgb(168, 168, 168);
     padding: 22px 30px;
+    color: var(--black-primary);
 }
 
 .closeSidenav{
@@ -69,7 +70,7 @@
     display: flex;
     align-items: center;
     margin: 0;
-    color: black;
+    color: var(--black-primary);
     cursor: pointer;
 }
 
@@ -82,7 +83,7 @@
 
 .sidenavCardLink:hover{
 
-    background: rgba(0, 0, 0, 0.02);
+    background: var(--faq-primary);
 }
 
 .sidenavCardLinkIcon{

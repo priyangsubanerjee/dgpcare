@@ -106,7 +106,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
                 <IoIcons.IoMdCall className={styles.resourceCallButton} onClick={() => placeCall(resource.phone)}/>
                 <HiIcons.HiOutlineMail className={styles.resourceSmsButton} onClick={() => sendMessage(resource.phone)}/>
                 <IoIcons5.IoShareSocial className={styles.resourceShareButton} onClick={() => share()}/>
-                <BsIcons.BsBookmarkPlus className={styles.resourceBookmarkButton} onClick={handleSaveCard} style={{color: saved ? 'rgb(0, 119, 255)' : 'rgb(0, 0, 0)'}}/>
+                <BsIcons.BsBookmarkPlus className={styles.resourceBookmarkButton} onClick={handleSaveCard} style={{color: saved ? 'var(--blue-primary)' : 'var(--black-primary)'}}/>
             </div>
 
             { 

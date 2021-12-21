@@ -21,7 +21,7 @@ function NotificationCard({notification}) {
     return (
         <div className={styles.notificationCard}>
             <div className={styles.notificationCardHeader}>
-                <VscIcons.VscBellDot/>
+                <VscIcons.VscBellDot style={{color:'var(--black-primary)'}}/>
                 <span className={styles.notificationsDate}>{getDate(notification.createdAt)}</span>
                 <span className={styles.notificationsTime}>{getTimeMinutes(notification.createdAt)} Hrs</span>
                 <span className={styles.notificationSource}>Admin</span>

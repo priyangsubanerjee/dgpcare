@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    background: var(--bg-primary);
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -12,8 +13,8 @@
 
     font-size: 15px;
     font-weight: 600;
-    color: rgb(0, 119, 255);
-    background: rgba(0, 119, 255, 0.05);
+    color: var(--blue-primary);
+    background: var(--blue-secondary);
     padding: 10px;
     border-radius: 5px;
     margin-left: 10px;
@@ -22,7 +23,7 @@
 .brandUrl{
 
     font-size: 13px;
-    color: gray;
+    color: var(--text-primary);
     margin-top: 15px;
     padding: 5px;
 }
@@ -39,13 +40,8 @@
     margin-left: 30px;
     font-size: 20px;
     cursor: pointer;
-    color: rgba(0, 119, 255, 1);
+    color: var(--blue-primary);
     transition: all 0.2s ease-in-out;
-}
-
-.socialIcon:hover{
-
-    color: rgb(0, 119, 255);
 }
 
 @media screen and (max-width: 768px){

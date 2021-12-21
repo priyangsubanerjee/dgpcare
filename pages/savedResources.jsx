@@ -72,7 +72,7 @@ function SavedResources() {
 
             
                 <div className={styles.search_flex}>
-                        <HiIcons.HiSearch className={styles.search_icon} />
+                        <HiIcons.HiSearch style={{color:'var(--text-primary)'}} className={styles.search_icon} />
                         <input className={styles.search_input} type="text" placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)}/>
                         <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setQuery('')}/>
                 </div>
