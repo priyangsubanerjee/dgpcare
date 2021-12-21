@@ -67,87 +67,13 @@
 
 .aboutText{
 
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(63, 63, 63);
     margin-top: 25px;
     margin-left: 0px;
     display: block;
     line-height: 2;
-    width: 60%;
-}
-
-.horizontalFlex{
-
-    display: flex;
-    margin-top: 55px;
-    margin-left: 0px;
-}
-
-.shareContainer{
-
-    background: linear-gradient(to right, rgb(46, 144, 255), rgb(0, 119, 255));
-    width: fit-content;
-    padding: 20px 15px;
-    border-radius: 7px;
-    color: white;
-    max-width: 440px;
-    height: fit-content;
-}
-
-.shareHead{
-
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    display: flex;
-    line-height: 2;
-    align-items: center;
-}
-
-.socialIcons{
-
-    display: flex;
-    align-items: center;
-    width: 70%;
-    margin: auto;
-    margin-top: 30px;
-    justify-content: space-evenly;
-}
-
-.socialIcon{
-
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.shareDescription{
-
-    margin-top: 30px;
-    font-size: 13px;
-    line-height: 2;
-}
-
-.shareButton{
-
-    width: 100%;
-    border: 1px solid white;
-    margin-top: 30px;
-    padding: 10px;
-    background: transparent;
-    border-radius: 5px;
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.shareButton:hover{
-
-    background: white;
-    color: rgb(0, 119, 255);
+    width: 80%;
 }
 
 
@@ -171,10 +97,18 @@
 
 .faqDetails{
 
-    margin-top: 30px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0));
-    padding: 20px 15px;
-    border-left: 2px solid rgba(0, 119, 255, 1);
+    background: rgba(0, 0, 0, 0.02);
+    transition: all 0.2s ease-in-out;
+}
+
+.faqDetails:hover{
+
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.faqSummary:focus{
+
+    outline: none;
 }
 
 .faqSummary{
@@ -182,14 +116,38 @@
     font-size: 16px;
     color: rgb(48, 48, 48);
     font-weight: 500;
+    padding: 20px 15px;
     cursor: pointer;
+    margin: 0;
 }
 
 .faqAnswer{
 
     color: gray;
     font-size: 14px;
+    background: white;
     line-height: 2;
+    padding: 0 15px;
+}
+
+.shareContainer{
+
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    background: linear-gradient(to right, rgb(45, 143, 255), rgb(0, 105, 224));
+    box-shadow: 0px 0px 10px rgba(0, 119, 255, 0.2);
+    padding: 15px 20px;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.socialIcon{
+
+    margin-left: 20px;
 }
 
 @media screen and (max-width: 768px){
@@ -206,7 +164,13 @@
     }
     .aboutText{
 
+        font-size: 13px;
         width: 100%;
+    }
+
+    .faqSummary{
+
+        font-size: 14px;
     }
 
     .shareContainer{
@@ -227,4 +191,17 @@
 
         font-size: 13px;
     }
+
+    .shareContainer{
+
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .socialIcon{
+            
+            margin-left: 0px;
+    }
+
 }

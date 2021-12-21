@@ -66,25 +66,8 @@ function About() {
                     <p className={styles.aboutText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum nulla a dolor architecto corrupti eum optio harum odit eius sit qui, repellat est minima aperiam in soluta id reiciendis, repellendus debitis. Commodi ipsum magnam in quidem porro asperiores vel vero hic, consequatur, aperiam, unde ea repellendus odio saepe ex!</p>
                 </div>
 
-                <div className={styles.horizontalFlex}>
-                    <div className={styles.shareContainer}>
-                        <span className={styles.shareHead}><BsIcons.BsStars/> &nbsp; Share this page?</span>
-                        <div className={styles.socialIcons}>
-                            <BsIcons.BsWhatsapp title='Whatsapp' className={styles.socialIcon}/>
-                                <BsIcons.BsFacebook title='Facebook' className={styles.socialIcon}/>
-                                <BsIcons.BsInstagram title='Instagram' className={styles.socialIcon}/>
-                                <BsIcons.BsTwitter title='Twitter' className={styles.socialIcon}/>
-                                <BsIcons.BsLinkedin title='Linkedin' className={styles.socialIcon}/>
-                        </div>
-                        <div className={styles.shareDescription}>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab accusantium et, dicta doloremque quibusdam quidem ad voluptates aperiam, quas quaerat officiis? Vitae necessitatibus cupiditate minus blanditiis debitis nam amet nisi?
-                        </div>
-                        <button className={styles.shareButton}>Share now</button>
-                    </div>
-                </div>
-
                 <div className={styles.faqContainer}>
-                        <span className={styles.faqHead}>F.A.Q{`'`}s Section</span>
+                        <span className={styles.faqHead}>F.A.Q Section</span>
 
                         <details className={styles.faqDetails}>
                             <summary className={styles.faqSummary}>Who are we ?</summary>
@@ -110,6 +93,17 @@ function About() {
                             <summary className={styles.faqSummary}>What do we do?</summary>
                             <p className={styles.faqAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, explicabo!</p>
                         </details>
+                </div>
+
+                <div className={styles.shareContainer}>
+                    <span>Share this page ?</span>&nbsp;&nbsp;&nbsp;
+                    <BsIcons.BsWhatsapp className={styles.socialIcon}/>
+                    <BsIcons.BsFacebook className={styles.socialIcon}/>
+                    <BsIcons.BsTwitter className={styles.socialIcon}/>
+                    <BsIcons.BsLinkedin className={styles.socialIcon}/>
+                    <BsIcons.BsReddit className={styles.socialIcon}/>
+                    <BsIcons.BsPinterest className={styles.socialIcon}/>
+                    
                 </div>
                
             </div>
