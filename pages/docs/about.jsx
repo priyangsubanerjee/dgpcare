@@ -25,11 +25,11 @@ function About() {
         try {
             
             await navigator.share(shareData)
-            alert('Shared!')
-    
+            
         } catch(err) {
 
-            alert(err.message)
+            console.log(err)
+
         }
 
     }
@@ -66,7 +66,8 @@ function About() {
                 <div className={styles.about_container}>
                     <p className={styles.aboutText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum nulla a dolor architecto corrupti eum optio harum odit eius sit qui, repellat est minima aperiam in soluta id reiciendis, repellendus debitis. Commodi ipsum magnam in quidem porro asperiores vel vero hic, consequatur, aperiam, unde ea repellendus odio saepe ex!</p>
                 </div>
-                <div className={styles.shareContainer}>
+
+                <div className={styles.shareContainer} onClick={() => share()}>
                     <span>Share this page ?</span>&nbsp;&nbsp;&nbsp;
                     <BsIcons.BsWhatsapp className={styles.socialIcon}/>
                     <BsIcons.BsFacebook className={styles.socialIcon}/>
@@ -76,6 +77,7 @@ function About() {
                     <BsIcons.BsPinterest className={styles.socialIcon}/>
                     
                 </div>
+
                 <div className={styles.faqContainer}>
                         <span className={styles.faqHead}>F.A.Q Section</span>
 
@@ -105,8 +107,6 @@ function About() {
                         </details>
                 </div>
 
-               
-               
             </div>
 
             <Footer/>

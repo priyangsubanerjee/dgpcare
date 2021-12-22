@@ -5,6 +5,7 @@ import * as BiIcons from 'react-icons/bi'
 import * as IoIcons from 'react-icons/io5'
 import { useState, useEffect} from 'react'
 import Link from 'next/link'
+import Footer from '../../components/Footer'
 
 function ContactUs() {
 
@@ -66,7 +67,7 @@ function ContactUs() {
                     </div>
 
                 </div>
-
+                <Footer/>
         </div>
     )
 }

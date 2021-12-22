@@ -50,8 +50,8 @@
     transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
-    background: var(--card-button-primary);
-    color: var(--card-button-text);
+    background: var(--black-primary);
+    color: var(--white-primary);
 }
 
 .card_button:hover{
