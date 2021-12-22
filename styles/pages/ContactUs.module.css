@@ -101,15 +101,20 @@
 
 .form{
 
-    margin-top: 50px;
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 50px 0;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid var(--hr-primary);
 }
 
 .formGroup{
 
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .formLabel{
@@ -143,7 +148,6 @@
 
     width: fit-content;
     padding: 10px 15px;
-    margin-left: 30px;
     border: none;
     background: var(--black-primary);
     color: var(--white-primary);
@@ -175,12 +179,15 @@
     .container{
 
         padding: 30px 20px;
-        padding-bottom: 130px;
+        padding-bottom: 70px;
     }
 
     .form{
 
         width: 100%;
+        border: none;
+        margin: 10px 0;
+        padding: 10px;
     }
     
 }

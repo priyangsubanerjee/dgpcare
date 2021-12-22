@@ -6,76 +6,72 @@ import * as IoIcons from 'react-icons/io5'
 import { useState, useEffect} from 'react'
 import Link from 'next/link'
 import Footer from '../../components/Footer'
+import emailjs from 'emailjs-com'
 
 function ContactUs() {
 
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
-    const [name, setName] = useState('')
+    const [email, setEmail] = useState('s')
+    const [message, setMessage] = useState('s')
+    const [name, setName] = useState('s')
 
     const[progress, setProgress] = useState(false)
 
-    const handleSubmit = (e) => {
+    const data ={
 
-        e.preventDefault()
-        console.log(email, message, name)
-        setProgress(true)
-        
-        if(email && message && name) {
-            setEmail('')
-            setMessage('')
-            setName('')
-        }
-        else {
+        email: "priyangsu@gmail.com",
+        message: "Hello",
+    }
 
-            alert('Please fill out all fields')
-            setProgress(false)
+    const sendEmail = async (e) => {
+
+
+            e.preventDefault()
            
-        }
+            emailjs.sendForm('service_cxwhhsp', 'template_ykrgagm', e.target, 'user_OOObyVAeI31O8d1TMR0nd')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
 
-      }
-
+    }
 
     return (
         <div className={styles.container}>
-              <div>
-                    <span className={styles.header}>
-                        <BiIcons.BiSupport/>
-                        <span className={styles.header_text}>Contact us</span>
-                    </span>
-                    <span className={styles.about}>If you need any kind of <span className={styles.highlightedLink}>help</span> from us, or if you want to <span className={styles.highlightedLink}>report an issue,</span> then please leave it below. We&apos;ll respond asap.</span>
-                </div>
+
+            <div>
+                <span className={styles.header}>
+                    <BiIcons.BiSupport/>
+                    <span className={styles.header_text}>Contact us</span>
+                </span>
+                <span className={styles.about}>If you need any kind of <span className={styles.highlightedLink}>help</span> from us, or if you want to <span className={styles.highlightedLink}>report an issue,</span> then please leave it below. We&apos;ll respond asap.</span>
+            </div>
 
                 <div className={styles.form}>
 
+                <form onSubmit={sendEmail}>
                     <div className={styles.formGroup}>
-
                         <label className={styles.formLabel}>Name</label>
-                        <input className={styles.formInput} placeholder='Enter your name' type='text' value={name} onChange={(e) => setName(e.target.value)}/>
+                        <input className={styles.formInput} placeholder='Enter your name' type="text" name="name" />
                     </div>
-
                     <div className={styles.formGroup}>
-
-                        <label className={styles.formLabel}>Phone/E-mail</label>
-                        <input className={styles.formInput} placeholder='Phone number / Email address' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <label className={styles.formLabel}>Email / Phone</label>
+                        <input className={styles.formInput} placeholder='Enter Phone/Emal' type="text" name="email" />
                     </div>
-
-                     <div className={styles.formGroup}>
-
+                    <div className={styles.formGroup}>
                         <label className={styles.formLabel}>Message</label>
-                        <textarea className={styles.formInput} placeholder='Enter your message' type='text' rows={7} value={message} onChange={(e) => setMessage(e.target.value) }/>
+                        <textarea className={styles.formInput} rows={7} placeholder='Enter your message' name="message" />
                     </div>
+                   
+                    
+                   
+                    <input className={styles.formButton} type="submit" value="Send" />
+                </form>
 
-                    <div className={styles.formGroup}>
-                        <span style={{marginLeft:'auto', display:'flex', alignItems:'center'}}>
-                            { progress && <div className={styles.spinner}></div>}
-                            <button className={styles.formButton} onClick={(e) => handleSubmit(e)}>Send <IoIcons.IoSendSharp style={{marginLeft:'10px'}} /></button>
-                        </span>
-                        
-                    </div>
+            </div>
 
-                </div>
-                <Footer/>
+            <Footer/>
+            
         </div>
     )
 }
