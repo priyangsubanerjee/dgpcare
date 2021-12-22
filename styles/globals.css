@@ -29,6 +29,8 @@ a {
     --black-secondary: rgba(0,0,0,0.5);
     --black-hover: rgba(0,0,0,0.1);
 
+    --modal-bg: rgba(0,0,0,0.5);
+
     --white-primary: #fff;
 
     --topnav-bg: #fff;
@@ -67,6 +69,8 @@ a {
     --black-primary: rgb(221, 221, 221);
     --black-secondary: rgba(0,0,0,0.5);
     --black-hover: rgba(0,0,0,0.1);
+
+    --modal-bg: rgba(0, 0, 0, 0.76);
 
     --white-primary: rgb(0, 0, 0);
 

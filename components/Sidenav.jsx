@@ -38,15 +38,6 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                     <li className={styles.sidenavCardLink}>
                        <Link href='/docs/about'>
                             <a className={styles.parentLink} onClick={() => setSidenav(false)}>
-                                <MdIcons.MdOutlineBugReport className={styles.sidenavCardLinkIcon}/>
-                                <span className={styles.sidenavCardLinkText}>Report an issue</span>
-                            </a>
-                       </Link>
-                    </li>
-
-                    <li className={styles.sidenavCardLink}>
-                       <Link href='/docs/about'>
-                            <a className={styles.parentLink} onClick={() => setSidenav(false)}>
                                 <AiIcons.AiOutlineTeam className={styles.sidenavCardLinkIcon}/>
                                 <span className={styles.sidenavCardLinkText}>Team members</span>
                             </a>
@@ -58,6 +49,15 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                             <a className={styles.parentLink} onClick={() => setSidenav(false)}>
                                 <VscIcons.VscBook className={styles.sidenavCardLinkIcon}/>
                                 <span className={styles.sidenavCardLinkText}>Terms {'&'} Conditions</span>
+                            </a>
+                       </Link>
+                    </li>
+
+                    <li className={styles.sidenavCardLink}>
+                       <Link href='/docs/contactUs'>
+                            <a className={styles.parentLink} onClick={() => setSidenav(false)}>
+                                <BiIcons.BiSupport className={styles.sidenavCardLinkIcon}/>
+                                <span className={styles.sidenavCardLinkText}>Contact us</span>
                             </a>
                        </Link>
                     </li>

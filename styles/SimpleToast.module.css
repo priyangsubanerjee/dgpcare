@@ -3,9 +3,9 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: rgba(0, 0, 0, 1);
+    background: var(--black-primary);
     border-radius: 5px;
-    color: #fff;
+    color: var(--white-primary);
     overflow: hidden;
     display: flex;
     justify-content: center;

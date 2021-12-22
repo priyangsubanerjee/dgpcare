@@ -1,0 +1,176 @@
+.container{
+
+    padding: 40px;
+    user-select: none;
+    background: var(--bg-primary);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header{
+
+    display: flex;
+    align-items: center;
+    color: var(--blue-primary);
+}
+
+.header_text{
+
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.about{
+
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-top: 25px;
+    margin-left: 0px;
+    display: block;
+    line-height: 1.9;
+}
+
+.highlightedLink{
+
+    color: var(--red-primary);
+    background: var(--red-secondary);
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.highlightedLink:hover{
+
+    text-decoration: underline;
+}
+
+
+.search_flex{
+
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--searchflex-primary);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.search_flex:hover{
+
+    background: var(--searchflex-secondary);
+}
+
+.search_icon{
+
+    font-size: 20px;
+}
+
+.search_flex .search_input{
+
+    border: none;
+    margin-left: 10px;
+    background: transparent;
+    font-size: 15px;
+    width: 100%;
+}
+
+.clearQuery{
+
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.clearQuery:hover{
+
+    color: var(--black-primary);
+}
+
+.search_flex .search_input:focus, .search_flex .search_input:active{
+
+    outline: none;
+}
+
+.search_flex .search_input:focus + .search_icon{
+
+    color: var(--blue-primary);
+}
+
+.form{
+
+    margin-top: 50px;
+    width: 70%;
+}
+
+.formGroup{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.formLabel{
+
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.formInput{
+
+    border: none;
+    background: var(--searchflex-primary);
+    font-size: 15px;
+    padding: 15px;  
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    color: var(--black-primary);
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.formInput:focus{
+
+    outline: none;
+    background: var(--searchflex-secondary);
+}
+
+.formButton{
+
+    width: fit-content;
+    padding: 10px 15px;
+    margin-left: auto;
+    border: none;
+    background: var(--black-primary);
+    color: var(--white-primary);
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.formButton:hover{
+
+   opacity: 0.9;
+}
+
+@media screen and (max-width: 768px){
+
+    .container{
+
+        padding: 30px 20px;
+        padding-bottom: 130px;
+    }
+
+    .form{
+
+        width: 100%;
+    }
+    
+}
