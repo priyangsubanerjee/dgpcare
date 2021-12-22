@@ -5,9 +5,10 @@ import * as BsIcons from 'react-icons/bs'
 function NewsArticle({article}) {
 
     const shareData = {
+        
         title: 'Recent Feeds',
-        text: article.title.substring(0, 27) + '...' + '\n\n' + article.description.substring(0, 97)+'...' + '\n\n' +  "Read more: "  + article.url + '\n\n\n',
-        url: 'https://careplus.vercel.app'
+        text: article.title.substring(0, 27) + '...' + '\n\n' + article.description.substring(0, 97)+'...' + '\n\n',
+        url: article.url
       }
     
 

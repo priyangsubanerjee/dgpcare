@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/ContactUs.module.css'
+import styles from '../../styles/pages/ContactUs.module.css'
 import * as BsIcons from 'react-icons/bs'
 import * as BiIcons from 'react-icons/bi'
 import * as IoIcons from 'react-icons/io5'
@@ -13,10 +13,13 @@ function ContactUs() {
     const [message, setMessage] = useState('')
     const [name, setName] = useState('')
 
+    const[progress, setProgress] = useState(false)
+
     const handleSubmit = (e) => {
 
         e.preventDefault()
         console.log(email, message, name)
+        setProgress(true)
         
         if(email && message && name) {
             setEmail('')
@@ -24,7 +27,9 @@ function ContactUs() {
             setName('')
         }
         else {
+
             alert('Please fill out all fields')
+            setProgress(false)
            
         }
 
@@ -52,7 +57,7 @@ function ContactUs() {
                     <div className={styles.formGroup}>
 
                         <label className={styles.formLabel}>Phone/E-mail</label>
-                        <input className={styles.formInput} placeholder='Phone / Email address' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <input className={styles.formInput} placeholder='Phone number / Email address' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
 
                      <div className={styles.formGroup}>
@@ -62,8 +67,11 @@ function ContactUs() {
                     </div>
 
                     <div className={styles.formGroup}>
-
-                        <button className={styles.formButton} onClick={(e) => handleSubmit(e)}>Send <IoIcons.IoSendSharp style={{marginLeft:'10px'}} /></button>
+                        <span style={{marginLeft:'auto', display:'flex', alignItems:'center'}}>
+                            { progress && <div className={styles.spinner}></div>}
+                            <button className={styles.formButton} onClick={(e) => handleSubmit(e)}>Send <IoIcons.IoSendSharp style={{marginLeft:'10px'}} /></button>
+                        </span>
+                        
                     </div>
 
                 </div>

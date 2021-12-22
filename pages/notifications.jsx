@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Notifications.module.css'
+import styles from '../styles/pages/Notifications.module.css'
 import * as VscIcons from 'react-icons/vsc'
 import * as BsIcons from 'react-icons/bs'
 import * as HiIcons from 'react-icons/hi'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import ResourceCard from '../components/ResourceCard'
-import styles from '../styles/SavedResources.module.css'
+import styles from '../styles/pages/SavedResources.module.css'
 import * as BsIcons from 'react-icons/bs'
 import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link'

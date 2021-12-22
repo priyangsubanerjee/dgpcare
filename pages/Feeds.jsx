@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Feeds.module.css'
+import styles from '../styles/pages/Feeds.module.css'
 import * as BsIcons from 'react-icons/bs'
 import NewsArticle from '../components/NewsArticle';
 import * as HiIcons from 'react-icons/hi'

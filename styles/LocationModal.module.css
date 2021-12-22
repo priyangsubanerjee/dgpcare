@@ -70,25 +70,6 @@
     background: var(--blue-primary-dark);
 }
 
-.close_modal{
-
-    display: flex;
-    border: none;
-    padding: 10px 15px;
-    font-size: 15px;
-    border-radius: 5px;
-    margin-left: 20px;
-    cursor: pointer;
-    background: var(--card-button-primary);
-    color: var(--card-button-text);
-    transition: all 0.3s ease-in-out;
-}
-
-.close_modal:hover{
-
-    opacity: 0.8;
-}
-
 .close_modalButton{
 
     margin-left: auto;

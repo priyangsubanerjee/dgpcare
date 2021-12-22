@@ -27,7 +27,6 @@ function Modal({setModal}) {
                 <p className={styles.body}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor assumenda quia obcaecati quibusdam dolorem temporibus perspiciatis corporis adipisci harum minima!</p>
                 <div className={styles.buttons_flex}>
                     <button className={styles.send_locationRequest}>Send request<RiIcons.RiSendPlaneFill style={{marginLeft:'10px'}}/></button>
-                    <button className={styles.close_modal} onClick={() => setModal(false)}>Close</button>
                 </div>
             </div>
         </div>

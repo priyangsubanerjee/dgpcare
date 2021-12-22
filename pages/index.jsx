@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import {gql, GraphQLClient} from 'graphql-request'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/pages/Home.module.css'
 import * as BiICons from 'react-icons/bi'
 import CategoryCard from '../components/CategoryCard.jsx'
 import * as HiIcons from 'react-icons/hi'

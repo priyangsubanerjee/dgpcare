@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/About.module.css'
+import styles from '../../styles/pages/About.module.css'
 import * as BsIcons from 'react-icons/bs'
 import * as BiIcons from 'react-icons/bi'
 import * as AiIcons from 'react-icons/ai'
