@@ -114,6 +114,21 @@
     color: var(--blue-primary);
 }
 
+.viewArticle{
+
+    color: white;
+    background: rgb(0, 119, 255);
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 14px;
+    width: fit-content;
+}
+
 @media screen and (max-width: 768px){
 
     .container{

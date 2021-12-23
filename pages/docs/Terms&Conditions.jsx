@@ -24,7 +24,11 @@ function TermsandConditions() {
                 <h1>Interpretation and Definitions</h1>
                 <h2>Interpretation</h2>
                 <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+                
             </div>
+
+            <a href="https://www.privacypolicies.com/live/a02085b7-136a-4c3c-b15c-87ff47d81005"><span className={styles.viewArticle}> View full article</span></a>
+
         </div>
     )
 }
