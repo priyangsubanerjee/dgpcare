@@ -17,11 +17,10 @@ function NewsArticle({article}) {
         try {
             
             await navigator.share(shareData)
-            alert('Shared!')
     
         } catch(err) {
 
-            alert(err.message)
+            console.log(err.message)
         }
 
     }

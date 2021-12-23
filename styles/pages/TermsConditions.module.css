@@ -1,0 +1,147 @@
+.container{
+
+    padding: 40px;
+    user-select: none;
+    background: var(--bg-primary);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header{
+
+    display: flex;
+    align-items: center;
+    color: var(--blue-primary);
+}
+
+.header_text{
+
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.about{
+
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-top: 25px;
+    margin-left: 0px;
+    display: block;
+    line-height: 1.9;
+}
+
+.highlightedLink{
+
+    color: var(--red-primary);
+    background: var(--red-secondary);
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.highlightedLink:hover{
+
+    text-decoration: underline;
+}
+
+
+.search_flex{
+
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--searchflex-primary);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.search_flex:hover{
+
+    background: var(--searchflex-secondary);
+}
+
+.search_icon{
+
+    font-size: 20px;
+}
+
+.search_flex .search_input{
+
+    border: none;
+    margin-left: 10px;
+    background: transparent;
+    font-size: 15px;
+    width: 100%;
+}
+
+.clearQuery{
+
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.clearQuery:hover{
+
+    color: var(--black-primary);
+}
+
+.search_flex .search_input:focus, .search_flex .search_input:active{
+
+    outline: none;
+}
+
+.search_flex .search_input:focus + .search_icon{
+
+    color: var(--blue-primary);
+}
+
+.termsContainer{
+
+    margin-top: 40px;
+}
+
+.termsHeader{
+
+    color: var(--black-primary);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--hr-primary);
+}
+
+.termsUl{
+
+    padding: 0;
+    margin: 40px 0;
+}
+
+.termsLi{
+
+    margin: 20px 20px 20px 40px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.9;
+    white-space: normal;
+}
+
+@media screen and (max-width: 768px){
+
+    .container{
+
+        padding: 30px 20px;
+        padding-bottom: 70px;
+    }
+
+    .termsUl{
+
+        margin: 30px 0;
+    }
+
+    .termsLi{
+
+        margin: 20px 5px 0px 20px;
+    }
+
+}
