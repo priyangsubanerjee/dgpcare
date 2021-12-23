@@ -97,7 +97,7 @@ function ContactUs() {
 
             <h3 style={{color:'var(--black-primary)'}}>Or</h3>
             <p style={{color:'var(--text-secondary)', lineHeight:'1.9'}}>send us an email at <a  rel="noreferrer" href="mailto:dgpcovidresources@gmail.com" style={{color:'var(--blue-primary)'}}>dgpcovidresources@gmail.com</a></p>
-            <a  rel="noreferrer" href="mailto:dgpcovidresources@gmail.com"><span className={styles.openMail}><BiIcons.BiMailSend style={{marginRight:'10px'}}/> Tap to open mail</span></a>
+            <a href="mailto:dgpcovidresources@gmail.com"><span className={styles.openMail}><BiIcons.BiMailSend style={{marginRight:'10px'}}/> Tap to open mail</span></a>
 
             <Footer/>
             
