@@ -16,6 +16,9 @@ class MyDocument extends Document {
             <meta name="author" content="Priyangsu Banerjee" />
             <meta name="googlebot" content="index, follow" />
 
+            <meta name="theme-color" content="rgb(255, 255, 255)" media="(prefers-color-scheme: light)"/>
+            <meta name="theme-color" content="#13161f" media="(prefers-color-scheme: dark)"/>
+
             <meta property="og:site_name" content="Care Plus"></meta>
             <meta property="og:url" content="https:careplus.vercel.app" />
             <meta property="og:title" content="Dgp covid resources | Careplus" />
