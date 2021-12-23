@@ -92,7 +92,7 @@ function SavedResources() {
                     }
 
                     {
-                        savedCards.length === 0 && <span className={styles.emptyMessage}>You have nothing saved ! <Link href='/'><span className={styles.highlightedLink}>View categories</span></Link></span>
+                        savedCards.length === 0 && <span className={styles.emptyMessage}>No saved resource found ! <Link href='/'><span className={styles.highlightedLink}>View categories</span></Link></span>
                     }
 
                 </div>
