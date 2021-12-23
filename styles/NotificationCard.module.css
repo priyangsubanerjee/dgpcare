@@ -83,3 +83,12 @@
     background: rgb(0, 119, 255);
     color: white;
 }
+
+@media screen and (max-width: 768px){
+
+    .notificationBody{
+
+        font-size: 12px;
+    }
+    
+}
