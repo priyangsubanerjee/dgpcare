@@ -11,7 +11,7 @@ function TermsandConditions() {
                 <VscIcons.VscBook/>
                 <span className={styles.header_text}>Privacy Policy</span>
             </span>
-            <span className={styles.about}>Being a non-profit and a crowdsourced organization we are bound to some<a href="https://www.privacypolicies.com/live/a02085b7-136a-4c3c-b15c-87ff47d81005" rel="noopener" target={'_blank'}> <span className={styles.highlightedLink}>Terms &amp; Conditions</span></a> to avoid any professional sins.</span>
+            <span className={styles.about}>Being a non-profit and a crowdsourced organization we are bound to some<a href="https://www.privacypolicies.com/live/a02085b7-136a-4c3c-b15c-87ff47d81005" rel="noreferrer" target={'_blank'}> <span className={styles.highlightedLink}>Terms &amp; Conditions</span></a> to avoid any professional sins.</span>
             </div>
 
             <div className={styles.hr}></div>
