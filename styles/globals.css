@@ -20,6 +20,21 @@ a {
   box-sizing: border-box;
 }
 
+li, p{
+
+    line-height: 1.9;
+    color: var(--text-primary);
+}
+
+h1{
+
+    color: var(--black-primary);
+}
+
+h2, h3, h4, h5, h6{
+
+    color: var(--text-secondary);
+}
 
 :root{
 

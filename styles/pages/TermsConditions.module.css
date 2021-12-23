@@ -99,31 +99,19 @@
     color: var(--blue-primary);
 }
 
-.termsContainer{
 
-    margin-top: 40px;
+.hr{
+
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: var(--hr-primary);
+    margin: 30px 0;
 }
 
-.termsHeader{
+.link{
 
-    color: var(--black-primary);
-    padding: 20px 0;
-    border-bottom: 1px solid var(--hr-primary);
-}
-
-.termsUl{
-
-    padding: 0;
-    margin: 40px 0;
-}
-
-.termsLi{
-
-    margin: 20px 20px 20px 40px;
-    color: var(--text-secondary);
-    font-size: 14px;
-    line-height: 1.9;
-    white-space: normal;
+    color: var(--blue-primary);
 }
 
 @media screen and (max-width: 768px){
