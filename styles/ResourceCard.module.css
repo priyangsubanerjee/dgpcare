@@ -89,8 +89,8 @@
 
 .resourceCallButton:hover{
 
-    color: var(--blue-primary); 
-    background: var(--blue-secondary);
+    color: white; 
+    background: rgb(0, 119, 255);
 }
 
 .resourceShareButton{

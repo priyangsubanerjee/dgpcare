@@ -16,6 +16,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
     const categoryMap = resource.category.trim().split('-')
     const categoryName = categoryMap[0].charAt(0).toUpperCase() + categoryMap[0].slice(1) + ' ' + categoryMap[1].charAt(0).toUpperCase() + categoryMap[1].slice(1).substring(0, categoryMap[1].length - 2)
 
+
     useEffect(() => {
 
         saveCards.map(card => {
@@ -97,10 +98,10 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
             <span style={{display:'flex', alignItems:'center'}}>
                 <FiIcons.FiCheckCircle className={styles.resourceProviderIcon}/> <span className={styles.resourceCategory}>{categoryName}</span>
             </span>
-            
+        
             <span className={styles.resourceProviderName}>{resource.title}</span>
             <span className={styles.resourceProviderDescription}>{resource.description}</span>
-            <span className={styles.resourceProviderDescription}>{resource.phone}</span>
+            <span style={{color:'var(--black-primary)'}} className={styles.resourceProviderDescription}>{resource.phone}</span>
             <div className={styles.resourceActionFlex}>
                 <IoIcons.IoMdCall className={styles.resourceCallButton} onClick={() => placeCall(resource.phone)}/>
                 <HiIcons.HiOutlineMail className={styles.resourceSmsButton} onClick={() => sendMessage(resource.phone)}/>

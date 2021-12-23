@@ -58,7 +58,6 @@ function Category({data}) {
 
     const router = useRouter()
     const { category } = router.query
-
     const [sQuery, setSquery] = useState('')
     const [resource, setResources] = useState(data?data:[])
     const [savedCards, setSavedCards] = useState(() => {
@@ -119,7 +118,7 @@ function Category({data}) {
             <div className={styles.container} >
 
                 <div className={styles.queryInfo}>
-                    <span className={styles.queryFlex}><MdIcons.MdVerified style={{color:'var(--blue-primary)'}} className={styles.queryIcon}/><span style={{color:'var(--text-secondary)'}}> Available resources for </span> <span className={styles.queryText}>{categoryName}</span></span>
+                    <span className={styles.queryFlex}><MdIcons.MdVerified style={{color:'var(--blue-primary)'}} className={styles.queryIcon}/><span className={styles.queryText}>{categoryName}</span></span>
                     <span className={styles.queryAbout} style={{color:'var(--text-primary)'}}>Remember we dont assure available stocks, read our &nbsp; <Link href='/'><span className={styles.highLightedRed}>Terms &amp; Conditions</span></Link> or you can <Link href='/'><span className={styles.highLightedBlue}>Contact us</span></Link> for any assistance.</span>
                 </div>
 
@@ -137,7 +136,8 @@ function Category({data}) {
 
                             if(resource.category === category){
                                 
-                                return <ResourceCard resource={resource} saveCards={savedCards} setSavedCard={setSavedCards} key={resource.id}/>
+                              return <ResourceCard resource={resource} saveCards={savedCards} setSavedCard={setSavedCards} key={resource.id}/>
+                            
                             }
 
                         })
