@@ -45,10 +45,10 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                     </li>
                     
                     <li className={styles.sidenavCardLink}>
-                       <Link href='/docs/Terms&amp;Conditions'>
+                       <Link href='/docs/PrivacyPolicy'>
                             <a className={styles.parentLink} onClick={() => setSidenav(false)}>
                                 <VscIcons.VscBook className={styles.sidenavCardLinkIcon}/>
-                                <span className={styles.sidenavCardLinkText}>Terms {'&'} Conditions</span>
+                                <span className={styles.sidenavCardLinkText}>Privacy Policy</span>
                             </a>
                        </Link>
                     </li>
