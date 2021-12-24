@@ -1,7 +1,7 @@
 .articleCard{
 
     border: 1px solid var(--card-border-primary);
-    background: var(--bg-primary);
+    background: transparent;
     padding: 20px 20px;
     margin-bottom: 30px;
     border-radius: 5px;
