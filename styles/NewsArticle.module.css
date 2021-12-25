@@ -1,6 +1,6 @@
 .articleCard{
 
-    border: 1px solid var(--card-border-primary);
+    border: 1px dashed var(--card-border-primary);
     background: transparent;
     padding: 20px 20px;
     margin-bottom: 30px;
