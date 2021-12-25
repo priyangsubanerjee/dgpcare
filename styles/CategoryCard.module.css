@@ -6,7 +6,7 @@
     flex-direction: column;
     border-radius: 8px;
     background: transparent;
-    border: 1px solid var(--card-border-primary);
+    border: 1px dashed var(--card-border-primary);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     user-select: none;

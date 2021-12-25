@@ -6,6 +6,7 @@ import CategoryCard from '../components/CategoryCard.jsx'
 import * as HiIcons from 'react-icons/hi'
 import * as BsIcons from 'react-icons/bs'
 import Head from 'next/head'
+import axios from 'axios'
 
 
 export async function getStaticProps() {
@@ -82,7 +83,6 @@ export default function Home({categories}) {
         }
         
     }, [query])
-
     
     return (
 
