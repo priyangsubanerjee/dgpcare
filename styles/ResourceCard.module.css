@@ -47,6 +47,15 @@
     line-height: 1.9;
 }
 
+.resourceProviderPhone{
+
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 1.9;
+}
+
 .resourceProviderCategory{
 
     font-size: 13px;
@@ -58,7 +67,7 @@
 .resourceActionFlex{
     display: flex;
     align-items: center;
-    margin-top: 15px;
+    margin-top: auto;
 }
 
 .resourceSmsButton{

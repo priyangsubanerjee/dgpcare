@@ -101,7 +101,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
         
             <span className={styles.resourceProviderName}>{resource.title}</span>
             <span className={styles.resourceProviderDescription}>{resource.description}</span>
-            <span style={{color:'var(--black-primary)'}} className={styles.resourceProviderDescription}>{resource.phone}</span>
+            <span style={{color:'var(--black-primary)'}} className={styles.resourceProviderPhone}>{resource.phone}</span>
             <div className={styles.resourceActionFlex}>
                 <IoIcons.IoMdCall className={styles.resourceCallButton} onClick={() => placeCall(resource.phone)}/>
                 <HiIcons.HiOutlineMail className={styles.resourceSmsButton} onClick={() => sendMessage(resource.phone)}/>
