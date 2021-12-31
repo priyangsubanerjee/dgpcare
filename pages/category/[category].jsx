@@ -105,8 +105,8 @@ function Category({data}) {
 
     } , [sQuery])
 
-    const categoryMap = category.split('-')
-    const categoryName = categoryMap.map(item => item.charAt(0).toUpperCase() + item.slice(1)).join(' ')
+    const categoryMap = category.includes('-') ? category.split('-') : category.split(' ')
+    const categoryName = category.length > 1 ? categoryMap.map(item => item.charAt(0).toUpperCase() + item.slice(1)).join(' ') : category.charAt(0).toUpperCase() + category.slice(1)
 
     return (
 

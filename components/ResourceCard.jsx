@@ -13,8 +13,8 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
     const [saved, setSaved] = useState(false)
     const [toast, setToast] = useState(false)
-    const categoryMap = resource.category.trim().split('-')
-    const categoryName = categoryMap[0].charAt(0).toUpperCase() + categoryMap[0].slice(1) + ' ' + categoryMap[1].charAt(0).toUpperCase() + categoryMap[1].slice(1).substring(0, categoryMap[1].length - 2)
+    const categoryMap = resource.category.includes('-') ? resource.category.trim().split('-') : resource.category.trim().split(' ')
+    const categoryName = categoryMap.length > 1 ? categoryMap[0].charAt(0).toUpperCase() + categoryMap[0].slice(1) + ' ' + categoryMap[1].charAt(0).toUpperCase() + categoryMap[1].slice(1).substring(0, categoryMap[1].length - 2) : categoryMap[0].charAt(0).toUpperCase() + categoryMap[0].slice(1)
 
 
     useEffect(() => {
