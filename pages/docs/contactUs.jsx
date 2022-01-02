@@ -22,37 +22,6 @@ function ContactUs() {
         message: "Hello",
     }
 
-    const sendEmail = async (e) => {
-
-
-            e.preventDefault()
-
-            if(name && email && message){
-
-                setProgress(true)
-
-                emailjs.sendForm('service_cxwhhsp', 'template_ykrgagm', e.target, 'user_OOObyVAeI31O8d1TMR0nd')
-                    .then((result) => {
-
-                        e.target.reset()
-                        setName('')
-                        setEmail('')
-                        setMessage('')
-                        setProgress(false)
-                        alert('Message sent successfully')
-                        
-                    }, (error) => {
-                        console.log(error.text);
-                        setProgress(false)
-                    });
-
-            }else{
-
-                alert('Please fill all the fields')
-                setProgress(false)
-            }
-    }
-
     return (
         <div className={styles.container}>
 
@@ -66,7 +35,7 @@ function ContactUs() {
 
                 <div className={styles.form}>
 
-                <form onSubmit={sendEmail}>
+                <form>
                     <div className={styles.formGroup}>
                         <label className={styles.formLabel}>Name</label>
                         <input className={styles.formInput} value={name} onChange={(e) => setName(e.target.value)} placeholder='Enter your name' type="text" name="name" required/>

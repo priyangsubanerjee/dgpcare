@@ -36,6 +36,12 @@
 
     font-size: 12px;
     color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.linkAction{
+
+    margin-top: auto;
 }
 
 .card_button{
@@ -44,7 +50,6 @@
     width: fit-content;
     padding: 10px 15px;
     border-radius: 5px;
-    margin-top: 10px;
     font-size: 13px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;

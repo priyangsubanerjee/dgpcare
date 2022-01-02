@@ -12,14 +12,17 @@ function CategoryCard({props, setProgressBar}) {
                 <BsICons.BsJournalMedical className={styles.card_icon}/>
                 <span className={styles.card_title}>{props.title}</span>
                 <p className={styles.card_body}>{props.description}</p>
-                <Link href={`category/` + props.slug}>
-                    <a style={{width:'fit-content'}}>
-                        <button className={styles.card_button} onClick={() => setProgressBar(true)}>
-                            View all <IoIcons.IoIosArrowForward style={{marginLeft:'5px'}}/>
-                        </button>
-                    </a>
-                   
-                </Link>
+                <div className={styles.linkAction}>
+                    <Link href={`category/` + props.slug}>
+                        <a style={{width:'fit-content'}}>
+                            <button className={styles.card_button} onClick={() => setProgressBar(true)}>
+                                View all <IoIcons.IoIosArrowForward style={{marginLeft:'5px'}}/>
+                            </button>
+                        </a>
+                    
+                    </Link>
+                </div>
+                
         </div>
     )
 }
