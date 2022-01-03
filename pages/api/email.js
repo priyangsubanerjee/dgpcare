@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 export default async function (req, res) {
 
     const { method } = req
-    const {email, message, subject, from} = req.body
+    const {email, message} = req.body
 
     switch (method) {
 
@@ -20,9 +20,9 @@ export default async function (req, res) {
 
             const mailData = {
 
-            from: from,
-            to: email,
-            subject: subject,
+            from:  process.env.USER_NAME,
+            to:  process.env.USER_NAME,
+            subject: "Contact Form Submission",
             html: message,
             }
 

@@ -44,157 +44,110 @@
     text-decoration: underline;
 }
 
+.formConatiner{
 
-.search_flex{
-
-    width: 50%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: var(--searchflex-primary);
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.search_flex:hover{
-
-    background: var(--searchflex-secondary);
-}
-
-.search_icon{
-
-    font-size: 20px;
-}
-
-.search_flex .search_input{
-
-    border: none;
-    margin-left: 10px;
-    background: transparent;
-    font-size: 15px;
-    width: 100%;
-}
-
-.clearQuery{
-
-    color: var(--text-primary);
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.clearQuery:hover{
-
-    color: var(--black-primary);
-}
-
-.search_flex .search_input:focus, .search_flex .search_input:active{
-
-    outline: none;
-}
-
-.search_flex .search_input:focus + .search_icon{
-
-    color: var(--blue-primary);
+    flex-direction: column;
+    margin-top: 50px;
 }
 
 .form{
 
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 50px 0;
-    padding: 25px 30px;
     border: 1px solid var(--hr-primary);
-}
-
-.formGroup{
-
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    width: fit-content;
+    min-width: 500px;
 }
 
-.formLabel{
+.inputLabel{
 
-    margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-primary);
-    font-weight: 500;
+    margin-bottom: 15px;
+    margin-left: 5px;
 }
 
-.formInput{
+.input{
 
-    border: none;
-    background: var(--searchflex-primary);
+    border: 1px solid var(--hr-primary);
+    padding: 13px 15px;
     font-size: 15px;
-    padding: 15px;  
-    border-radius: 4px;
-    transition: all 0.3s ease-in-out;
     color: var(--black-primary);
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin-bottom: 10px;
+    background: var(--searchflex-primary);
+    border-radius: 4px;
 }
 
-.formInput:focus{
+.textarea{
+
+    border: 1px solid var(--hr-primary);
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--black-primary);
+    background: var(--searchflex-primary);
+    border-radius: 4px;
+    padding: 13px 15px;
+}
+
+.textarea:focus{
 
     outline: none;
-    background: var(--searchflex-secondary);
 }
 
-.hFlex{
+.input:focus{
+
+    outline: none;
+}
+
+.actionFlex{
 
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
-    justify-content: flex-end;
 }
 
-.formButton{
+.submitButton{
 
-    width: fit-content;
-    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
     border: none;
+    border-radius: 4px;
     background: var(--black-primary);
-    color: var(--white-primary);
-    font-size: 15px;
-    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
+    font-size: 13px;
+    margin-left: auto;
 }
 
-.formButton:hover{
+.submitIcon{
 
-   opacity: 0.9;
+    margin-left: 8px;
+    color: var(--white-primary);
+    font-size: 16px;
 }
 
-.spinner{
+.sipnner{
 
-    width: 30px;
-    height: 30px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
-    border: 2px solid var(--black-primary);
+    border: 1.5px solid var(--white-primary);
+    margin-right: 10px;
     border-top-color: transparent;
-    animation: spinner 1s linear infinite;
-
+    animation: spinner 1s infinite linear;
 }
 
-.openMail{
+.optionaltext{
 
-    padding: 10px 15px;
-    background: rgb(0, 119, 255);
-    color: white;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    font-size: 14px;
-    border-radius: 4px;
-    margin-top: 30px;
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-top: 20px;
+}
+
+.emailLink{
+
+    color: var(--blue-primary);
 }
 
 @media screen and (max-width: 768px){
@@ -202,23 +155,6 @@
     .container{
 
         padding: 30px 20px;
-    }
-
-    .form{
-
-        width: 100%;
-        margin: 40px 0;
-        padding: 20px;
-    }
-
-    .formInput{
-
-        padding: 15px 10px;
-    }
-
-    .formButton{
-
-        font-size: 14px;
     }
 
 }

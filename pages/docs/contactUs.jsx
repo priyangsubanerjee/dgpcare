@@ -7,19 +7,45 @@ import { useState, useEffect} from 'react'
 import Link from 'next/link'
 import Footer from '../../components/Footer'
 import emailjs from 'emailjs-com'
+import axios from 'axios'
 
 function ContactUs() {
 
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-    const [name, setName] = useState('')
-
     const[progress, setProgress] = useState(false)
 
-    const data ={
+    function sendMail(){
 
-        email: "priyangsu@gmail.com",
-        message: "Hello",
+        if(email && message){
+
+            setProgress(true)
+
+            axios.post('/api/email', JSON.stringify({
+
+                email,
+                message
+
+            }), {
+
+                headers: {
+
+                    'Content-Type': 'application/json'
+                
+            }}).then(res => {
+
+                setProgress(false)
+                console.log(res)
+                setEmail('')
+                setMessage('')
+
+            }).catch(err => {
+
+                setProgress(false)
+                console.log(err)
+            });
+        }
+
     }
 
     return (
@@ -32,41 +58,32 @@ function ContactUs() {
                 </span>
                 <span className={styles.about}>If you need any kind of <span className={styles.highlightedLink}>help</span> from us, or if you want to <span className={styles.highlightedLink}>report an issue,</span> then please leave it below. We&apos;ll respond asap.</span>
             </div>
-
+            
+            <div className={styles.formConatiner}>
                 <div className={styles.form}>
+                    <small className={styles.inputLabel}>Name</small>
+                    <input type="text" placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} className={styles.input}/>
+                    <br />
+                    <small className={styles.inputLabel}>Message</small>
+                    <textarea rows={5} type="text" placeholder='Enter your message' value={message} onChange={(e) => setMessage(e.target.value)} className={styles.textarea}/>
+                    <br />
+                    <div className={styles.actionFlex}>
 
-                <form>
-                    <div className={styles.formGroup}>
-                        <label className={styles.formLabel}>Name</label>
-                        <input className={styles.formInput} value={name} onChange={(e) => setName(e.target.value)} placeholder='Enter your name' type="text" name="name" required/>
-                    </div>
-                    <div className={styles.formGroup}>
-                        <label className={styles.formLabel}>Email / Phone</label>
-                        <input className={styles.formInput} value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter Phone/Emal' type="text" name="email" required/>
-                    </div>
-                    <div className={styles.formGroup}>
-                        <label className={styles.formLabel}>Message</label>
-                        <textarea className={styles.formInput} value={message} onChange={(e) => setMessage(e.target.value)} rows={7} placeholder='Enter your message' name="message" required/>
-                    </div>
-                   
-                    <div className={styles.hFlex}>
+                        <button className={styles.submitButton} onClick={() => {
+                            
+                            sendMail()
 
-                        {
-                            progress && <div className={styles.spinner}></div>
-                        }
-                        
-                        <button className={styles.formButton} type="submit">Send <IoIcons.IoSend style={{marginLeft:'10px'}}/></button>
+                        }}>
+                            {
+                                progress && <div className={styles.sipnner}></div>
+                            }
+                            <span>Submit</span>
+                            <BiIcons.BiSend className={styles.submitIcon}/>
+                        </button>
                     </div>
-                    
-
-                </form>
-
+                    <p className={styles.optionaltext}>or send us a mail at <a className={styles.emailLink} href="/">dgpcovidresources@gmail.com</a></p>
+                </div>
             </div>
-
-
-            <h3 style={{color:'var(--black-primary)'}}>Or</h3>
-            <p style={{color:'var(--text-secondary)', lineHeight:'1.9'}}>send us an email at <a  rel="noreferrer" href="mailto:dgpcovidresources@gmail.com" style={{color:'var(--blue-primary)'}}>dgpcovidresources@gmail.com</a></p>
-            <a href="mailto:dgpcovidresources@gmail.com" rel="noreferrer"><span className={styles.openMail}><BiIcons.BiMailSend style={{marginRight:'10px'}}/> Tap to open mail</span></a>
 
             <Footer/>
             
