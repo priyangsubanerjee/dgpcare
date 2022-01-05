@@ -10,6 +10,7 @@
   user-select: none;
   background: var(--bg-primary);
   -webkit-tap-highlight-color: transparent;
+  position: relative;
 }
 
 .menu {

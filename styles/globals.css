@@ -39,6 +39,7 @@ h2, h3, h4, h5, h6{
 :root{
 
     --bg-primary: #fff;
+    --contact-form-bg : #f5f5f5;
 
     --black-primary: #000;
     --black-secondary: rgba(0,0,0,0.5);
@@ -80,6 +81,7 @@ h2, h3, h4, h5, h6{
 [data-theme="dark"] {
 
     --bg-primary: #13161f;
+    --contact-form-bg : #0c0e16;
 
     --black-primary: rgb(221, 221, 221);
     --black-secondary: rgba(0,0,0,0.5);

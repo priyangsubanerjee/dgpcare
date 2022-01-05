@@ -1,0 +1,49 @@
+.TeamMemberCard {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px dashed var(--card-border-primary);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.TeamMemberCard:hover {
+  box-shadow: 0px 5px 10px var(--card-hover-shadow);
+  border: 1px dashed var(--blue-primary);
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.aboutProfile {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  padding: 5px;
+}
+
+.socialFlex {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.socialIcon {
+  opacity: 0.5;
+  padding: 5px;
+  height: auto;
+  width: auto;
+  margin-right: 5px;
+}
+
+.socialIcon:hover {
+  opacity: 1;
+}

@@ -36,7 +36,7 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                     </li>
 
                     <li className={styles.sidenavCardLink}>
-                       <Link href='/docs/about'>
+                       <Link href='/docs/TeamMembers'>
                             <a className={styles.parentLink} onClick={() => setSidenav(false)}>
                                 <AiIcons.AiOutlineTeam className={styles.sidenavCardLinkIcon}/>
                                 <span className={styles.sidenavCardLinkText}>Team members</span>

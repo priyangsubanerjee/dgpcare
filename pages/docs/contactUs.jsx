@@ -61,7 +61,7 @@ function ContactUs() {
             
             <div className={styles.formConatiner}>
                 <div className={styles.form}>
-                    <small className={styles.inputLabel}>Name</small>
+                    <small className={styles.inputLabel}>Email</small>
                     <input type="text" placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} className={styles.input}/>
                     <br />
                     <small className={styles.inputLabel}>Message</small>
@@ -83,6 +83,21 @@ function ContactUs() {
                     </div>
                     <p className={styles.optionaltext}>or send us a mail at <a className={styles.emailLink} href="/">dgpcovidresources@gmail.com</a></p>
                 </div>
+
+                <div className={styles.userAlert}>
+                    <h1>Disclaimer</h1>
+                    <p style={{margin:'0'}}>Keep the following things in mind</p>
+                    <div className={styles.hr}></div>
+                    <ul style={{marginTop:'50px'}}>
+                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                    </ul>
+                </div>
+                
+                
             </div>
 
             <Footer/>

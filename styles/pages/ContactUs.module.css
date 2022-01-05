@@ -49,24 +49,26 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    margin-bottom: 190px;
 }
 
 .form{
 
-    border: 1px solid var(--hr-primary);
     padding: 30px;
     display: flex;
     flex-direction: column;
     width: fit-content;
     min-width: 500px;
+    background: var(--contact-form-bg);
 }
 
 .inputLabel{
 
     font-size: 13px;
     color: var(--text-primary);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     margin-left: 5px;
+    font-weight: 600;
 }
 
 .input{
@@ -76,7 +78,7 @@
     font-size: 15px;
     color: var(--black-primary);
     margin-bottom: 10px;
-    background: var(--searchflex-primary);
+    background: transparent;
     border-radius: 4px;
 }
 
@@ -86,19 +88,21 @@
     font-size: 15px;
     margin-bottom: 10px;
     color: var(--black-primary);
-    background: var(--searchflex-primary);
+    background: transparent;
     border-radius: 4px;
     padding: 13px 15px;
 }
 
 .textarea:focus{
 
+    border: 1px solid var(--black-primary);
     outline: none;
 }
 
 .input:focus{
 
     outline: none;
+    border: 1px solid var(--black-primary);
 }
 
 .actionFlex{
@@ -118,6 +122,7 @@
     cursor: pointer;
     font-size: 13px;
     margin-left: auto;
+    color: var(--white-primary);
 }
 
 .submitIcon{
@@ -150,11 +155,28 @@
     color: var(--blue-primary);
 }
 
+.userAlert{
+
+    margin-top: 50px;
+}
+
+.hr{
+
+    width: 100%;
+    border: 1px solid var(--hr-primary);
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 768px){
 
     .container{
 
         padding: 30px 20px;
+    }
+    .form{
+
+        min-width: 100%;
+        padding: 20px;
     }
 
 }

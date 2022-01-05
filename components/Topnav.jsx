@@ -10,10 +10,11 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Sidenav from './Sidenav'
 
-function Topnav() {
+function Topnav({}) {
 
     const [modal, setModal] = useState(false)
     const [sidenav, setSidenav] = useState(false)
+    const [loading, setLoading] = useState(false)
 
 
     const[theme, setTheme] = useState(() => {
@@ -55,6 +56,7 @@ function Topnav() {
     return (
 
         <div className={styles.topnav}>
+
             <AiIcons.AiOutlineMenu className={styles.menu} onClick={() => setSidenav(true)}/>
             <Link href="/"><a className={styles.brand}><span>C-19 Resources</span></a></Link>
             <span className={styles.location_flex} onClick={() => setModal(!modal)}>

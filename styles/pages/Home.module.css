@@ -7,13 +7,14 @@
 
 .progressBar {
   width: 100%;
-  height: 3px;
+  height: 70px;
   background-color: var(--blue-primary);
   margin-bottom: 20px;
-  position: fixed;
-  top: 68px;
-  left: 0;
   animation: progressBar 2s infinite;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  opacity: 0.05;
 }
 
 .heading {
@@ -110,6 +111,10 @@
   .searchError {
     margin-top: 20px;
     margin-left: 0;
+  }
+  .progressBar{
+
+    animation: progressBar 3s infinite;
   }
 }
 

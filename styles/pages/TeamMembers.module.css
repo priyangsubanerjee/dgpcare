@@ -1,0 +1,148 @@
+.container{
+
+    padding: 40px;
+    user-select: none;
+    background: var(--bg-primary);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header{
+
+    display: flex;
+    align-items: center;
+    color: var(--blue-primary);
+}
+
+.header_text{
+
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.about{
+
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-top: 25px;
+    margin-left: 0px;
+    display: block;
+}
+
+.highlightedRed{
+
+    color: var(--red-primary);
+    background: var(--red-secondary);
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.highlightedRed:hover{
+
+    text-decoration: underline;
+}
+
+.highlightedBlue{
+
+    color: var(--blue-primary);
+    background: (--blue-primary);
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.highlightedBlue:hover{
+
+    text-decoration: underline;
+}
+
+.hr{
+
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: var(--hr-primary);
+    margin-top: 30px;
+}
+
+.search_flex {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--searchflex-primary);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search_flex:hover {
+    background: var(--searchflex-secondary);
+  }
+  
+  .search_icon {
+    font-size: 20px;
+  }
+  
+  .search_flex .search_input {
+    border: none;
+    margin-left: 10px;
+    background: transparent;
+    font-size: 15px;
+    width: 100%;
+  }
+  
+  .clearQuery {
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .clearQuery:hover {
+    color: var(--black-primary);
+  }
+  
+  .search_flex .search_input:focus,
+  .search_flex .search_input:active {
+    outline: none;
+  }
+  
+  .search_flex .search_input:focus + .search_icon {
+    color: var(--blue-primary);
+  }
+
+  .teamMemeberContainer{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+  }
+
+  
+@media screen and (max-width: 768px){
+
+    .container{
+
+        padding: 30px 20px;
+    }
+
+    .about{
+
+        line-height: 2;
+    }
+    .aboutText{
+
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    .search_flex {
+        width: 100%;
+      }
+    
+      .search_flex .search_input {
+        font-size: 14px;
+      }
+}
