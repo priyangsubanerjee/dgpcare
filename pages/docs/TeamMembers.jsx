@@ -1,4 +1,5 @@
 import React from 'react'
+import {gql, GraphQLClient} from 'graphql-request'
 import styles from '../../styles/pages/TeamMembers.module.css'
 import Footer from '../../components/Footer'
 import Head from 'next/head'
@@ -9,8 +10,58 @@ import * as HiIcons from 'react-icons/hi'
 import { useState } from 'react'
 import TeamMemberCard from '../../components/TeamMemberCard'
 
-function TeamMembers() {
 
+export async function getStaticProps() {
+
+    const url = process.env.ENDPOINT_URL
+    const GraphClient = new GraphQLClient( url , 
+
+        { 
+            headers: { 
+                
+                'Authorization': process.env.GRAPH_CMS_TOKEN 
+            } 
+    })
+
+    const query = gql`
+    
+    query{
+  
+        members{
+              name
+          image {
+            url
+          }
+          twitter
+          instagram
+          github
+          linkedin
+          description
+        }
+      }
+    `
+
+
+    const data = await GraphClient.request(query)
+    const members = data.members
+
+    return{
+
+        props: {
+
+            members,
+        },
+        revalidate: 60,
+    }
+}
+
+
+function TeamMembers({ members }) {
+
+    const [data, setData] = useState(members)
+    const [filtered, setFiltered] = useState([])
+
+    console.log(members)
 
     const [query, setQuery] = useState('')
 
@@ -43,10 +94,12 @@ function TeamMembers() {
                 <br />
                 
                 <div className={styles.teamMemeberContainer}>
-                    <TeamMemberCard/>
-                    <TeamMemberCard/>
-                    <TeamMemberCard/>
-                    <TeamMemberCard/>
+                    {
+                        data.map((item) => {
+
+                            return <TeamMemberCard key={item.id} props={item}/>
+                        })
+                    }
                 </div>
             </div>
 
