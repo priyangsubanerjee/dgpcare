@@ -95,7 +95,7 @@ export default function Home({categories}) {
             <div className={styles.container}>
 
                 {
-                    !progressBar && <div className={styles.progressBar}></div>
+                    progressBar && <div className={styles.progressBar}></div>
                 }
 
                 <>

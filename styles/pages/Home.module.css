@@ -113,9 +113,8 @@
     margin-left: 0;
   }
   .progressBar{
-
-
-    animation: progressBar 2s infinite;
+      
+    animation: progressBar 3s infinite;
   }
 }
 
