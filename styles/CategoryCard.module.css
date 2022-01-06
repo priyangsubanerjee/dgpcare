@@ -42,6 +42,7 @@
 .linkAction{
 
     margin-top: auto;
+    width: fit-content;
 }
 
 .card_button{
