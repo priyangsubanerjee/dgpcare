@@ -91,6 +91,7 @@
     background: transparent;
     border-radius: 4px;
     padding: 13px 15px;
+    font-family: inherit;
 }
 
 .textarea:focus{

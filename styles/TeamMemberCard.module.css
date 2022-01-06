@@ -17,8 +17,8 @@
 }
 
 .profileImage {
-  width: 100px;
-  height: 100px;
+  height: 80px;
+  width: 80px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -26,12 +26,26 @@
 .aboutProfile {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-left: 25px;
-  padding: 5px;
+}
+
+.profileName{
+
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--blue-primary);
+}
+
+.profileDescription{
+
+    margin: 7px 0;
+    color: var(--text-primary);
+    font-size: 13px;
 }
 
 .socialFlex {
-  margin-top: 10px;
   display: flex;
   align-items: center;
 }

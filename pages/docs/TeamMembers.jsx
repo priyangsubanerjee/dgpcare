@@ -7,7 +7,7 @@ import Link from 'next/link'
 import * as BsIcons from 'react-icons/bs'
 import * as AiIcons from  'react-icons/ai'
 import * as HiIcons from 'react-icons/hi'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import TeamMemberCard from '../../components/TeamMemberCard'
 
 
@@ -59,11 +59,27 @@ export async function getStaticProps() {
 function TeamMembers({ members }) {
 
     const [data, setData] = useState(members)
-    const [filtered, setFiltered] = useState([])
+    const [filtered, setFiltered] = useState(data)
 
     console.log(members)
 
     const [query, setQuery] = useState('')
+    
+    useEffect(() => {
+       
+        if(query === '') {
+            setFiltered(data)
+        }{
+
+            const result = data.filter(member => {
+
+                return member.name.toLowerCase().includes(query.toLowerCase()) || member.description.toLowerCase().includes(query.toLowerCase())
+            })
+
+            setFiltered(result)
+        }
+
+    }, [query])
 
     return (
         <>
@@ -95,7 +111,7 @@ function TeamMembers({ members }) {
                 
                 <div className={styles.teamMemeberContainer}>
                     {
-                        data.map((item) => {
+                        filtered.map((item) => {
 
                             return <TeamMemberCard key={item.id} props={item}/>
                         })

@@ -15,6 +15,7 @@ class MyDocument extends Document {
             <meta name="keywords" content="Durgapur, dgp, durgapur, durgapurcovidresource, priyangsu, priyangsubanerjee, covid19, c19, coronavirus, covidresources, covid-19 resosurces, covid19resources, covid helplines, corona, dgpcovidresources, dgpcovidresource, west bengal" />
             <meta name="author" content="Priyangsu Banerjee" />
             <meta name="googlebot" content="index, follow" />
+            <link rel="manifest" href="manifest.json" />
 
             <meta name="theme-color" content="rgb(255, 255, 255)" media="(prefers-color-scheme: light)"/>
             <meta name="theme-color" content="#13161f" media="(prefers-color-scheme: dark)"/>

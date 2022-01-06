@@ -92,6 +92,7 @@
     background: transparent;
     font-size: 15px;
     width: 100%;
+    color: var(--text-secondary);
   }
   
   .clearQuery {
