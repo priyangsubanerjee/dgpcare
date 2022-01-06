@@ -63,7 +63,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
 
     const shareData = {
         title: 'Careplus Resources',
-        text: 'Name: ' + resource.title + '\n' + 'Phone: ' + resource.phone + '\n' + 'Category: ' + categoryName + '\n\n' + 'Description: ' + resource.description + '\n\n\n',
+        text: 'Name: ' + resource.title + '\n' + 'Phone: ' + resource.phone + '\n' + 'Category: ' + categoryName + '\n\n' + resource.description + '\n\n\n',
         url: 'https://dgpcare.vercel.app'
       }
     
