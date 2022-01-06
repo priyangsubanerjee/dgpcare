@@ -18,8 +18,8 @@ function About() {
 
         const shareData = {
             title: 'Dgp Covid Resources',
-            text: 'https://dgp-covid-resources.vercel.app/',
-            url: 'https://dgp-covid-resources.vercel.app/'
+            text: 'Army of selfless volunteers, working together to curate best possible Covid-19 resources for the community.',
+            url: 'https://dgpcare.vercel.app/'
         }
 
         try {
@@ -36,7 +36,7 @@ function About() {
 
     function copyToClipboard() {
 
-        navigator.clipboard.writeText('https://dgpcovidresources.vercel.app/')
+        navigator.clipboard.writeText('https://dgpcare.vercel.app/')
         setCopied(true)
         setTimeout(() => {
             setCopied(false)
