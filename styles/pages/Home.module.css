@@ -7,14 +7,14 @@
 
 .progressBar {
   width: 100%;
-  height: 70px;
+  height: 2px;
   background-color: var(--blue-primary);
   margin-bottom: 20px;
   animation: progressBar 2s infinite;
   position: fixed;
-  top: 0;
+  top: 68px;
   z-index: 999;
-  opacity: 0.05;
+  opacity: 1;
 }
 
 .heading {
@@ -114,7 +114,8 @@
   }
   .progressBar{
 
-    animation: progressBar 3s infinite;
+
+    animation: progressBar 2s infinite;
   }
 }
 
