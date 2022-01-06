@@ -7,7 +7,7 @@ function TeamMemberCard({props}) {
     console.log(props)
     return (
         <div className={styles.TeamMemberCard}>
-                <img className={styles.profileImage} src={props.image.url}/>
+                <img className={styles.profileImage} src={props.image != null ? props.image.url : "https://media.graphcms.com/6UMMG0gKR1yKqiMXvD0v"}/>
                 <div className={styles.aboutProfile}>
                     <h3 style={{margin:'0', color: "var(--blue-primary)"}}>{props.name}</h3>
                     <p style={{margin:'5px 0 0 0', fontSize:'13px'}}>{props.description}</p>

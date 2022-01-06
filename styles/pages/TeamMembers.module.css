@@ -139,10 +139,17 @@
     }
     
     .search_flex {
+        
         width: 100%;
       }
     
-      .search_flex .search_input {
+    .search_flex .search_input {
+
         font-size: 14px;
-      }
+    }
+
+    .teamMemeberContainer{
+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
