@@ -27,7 +27,7 @@ function TermsandConditions() {
                 
             </div>
 
-            <a href="https://www.privacypolicies.com/live/a02085b7-136a-4c3c-b15c-87ff47d81005"><span className={styles.viewArticle}> View full article</span></a>
+            <a href="https://www.privacypolicies.com/live/a02085b7-136a-4c3c-b15c-87ff47d81005"><span className={styles.viewArticle}> Read full article</span></a>
 
         </div>
     )
