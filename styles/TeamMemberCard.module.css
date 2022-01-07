@@ -28,6 +28,7 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 25px;
+  padding: 5px 0;
 }
 
 .profileName{
@@ -67,12 +68,17 @@
 
     .TeamMemberCard {
         
-        padding: 7px 15px;
+        padding: 10px 15px;
     }
 
     .profileImage{
 
-        width: 80px;
-        height: 80px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .profileDescription{
+
+        margin: 5px 0;
     }
 }
