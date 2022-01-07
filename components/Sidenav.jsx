@@ -5,6 +5,7 @@ import * as GrIcons from 'react-icons/gr'
 import * as MdIcons from 'react-icons/md'
 import * as AiIcons from 'react-icons/ai'
 import * as BiIcons from 'react-icons/bi'
+import * as GiIcons from 'react-icons/gi'
 import * as VscIcons from 'react-icons/vsc'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
@@ -43,12 +44,21 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                             </a>
                        </Link>
                     </li>
+
+                    <li className={styles.sidenavCardLink}>
+                       <Link href='/docs/ImportantLinks'>
+                            <a className={styles.parentLink} onClick={() => setSidenav(false)}>
+                                <GiIcons.GiLinkedRings className={styles.sidenavCardLinkIcon}/>
+                                <span className={styles.sidenavCardLinkText}>Important links</span>
+                            </a>
+                       </Link>
+                    </li>
                     
                     <li className={styles.sidenavCardLink}>
                        <Link href='/docs/PrivacyPolicy'>
                             <a className={styles.parentLink} onClick={() => setSidenav(false)}>
                                 <VscIcons.VscBook className={styles.sidenavCardLinkIcon}/>
-                                <span className={styles.sidenavCardLinkText}>Privacy Policy</span>
+                                <span className={styles.sidenavCardLinkText}>Privacy policy</span>
                             </a>
                        </Link>
                     </li>

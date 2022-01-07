@@ -6,7 +6,6 @@ import * as IoIcons from 'react-icons/io5'
 import { useState, useEffect} from 'react'
 import Link from 'next/link'
 import Footer from '../../components/Footer'
-import emailjs from 'emailjs-com'
 import axios from 'axios'
 
 function ContactUs() {
@@ -24,12 +23,12 @@ function ContactUs() {
 
             const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-            if(emailPattern.test(email)){
+            if(emailPattern.test(email.trim.toLoweCase())){
 
                 setProgress(true)
                 axios.post('/api/email', JSON.stringify({
 
-                    email,
+                    email: email.trim.toLoweCase(),
                     message
 
                 }), {
