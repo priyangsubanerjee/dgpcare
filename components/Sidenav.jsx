@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from '../styles/Sidenav.module.css'
 import * as IoICons from 'react-icons/io5'
+import * as BsIcons from 'react-icons/bs'
 import * as GrIcons from 'react-icons/gr'
 import * as MdIcons from 'react-icons/md'
 import * as AiIcons from 'react-icons/ai'
 import * as BiIcons from 'react-icons/bi'
 import * as GiIcons from 'react-icons/gi'
 import * as VscIcons from 'react-icons/vsc'
+import * as FiIcons from 'react-icons/fi'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
@@ -82,6 +84,18 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                     </li>
 
                 </ul>
+                
+                <div className={styles.installApp}>
+
+                    <a rel='noopener noreferrer' target={"_blank"}  href="/">
+                        <div className={styles.details}>
+                            <p className={styles.detailsHead}>Install app ?</p>
+                            <p className={styles.detailsbody}>You can install this page as an app and get seamless performance throughout.</p>
+                            <p className={styles.detailsLink}>Learn how <FiIcons.FiExternalLink className={styles.openDetailsLink}/></p>
+                        </div>
+                    </a>
+                
+                </div>
             </div>
         </div>
     )

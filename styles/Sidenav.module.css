@@ -1,143 +1,161 @@
-
-.sidenav{
-
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow-x: hidden;
-    transition: 0.5s;
-    animation: fadeIn 0.2s;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+.sidenav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  transition: 0.5s;
+  animation: fadeIn 0.2s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.sidenavCard{
-
-    width: 350px;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    background-color: var(--bg-primary);
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+.sidenavCard {
+  width: 350px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--bg-primary);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.sidenavCardHeader{
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--faq-secondary);
-    border-bottom: 1px dashed rgb(168, 168, 168);
-    padding: 22px 30px;
-    color: var(--black-primary);
+.sidenavCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--faq-secondary);
+  border-bottom: 1px dashed rgb(168, 168, 168);
+  padding: 22px 30px;
+  color: var(--black-primary);
 }
 
-.closeSidenav{
-
-    font-size: 25px;
-    transition: all 0.3s;
+.closeSidenav {
+  font-size: 25px;
+  transition: all 0.3s;
 }
 
-.closeSidenav:hover{
-
-    cursor: pointer;
+.closeSidenav:hover {
+  cursor: pointer;
 }
 
-.brand{
-
-    font-weight: 600;
-    margin-right: auto;
-    margin-left: 20px;
-    font-size: 18px;
+.brand {
+  font-weight: 600;
+  margin-right: auto;
+  margin-left: 20px;
+  font-size: 18px;
 }
 
-.sidenavCardLinks{
-
-    margin: 30px 0;
-    padding: 0;
-    list-style: none;
+.sidenavCardLinks {
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
 }
 
-
-.sidenavCardLink{
-
-    display: flex;
-    align-items: center;
-    margin: 0;
-    color: var(--black-primary);
-    cursor: pointer;
+.sidenavCardLink {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: var(--black-primary);
+  cursor: pointer;
 }
 
-.parentLink{
-
-    width: 100%;
-    height: 100%;
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
+.parentLink {
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
 }
 
-.sidenavCardLink:hover{
-
-    background: var(--faq-primary);
+.sidenavCardLink:hover {
+  background: var(--faq-primary);
 }
 
-.sidenavCardLinkIcon{
-
-    color: inherit;
-    font-size: 18px;
+.sidenavCardLinkIcon {
+  color: inherit;
+  font-size: 18px;
 }
 
-.sidenavCardLinkText{
-
-    margin-left: 20px;
-    color: inherit;
+.sidenavCardLinkText {
+  margin-left: 20px;
+  color: inherit;
 }
 
-.active{
-
-    color: rgb(0, 119, 255);
+.active {
+  color: rgb(0, 119, 255);
 }
 
-
-@keyframes fadeIn{
-
-    from{
-
-        opacity: 0;
-    }
-
-    to{
-
-        opacity: 1;
-    }
+.installApp {
+  padding: 15px;
+  margin-top: auto;
+  display: flex;
+  background: var(--blue-secondary);
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
 
-@media screen and (max-width: 768px){
+.detailsIcon {
+  color: var(--blue-primary);
+  font-size: 28px;
+  margin: 5px 0 0 0;
+}
 
-    .sidenavCard{
+.detailsHead {
+  color: var(--blue-primary);
+  font-weight: 600;
+  font-size: 17px;
+  margin: 0;
+}
 
-        width: 80%;
-    }
-    .sidenavCardHeader{
+.detailsbody {
+  color: var(--text-primary);
+  margin: 8px 0;
+  font-size: 12px;
+}
 
-        padding: 22px 20px;
-    }
-    .sidenavCardLinks{
+.detailsLink {
+  color: var(--blue-primary);
+  font-size: 12px;
+  margin: 5px 0 0 0;
+  display: flex;
+  align-items: center;
+}
 
-        margin-top: 20px;
-    }
+.openDetailsLink {
+  margin-left: 5px;
+}
 
-    .parentLink{
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
-        padding: 20px;
-    }
+  to {
+    opacity: 1;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .sidenavCard {
+    width: 80%;
+  }
+  .sidenavCardHeader {
+    padding: 22px 20px;
+  }
+  .sidenavCardLinks {
+    margin-top: 20px;
+  }
+
+  .parentLink {
+    padding: 20px;
+  }
 }
