@@ -52,6 +52,7 @@
     margin-bottom: 190px;
 }
 
+
 .form{
 
     padding: 30px;
@@ -59,6 +60,7 @@
     flex-direction: column;
     width: fit-content;
     min-width: 500px;
+    position: relative;
     background: var(--contact-form-bg);
 }
 
@@ -166,6 +168,20 @@
     width: 100%;
     border: 1px solid var(--hr-primary);
     margin-top: 20px;
+}
+
+.successConfetti{
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: url("https://cdn.dribbble.com/users/1138069/screenshots/8974973/media/2b32ae97856da7406151c6ae6ea086cc.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 @media screen and (max-width: 768px){

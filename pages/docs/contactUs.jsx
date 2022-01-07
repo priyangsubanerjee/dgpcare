@@ -14,36 +14,58 @@ function ContactUs() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const[progress, setProgress] = useState(false)
+    const [success, setSuccess] = useState(false)
 
     function sendMail(){
 
+
         if(email && message){
 
-            setProgress(true)
 
-            axios.post('/api/email', JSON.stringify({
+            const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-                email,
-                message
+            if(emailPattern.test(email)){
 
-            }), {
+                setProgress(true)
+                axios.post('/api/email', JSON.stringify({
+
+                    email,
+                    message
+
+                }), {
 
                 headers: {
 
                     'Content-Type': 'application/json'
-                
-            }}).then(res => {
+                    
+                }}).then(res => {
 
-                setProgress(false)
-                console.log(res)
-                setEmail('')
-                setMessage('')
+                    setProgress(false)
+                    console.log(res)
+                    setEmail('')
+                    setMessage('')
+                    setSuccess(true)
+                    setTimeout(() => {
 
-            }).catch(err => {
+                        setSuccess(false)
 
-                setProgress(false)
-                console.log(err)
-            });
+                    }, 5400);
+
+                }).catch(err => {
+
+                    setProgress(false)
+                    console.log(err)
+                });
+
+            }else{
+
+                alert('Please enter a valid email')
+            }
+
+            
+        }else{
+
+            alert('Please fill all fields')
         }
 
     }
@@ -61,6 +83,9 @@ function ContactUs() {
             
             <div className={styles.formConatiner}>
                 <div className={styles.form}>
+                    {
+                        success && <div className={styles.successConfetti}></div>
+                    }
                     <small className={styles.inputLabel}>Email</small>
                     <input type="text" placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} className={styles.input}/>
                     <br />
@@ -88,12 +113,12 @@ function ContactUs() {
                     <h1>Disclaimer</h1>
                     <p style={{margin:'0'}}>Keep the following things in mind</p>
                     <div className={styles.hr}></div>
-                    <ul style={{marginTop:'50px'}}>
-                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                    <ul style={{margin:'20px 0 0 0', padding:'20px'}}>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
                     </ul>
                 </div>
                 
