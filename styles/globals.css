@@ -1,9 +1,5 @@
-
 html,
-
-
 body {
-
   background: var(--bg-primary);
   padding: 0;
   margin: 0;
@@ -20,103 +16,102 @@ a {
   box-sizing: border-box;
 }
 
-li, p{
-
-    line-height: 1.9;
-    color: var(--text-primary);
+li,
+p {
+  line-height: 1.9;
+  color: var(--text-primary);
 }
 
-h1{
-
-    color: var(--black-primary);
+h1 {
+  color: var(--black-primary);
 }
 
-h2, h3, h4, h5, h6{
-
-    color: var(--text-secondary);
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-secondary);
 }
 
-:root{
+:root {
+  --bg-primary: #fff;
+  --contact-form-bg: #f8f8f8;
 
-    --bg-primary: #fff;
-    --contact-form-bg : #f8f8f8;
+  --black-primary: #000;
+  --black-secondary: rgba(0, 0, 0, 0.5);
+  --black-hover: rgba(0, 0, 0, 0.1);
 
-    --black-primary: #000;
-    --black-secondary: rgba(0,0,0,0.5);
-    --black-hover: rgba(0,0,0,0.1);
+  --modal-bg: rgba(0, 0, 0, 0.5);
 
-    --modal-bg: rgba(0,0,0,0.5);
+  --white-primary: #fff;
 
-    --white-primary: #fff;
+  --topnav-bg: #fff;
+  --topnav-border: #e5e5e550;
 
-    --topnav-bg: #fff;
-    --topnav-border: #e5e5e550;
+  --card-border-primary: rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: rgba(0, 0, 0, 0.05);
+  --card-button-primary: rgb(241, 241, 241);
+  --card-button-text: rgb(0, 0, 0);
 
-    --card-border-primary: rgba(0,0,0,0.1);
-    --card-hover-shadow: rgba(0,0,0,0.05);
-    --card-button-primary: rgb(241, 241, 241);
-    --card-button-text: rgb(0, 0, 0);
+  --blue-primary: rgb(0, 119, 255);
+  --blue-primary-dark: rgb(0, 98, 255);
+  --blue-secondary: rgba(0, 119, 255, 0.05);
 
-    --blue-primary: rgb(0, 119, 255);
-    --blue-primary-dark: rgb(0, 98, 255);
-    --blue-secondary: rgba(0, 119, 255, 0.05);
+  --text-primary: gray;
+  --text-secondary: rgb(63, 63, 63);
 
-    --text-primary: gray;
-    --text-secondary: rgb(63, 63, 63);
+  --red-primary: rgb(255, 0, 0);
+  --red-secondary: rgba(255, 0, 0, 0.05);
 
-    --red-primary: rgb(255, 0, 0);
-    --red-secondary: rgba(255, 0, 0, 0.05);
+  --hr-primary: rgba(0, 0, 0, 0.1);
 
-    --hr-primary: rgba(0, 0, 0, 0.1);
+  --faq-primary: rgba(0, 0, 0, 0.015);
+  --faq-secondary: rgba(0, 0, 0, 0.04);
 
-    --faq-primary: rgba(0, 0, 0, 0.015);
-    --faq-secondary: rgba(0, 0, 0, 0.04);
+  --searchflex-primary: rgba(0, 0, 0, 0.03);
+  --searchflex-secondary: rgba(0, 0, 0, 0.06);
 
-    --searchflex-primary: rgba(0, 0, 0, 0.03);
-    --searchflex-secondary: rgba(0, 0, 0, 0.06);
+  --success-url: "https://cdn.dribbble.com/users/1138069/screenshots/8974973/media/2b32ae97856da7406151c6ae6ea086cc.gif";
 }
 
 /* data theme dark colors */
 
 [data-theme="dark"] {
+  --bg-primary: #13161f;
+  --contact-form-bg: #0c0e16;
 
-    --bg-primary: #13161f;
-    --contact-form-bg : #0c0e16;
+  --black-primary: rgb(221, 221, 221);
+  --black-secondary: rgba(0, 0, 0, 0.5);
+  --black-hover: rgba(0, 0, 0, 0.1);
 
-    --black-primary: rgb(221, 221, 221);
-    --black-secondary: rgba(0,0,0,0.5);
-    --black-hover: rgba(0,0,0,0.1);
+  --modal-bg: rgba(0, 0, 0, 0.884);
 
-    --modal-bg: rgba(0, 0, 0, 0.884);
+  --white-primary: rgb(0, 0, 0);
 
-    --white-primary: rgb(0, 0, 0);
+  --topnav-bg: rgb(30, 30, 48);
+  --topnav-border: #e5e5e515;
 
-    --topnav-bg: rgb(30, 30, 48);
-    --topnav-border: #e5e5e515;
+  --card-border-primary: rgba(255, 255, 255, 0.2);
+  --card-hover-shadow: rgba(0, 0, 0, 0.05);
+  --card-button-primary: #d4d4d4;
+  --card-button-text: rgb(0, 0, 0);
 
-    --card-border-primary: rgba(255, 255, 255, 0.2);
-    --card-hover-shadow: rgba(0,0,0,0.05);
-    --card-button-primary: #d4d4d4;
-    --card-button-text: rgb(0, 0, 0);
+  --blue-primary: rgb(81, 162, 255);
+  --blue-primary-dark: rgb(0, 98, 255);
+  --blue-secondary: rgba(0, 119, 255, 0.05);
 
-    --blue-primary: rgb(81, 162, 255);
-    --blue-primary-dark: rgb(0, 98, 255);
-    --blue-secondary: rgba(0, 119, 255, 0.05);
+  --text-primary: rgb(187, 187, 187);
+  --text-secondary: rgb(209, 209, 209);
 
-    --text-primary: rgb(187, 187, 187);
-    --text-secondary: rgb(209, 209, 209);
+  --red-primary: rgb(255, 60, 60);
+  --red-secondary: rgba(255, 60, 60, 0.05);
 
-    --red-primary: rgb(255, 60, 60);
-    --red-secondary: rgba(255, 60, 60, 0.05);
+  --hr-primary: rgba(255, 255, 255, 0.1);
 
-    --hr-primary: rgba(255, 255, 255, 0.1);
+  --faq-primary: rgba(255, 255, 255, 0.015);
+  --faq-secondary: rgba(255, 255, 255, 0.04);
 
-    --faq-primary: rgba(255, 255, 255, 0.015);
-    --faq-secondary: rgba(255, 255, 255, 0.04);
-
-    --searchflex-primary: rgba(255, 255, 255, 0.07);
-    --searchflex-secondary: rgba(255, 255, 255, 0.09);
+  --searchflex-primary: rgba(255, 255, 255, 0.07);
+  --searchflex-secondary: rgba(255, 255, 255, 0.09);
 }
-
-
-
