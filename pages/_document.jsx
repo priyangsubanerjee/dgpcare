@@ -16,7 +16,7 @@ class MyDocument extends Document {
             <meta name="author" content="Priyangsu Banerjee" />
             <meta name="googlebot" content="index, follow" />
             <link rel="manifest" href="manifest.json" />
-            <link rel="apple-touch-icon" href="/public/icons/512x512.png" />
+            <link rel="shortcut icon" href="../public/icons/512x512.png" type="image/x-icon"/>
 
             <meta name="theme-color" content="rgb(255, 255, 255)" media="(prefers-color-scheme: light)"/>
             <meta name="theme-color" content="#13161f" media="(prefers-color-scheme: dark)"/>
