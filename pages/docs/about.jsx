@@ -64,7 +64,7 @@ function About() {
                 </div>
 
                 <div className={styles.about_container}>
-                    <p className={styles.aboutText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laborum nulla a dolor architecto corrupti eum optio harum odit eius sit qui, repellat est minima aperiam in soluta id reiciendis, repellendus debitis. Commodi ipsum magnam in quidem porro asperiores vel vero hic, consequatur, aperiam, unde ea repellendus odio saepe ex!</p>
+                    <p className={styles.aboutText}>We are a group of students with a common with a common mission to help India during the Covid crisis, brought us all together to create this platform. We try our best to amplify the need of resources while we undergo waves of Covid-19.</p>
                 </div>
 
                 <div className={styles.shareContainer} onClick={() => share()}>

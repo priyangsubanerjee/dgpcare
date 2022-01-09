@@ -24,9 +24,11 @@ function Modal({setModal}) {
                 <GiIcons.GiModernCity style={{fontSize:'60px', marginTop:'0px'}}/>
                 <span style={{margin: '40px 0 0 0', padding:'0', fontSize:'22px', fontWeight:'600'}}>Hey there 👋</span>
                 <p style={{padding:'0', fontSize: '15px', marginTop:'10px', color:'rgba(0, 0, 0, 0.7)', fontWeight:'500', color:'var(--text-secondary)'}}>Seems you want to change your <span className={styles.highlighted}>Location?</span></p>
-                <p className={styles.body}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor assumenda quia obcaecati quibusdam dolorem temporibus perspiciatis corporis adipisci harum minima!</p>
+                <p className={styles.body}>Since we rely on the sources we get from our volunteers, we had to limit our radius. If we get enough requests from a locality, we may expand our radius of service.</p>
                 <div className={styles.buttons_flex}>
-                    <button className={styles.send_locationRequest}>Send request<RiIcons.RiSendPlaneFill style={{marginLeft:'10px'}}/></button>
+                    <a href="/" rel='noopener noreferrer' target={'_blank'} onClick={() => setModal(false)}>
+                        <button className={styles.send_locationRequest}>Send request<RiIcons.RiSendPlaneFill style={{marginLeft:'10px'}}/></button>
+                    </a>
                 </div>
             </div>
         </div>

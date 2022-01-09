@@ -1,118 +1,101 @@
-.modal{
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--modal-bg);
-    z-index: 99999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-    animation: fadeIn 0.1s ease-in-out;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--modal-bg);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  animation: fadeIn 0.1s ease-in-out;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.modal_card{
-
-    width: 500px;
-    background: var(--bg-primary);
-    border-radius: 15px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    color: var(--black-primary);
+.modal_card {
+  width: 500px;
+  background: var(--bg-primary);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  color: var(--black-primary);
 }
-.highlighted{
-
-    background: var(--blue-secondary);
-    padding: 5px 8px;
-    border-radius: 5px;
-    color: var(--blue-primary);
-    font-weight: 500;
+.highlighted {
+  background: var(--blue-secondary);
+  padding: 5px 8px;
+  border-radius: 5px;
+  color: var(--blue-primary);
+  font-weight: 500;
 }
 
-.body{
-
-    font-size: 14px;
-    line-height: 1.9;
-    color: var(--text-primary);
+.body {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text-primary);
+  margin-top: 0;
 }
 
-.buttons_flex{
-
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+.buttons_flex {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.send_locationRequest{
-
-    border: none;
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background: rgb(0, 119, 255);
-    color: white;
-    font-size: 15px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.send_locationRequest {
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: rgb(0, 119, 255);
+  color: white;
+  font-size: 15px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.send_locationRequest:hover{
-
-    background: var(--blue-primary-dark);
+.send_locationRequest:hover {
+  background: var(--blue-primary-dark);
 }
 
-.close_modalButton{
-
-    margin-left: auto;
-    font-size: 25px;
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.close_modalButton {
+  margin-left: auto;
+  font-size: 25px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-
-.close_modalButton:hover{
-
-    color: var(--black-primary)
+.close_modalButton:hover {
+  color: var(--black-primary);
 }
-
 
 /* Fade in animation */
 
 @keyframes fadeIn {
-
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-    
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-
 @media screen and (max-width: 510px) {
+  .modal {
+    bottom: 0;
+    height: 100vh;
+  }
 
-    .modal{
-
-        bottom: 0;
-        height: 100vh;
-    }
-
-    .modal_card{
-
-        width: 90%;
-        position: fixed;
-        border-radius: 10px;
-    }
-    
+  .modal_card {
+    width: 90%;
+    position: fixed;
+    border-radius: 10px;
+  }
 }
