@@ -110,7 +110,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
             </div>
 
             { 
-                toast && <SimpleToast text={resource.title + " added to saved resources !"} /> 
+                toast && <SimpleToast text={ resource.title.length > 20 ? resource.title.substring(0, 17)+ '...  added to saved resources !' : resource.title + " added to saved resources !"} /> 
             }
 
         </div>
