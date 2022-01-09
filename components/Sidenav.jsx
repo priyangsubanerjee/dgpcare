@@ -87,7 +87,7 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                 
                 <div className={styles.installApp}>
 
-                    <a rel='noopener noreferrer' target={"_blank"}  href="http://media.graphcms.com/MpMm4DSTyID6EsX5gvjw">
+                    <a rel='noopener noreferrer' target={"_blank"}  href="https://drive.google.com/file/d/1-R9r2qo-LryrS-ce7bjqclEBnyEpXfvx/view?usp=sharing">
                         <div className={styles.details}>
                             <p className={styles.detailsHead}>Install app ?</p>
                             <p className={styles.detailsbody}>You can install this page as an app and get seamless performance throughout.</p>
