@@ -18,7 +18,7 @@ function About() {
 
         const shareData = {
             title: 'Dgp Covid Resources',
-            text: 'Army of selfless volunteers, working together to curate best possible Covid-19 resources for the community.',
+            text: 'Army of selfless volunteers, working together to curate best possible Covid-19 resources for the community./n/n',
             url: 'https://dgpcare.vercel.app/'
         }
 

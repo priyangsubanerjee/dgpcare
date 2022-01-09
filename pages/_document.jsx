@@ -26,7 +26,7 @@ class MyDocument extends Document {
             <meta property="og:url" content="https:careplus.vercel.app" />
             <meta property="og:title" content="Dgp covid resources | Careplus" />
             <meta property="og:description" content="Hey all, this is Team Care Plus, we provide information on necessary covid-19 supplies, from oxygen suppliers to free food home deliveries and more. We are leading from Durgapur, West bengal" />
-            <meta property="og:image" content="https://thumbs.dreamstime.com/b/simple-coronavirus-covid-icon-vector-illustration-your-projects-176237979.jpg" />
+            <meta property="og:image" content="https://media.graphcms.com/43k0OjdxRFOZXDgwElxI" />
             <meta property="og:type" content="website" />
             <meta property="og:image:type" content="image/jpg"/>
             
