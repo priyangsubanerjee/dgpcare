@@ -7,8 +7,6 @@ import * as MdIcons from 'react-icons/md'
 
 function Modal({setModal}) {
 
-    //close if clicked outside
-
     const handleClickOutside = (e) => {
 
         if(e.target.className === styles.modal) {
