@@ -105,7 +105,7 @@ function Category({data}) {
 
             const filtered = data.filter(function(item) {
 
-                return item.title.toLowerCase().includes(sQuery.toLowerCase())
+                return item.title.toLowerCase().includes(sQuery.toLowerCase()) || item.description.toLowerCase().includes(sQuery.toLowerCase()) || item.phone.includes(sQuery)
 
             })
 
@@ -138,7 +138,7 @@ function Category({data}) {
                 <div className={styles.search_flex}>
                     <HiIcons.HiSearch className={styles.search_icon} />
                     <input className={styles.search_input} type="text" placeholder="Search" onChange={(e) => setSquery(e.target.value)}  value={sQuery} />
-                    <BsIcons.BsBackspace className={styles.clearQuery}/>
+                    <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setSquery('')}/>
                 </div>
 
                 <div className={styles.resourceGrid}>
