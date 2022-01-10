@@ -112,8 +112,8 @@
 }
 
 .noResource {
-  background: rgba(255, 217, 0, 0.212);
-  color: rgb(146, 124, 0);
+  background: var(--secondary-alert-bg);
+  color: var(--secondary-alert-text);
   display: flex;
   align-items: center;
   padding: 10px 15px;
