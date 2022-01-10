@@ -10,6 +10,7 @@ import Link from 'next/link'
 import ResourceCard from '../../components/ResourceCard'
 import {gql, GraphQLClient} from 'graphql-request'
 import Head from 'next/head'
+import Footer from '../../components/Footer'
 
 
 
@@ -119,7 +120,7 @@ function Category({data}) {
 
                 <div className={styles.queryInfo}>
                     <span className={styles.queryFlex}><MdIcons.MdVerified style={{color:'var(--blue-primary)'}} className={styles.queryIcon}/><span className={styles.queryText}>{categoryName}</span></span>
-                    <span className={styles.queryAbout} style={{color:'var(--text-primary)'}}>Remember we dont assure available stocks, read our &nbsp; <Link href='/'><span className={styles.highLightedRed}>Terms &amp; Conditions</span></Link> or you can <Link href='/'><span className={styles.highLightedBlue}>Contact us</span></Link> for any assistance.</span>
+                    <span className={styles.queryAbout} style={{color:'var(--text-primary)'}}>Remember we dont assure available stocks, read our &nbsp; <Link href='/docs/PrivacyPolicy'><span className={styles.highLightedRed}>Terms &amp; Conditions</span></Link> or you can <Link href='/docs/contactUs'><span className={styles.highLightedBlue}>Contact us</span></Link> for any assistance.</span>
                 </div>
 
                 <div className={styles.search_flex}>
@@ -144,6 +145,8 @@ function Category({data}) {
                     }
 
                 </div>
+
+                <Footer/>
             </div>
         </>
     )

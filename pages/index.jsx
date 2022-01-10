@@ -7,6 +7,7 @@ import * as HiIcons from 'react-icons/hi'
 import * as BsIcons from 'react-icons/bs'
 import Head from 'next/head'
 import axios from 'axios'
+import Footer from '../components/Footer.jsx'
 
 
 export async function getStaticProps() {
@@ -126,6 +127,8 @@ export default function Home({categories}) {
                     }
 
                 </div>
+                
+               <Footer/>
                 
             </div>
 

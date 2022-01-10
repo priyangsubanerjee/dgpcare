@@ -113,11 +113,9 @@ function ContactUs() {
                     <p style={{margin:'0'}}>Keep the following things in mind</p>
                     <div className={styles.hr}></div>
                     <ul style={{margin:'20px 0 0 0', padding:'20px'}}>
-                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
-                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Lorem ipsum dolor sit amet consectetur adipisicing.</p></li>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Please put on a valid query.</p></li>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>Since we have a very small team, so response may get delayed.</p></li>
+                        <li style={{margin:'10px 0 0 0'}}><p style={{margin:'0'}}>We strongly suggest not to spam in the contact us page.</p></li>
                     </ul>
                 </div>
                 

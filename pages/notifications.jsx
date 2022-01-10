@@ -8,6 +8,7 @@ import Head from 'next/head'
 import {gql, GraphQLClient} from 'graphql-request'
 import NotificationCard from '../components/NotificationCard'
 import { useState, useEffect } from 'react'
+import Footer from '../components/Footer'
 
 export async function getStaticProps() {
 
@@ -111,6 +112,8 @@ function Notifications({notifications}) {
                 
 
             </div>
+
+            <Footer/>
         </>
     )
 }

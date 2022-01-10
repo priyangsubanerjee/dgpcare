@@ -3,13 +3,13 @@ import styles from '../styles/LinkCard.module.css'
 import Link from 'next/link'
 import * as BsICons from 'react-icons/bs'
 
-function LinksCard({title, description, link}) {
+function LinksCard({props}) {
     return (
         <div className={styles.category_card}>
-                <span className={styles.card_title}>{title}</span>
-                <p className={styles.card_body}>{description}</p>
+                <span className={styles.card_title}>{props.title}</span>
+                <p className={styles.card_body}>{props.description}</p>
                 <div className={styles.linkAction}>
-                    <a  target="_blank" rel="noopener noreferrer" href={link} style={{width:'fit-content'}}>
+                    <a  target="_blank" rel="noopener noreferrer" href={props.link} style={{width:'fit-content'}}>
                         <button className={styles.card_button}>Open link</button>
                     </a>
                 </div>

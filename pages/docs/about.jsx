@@ -59,7 +59,7 @@ function About() {
                         <BsIcons.BsLightbulb/>
                         <span className={styles.header_text}>About us</span>
                     </span>
-                    <span className={styles.about}>We stand with everyone fighting on the frontlines against <Link href="/"><span className={styles.highlightedRed}>Covid-19.</span></Link></span>
+                    <span className={styles.about}>We stand with everyone fighting on the frontlines against <a rel='noopener noreferrer' target={'_blank'} href="https://g.co/kgs/cvE1yX"><span className={styles.highlightedRed}>Covid-19</span></a></span>
                     <div className={styles.hr}></div>
                 </div>
 

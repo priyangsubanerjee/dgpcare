@@ -6,6 +6,7 @@ import * as BsIcons from 'react-icons/bs'
 import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link'
 import Head from 'next/head'
+import Footer from '../components/Footer'
 
 function SavedResources() {
 
@@ -97,8 +98,10 @@ function SavedResources() {
 
                 </div>
                     
-
+                   
             </div>
+
+        
         </>
     )
 }

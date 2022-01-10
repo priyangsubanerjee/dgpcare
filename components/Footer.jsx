@@ -11,11 +11,11 @@ function Footer() {
                 <span className={styles.brandUrl}>A Crowdsourced Initiative <a className={styles.footerMail} href="">| dgpcovidresources@gmail.com</a> </span>
 
                 <div className={styles.brandSocialIcons}>
-                    <FiIcons.FiMail className={styles.socialIcon}/>
-                    <BsIcons.BsFacebook className={styles.socialIcon}/>
-                    <BsIcons.BsTwitter className={styles.socialIcon}/>
-                    <BsIcons.BsInstagram className={styles.socialIcon}/>
-                    <BsIcons.BsGithub className={styles.socialIcon}/>
+                    <a rel='noopener noreferrer' target={"_blank"} href="mailto:dgpcovidresources@gmail.com"><FiIcons.FiMail className={styles.socialIcon}/></a>
+                    <BsIcons.BsFacebook style={{display:'none', cursor:'not-allowed'}} className={styles.socialIcon}/>
+                    <BsIcons.BsTwitter style={{display:'none', cursor:'not-allowed'}} className={styles.socialIcon}/>
+                    <a rel='noopener noreferrer' target={"_blank"} href="https://instagram.com/dgp_covid_resource"><BsIcons.BsInstagram className={styles.socialIcon}/></a>
+                    <a rel='noopener noreferrer' target={"_blank"} href="https://github.com/priyangsubanerjee"></a><BsIcons.BsGithub className={styles.socialIcon}/>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import * as BiIcons from 'react-icons/bi'
 import * as GiIcons from 'react-icons/gi'
 import Footer from '../../components/Footer'
 import LinksCard from '../../components/LinksCard'
+import links from '../../database/Links'
 
 function ImportantLinks() {
     return (
@@ -18,10 +19,21 @@ function ImportantLinks() {
                 <div className={styles.hr}></div>
             </div>
 
-            <div className={styles.linksContainer}>
-                <LinksCard title={"Instagram"} description={"Make sure you follow our instagram page to get latest notifications !"} link={'https://instagram.com/dgp_covid_resource'}/>
-            </div>
-            
+
+            {
+
+                links.map((link, index) => {
+
+                    return (
+                        <LinksCard
+                            key={index}
+                            props={link}
+                        />
+                    )
+
+                })
+            }   
+
 
             <Footer/>
             

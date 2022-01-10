@@ -6,6 +6,7 @@ import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 
 export async function getStaticProps() {
 
@@ -72,7 +73,7 @@ function Feeds({res}) {
                         <BsIcons.BsNewspaper style={{}}/>
                         <span className={styles.header_text}>Recent Feeds</span>
                     </span>
-                    <span className={styles.about}>Getting you the latest developments of <Link href="/"><span className={styles.highlightedLink}>Covid-19</span></Link>  from all over India.</span>
+                    <span className={styles.about}>Getting you the latest developments of <a rel='noopener noreferrer' target={'_blank'} href="https://g.co/kgs/cvE1yX"><span className={styles.highlightedLink}>Covid-19</span></a>  from all over India.</span>
                 </div>
 
             
@@ -100,7 +101,7 @@ function Feeds({res}) {
 
                 </div>
 
-                
+                    <Footer/>
             </div>
         </>
     )
