@@ -9,7 +9,7 @@ function LinksCard({props}) {
                 <span className={styles.card_title}>{props.title}</span>
                 <p className={styles.card_body}>{props.description}</p>
                 <div className={styles.linkAction}>
-                    <a  target="_blank" rel="noopener noreferrer" href={props.link} style={{width:'fit-content'}}>
+                    <a  target={props.target} rel="noopener noreferrer" href={props.link} style={{width:'fit-content'}}>
                         <button className={styles.card_button}>Open link</button>
                     </a>
                 </div>
