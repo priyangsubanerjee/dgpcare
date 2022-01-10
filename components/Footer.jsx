@@ -12,8 +12,8 @@ function Footer() {
 
                 <div className={styles.brandSocialIcons}>
                     <a rel='noopener noreferrer' target={"_blank"} href="mailto:dgpcovidresources@gmail.com"><FiIcons.FiMail className={styles.socialIcon}/></a>
-                    <BsIcons.BsFacebook style={{opacity:'0.5', cursor:'not-allowed'}} className={styles.socialIcon}/>
-                    <BsIcons.BsTwitter style={{opacity:'0.5', cursor:'not-allowed'}} className={styles.socialIcon}/>
+                    <FiIcons.FiFacebook style={{opacity:'0.5', cursor:'not-allowed'}} className={styles.socialIcon}/>
+                    <FiIcons.FiTwitter style={{opacity:'0.5', cursor:'not-allowed'}} className={styles.socialIcon}/>
                     <a rel='noopener noreferrer' target={"_blank"} href="https://instagram.com/dgp_covid_resource"><BsIcons.BsInstagram className={styles.socialIcon}/></a>
                     <a rel='noopener noreferrer' target={"_blank"} href="https://github.com/priyangsubanerjee"></a><BsIcons.BsGithub className={styles.socialIcon}/>
                 </div>
