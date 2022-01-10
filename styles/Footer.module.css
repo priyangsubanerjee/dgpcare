@@ -1,59 +1,50 @@
-.brandNameContainer{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-    background: var(--bg-primary);
-    -webkit-tap-highlight-color: transparent;
+.brandNameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  background: var(--bg-primary);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.brandName{
-
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--blue-primary);
-    background: var(--blue-secondary);
-    padding: 10px;
-    border-radius: 5px;
-    margin-left: 10px;
+.brandName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue-primary);
+  background: var(--blue-secondary);
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
-.brandUrl{
-
-    font-size: 13px;
-    color: var(--text-primary);
-    margin-top: 15px;
-    padding: 5px;
+.brandUrl {
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-top: 15px;
+  padding: 5px;
 }
 
-.brandSocialIcons{
-
-    margin-top: 30px;
-    margin-bottom: 50px;
-    display: flex;
+.brandSocialIcons {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
 }
 
-.socialIcon{
-
-    margin-left: 30px;
-    font-size: 20px;
-    cursor: pointer;
-    color: var(--blue-primary);
-    transition: all 0.2s ease-in-out;
+.socialIcon {
+  margin: 0 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--blue-primary);
+  transition: all 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
+  .brandNameContainer {
+    margin-bottom: 100px;
+  }
 
-    .brandNameContainer{
-
-        margin-bottom: 100px;
-    }
-
-
-    .footerMail{
-
-        display: none;
-    }
+  .footerMail {
+    display: none;
+  }
 }
