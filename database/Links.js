@@ -13,6 +13,12 @@ const links = [
         link : "/",
         target: '_self',
     },
+    {
+        title : "Installation guide",
+        description : "Install Dgp Care across your favourite operating systems. Open the link below to view installation guide.",
+        link : "https://drive.google.com/file/d/1-R9r2qo-LryrS-ce7bjqclEBnyEpXfvx/view?usp=sharing",
+        target: '_blank',
+    },
 
 ]
 
