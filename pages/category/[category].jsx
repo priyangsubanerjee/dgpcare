@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import resources from '../../database/resources'
 import styles from '../../styles/pages/Category.module.css'
 import * as MdIcons from 'react-icons/md'
 import * as BsIcons from 'react-icons/bs'
@@ -11,6 +10,7 @@ import ResourceCard from '../../components/ResourceCard'
 import {gql, GraphQLClient} from 'graphql-request'
 import Head from 'next/head'
 import Footer from '../../components/Footer'
+import * as FcIcons from 'react-icons/fc'
 
 
 
@@ -60,6 +60,7 @@ function Category({data}) {
     const router = useRouter()
     const { category } = router.query
     const [sQuery, setSquery] = useState('')
+    const [count , setCount] = useState(0)
     const [resource, setResources] = useState(data?data:[])
     const [savedCards, setSavedCards] = useState(() => {
 
@@ -78,6 +79,17 @@ function Category({data}) {
             return []
         }
     })
+
+
+    useEffect(() => {
+
+
+        //count resources where category matches
+
+        const countResources = resource.filter(res => res.category.includes(category))
+        setCount(countResources.length)
+        
+    }, [])
 
 
     useEffect(() => {
@@ -136,7 +148,7 @@ function Category({data}) {
                         resource.map((resource, index) => {
 
                             if(resource.category === category){
-                                
+                            
                               return <ResourceCard resource={resource} saveCards={savedCards} setSavedCard={setSavedCards} key={resource.id}/>
                             
                             }
@@ -144,7 +156,14 @@ function Category({data}) {
                         })
                     }
 
+                    
                 </div>
+                    {
+                        count == 0 && <div className={styles.noResource}>
+                            <FcIcons.FcMediumPriority className={styles.noResourceIcon}/>
+                            <span className={styles.noResourceText}>Our team is re-validating all the data related to <strong>{categoryName}</strong>.</span>
+                        </div>
+                    }
 
                 <Footer/>
             </div>

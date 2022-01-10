@@ -111,6 +111,27 @@
   margin-top: 40px;
 }
 
+.noResource {
+  background: rgba(255, 217, 0, 0.212);
+  color: rgb(146, 124, 0);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.noResourceIcon {
+  font-size: 25px;
+}
+
+.noResourceText {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 20px;
@@ -142,5 +163,20 @@
 
   .resourceGrid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .noResourceIcon {
+    font-size: 22px;
+  }
+
+  .noResource {
+    padding: 5px 10px;
+  }
+  .noResourceText {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    margin-left: 10px;
+    line-height: 1.9;
   }
 }
