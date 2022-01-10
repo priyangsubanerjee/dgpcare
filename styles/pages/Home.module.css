@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 768px) {
   .container {
-    padding: 30px 20px 100px 20px;
+    padding: 30px 20px 30px 20px;
   }
 
   .search_flex {
@@ -112,8 +112,7 @@
     margin-top: 20px;
     margin-left: 0;
   }
-  .progressBar{
-      
+  .progressBar {
     animation: progressBar 3s infinite;
   }
 }
