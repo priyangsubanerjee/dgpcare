@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import styles from '../../styles/pages/Category.module.css'
 import * as MdIcons from 'react-icons/md'
 import * as BsIcons from 'react-icons/bs'
+import * as BiIcons from 'react-icons/bi'
 import * as HiIcons from 'react-icons/hi'
 import Link from 'next/link'
 import ResourceCard from '../../components/ResourceCard'
@@ -130,6 +131,10 @@ function Category({data}) {
 
             <div className={styles.container} >
 
+                {/* <div className={styles.backContainer}>
+                    <BiIcons.BiArrowBack/>
+                </div> */}
+
                 <div className={styles.queryInfo}>
                     <span className={styles.queryFlex}><MdIcons.MdVerified style={{color:'var(--blue-primary)'}} className={styles.queryIcon}/><span className={styles.queryText}>{categoryName}</span></span>
                     <span className={styles.queryAbout} style={{color:'var(--text-primary)'}}>Remember we dont assure available stocks, read our &nbsp; <Link href='/docs/PrivacyPolicy'><span className={styles.highLightedRed}>Terms &amp; Conditions</span></Link> or you can <Link href='/docs/contactUs'><span className={styles.highLightedBlue}>Contact us</span></Link> for any assistance.</span>
@@ -161,7 +166,7 @@ function Category({data}) {
                     {
                         count == 0 && <div className={styles.noResource}>
                             <FcIcons.FcMediumPriority className={styles.noResourceIcon}/>
-                            <span className={styles.noResourceText}>Our team is re-validating all the data related to <strong>{categoryName}</strong>.</span>
+                            <span className={styles.noResourceText}>Our team is re-validating this data.</span>
                         </div>
                     }
 

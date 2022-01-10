@@ -6,6 +6,20 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.backContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  width: fit-content;
+  padding: 10px;
+  font-size: 20px;
+  color: var(--text-primary);
+  cursor: pointer;
+  color: var(--text-primary);
+  background-color: var(--contact-form-bg);
+  border-radius: 50%;
+}
+
 .queryFlex {
   display: flex;
   align-items: center;
