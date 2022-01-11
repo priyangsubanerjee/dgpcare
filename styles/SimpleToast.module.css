@@ -21,7 +21,7 @@
 
 .icon {
   color: var(--white-primary);
-  font-size: 15px;
+  font-size: 20px;
   margin-right: 10px;
   animation: jiggle 1s infinite ease-in-out;
 }
@@ -91,5 +91,12 @@
     padding: 15px 10px;
     border-radius: 0;
     right: 0;
+  }
+
+  .icon {
+    color: var(--white-primary);
+    font-size: 20px;
+    margin-right: 10px;
+    animation: jiggle 1s infinite ease-in-out;
   }
 }
