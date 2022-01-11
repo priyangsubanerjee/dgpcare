@@ -29,8 +29,8 @@ Our primary categories, while we gear up & become fully operational
 - [Oxygen suppliers](https://dgpcare.vercel.app/category/oxygen-suppliers)
 - [Pharmacy shops](https://dgpcare.vercel.app/category/pharmacy-shops)
 - [RT PCR services](https://dgpcare.vercel.app/category/rtpcr-services)
-- [x] Food suplliers (for covid positive patients)
-- [x] Tele consultation services
+- [ ] Food suplliers (for covid positive patients)
+- [ ] Tele consultation services
 
 ## Stacks
 
