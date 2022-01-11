@@ -3,7 +3,7 @@ const links = [
 
     {
         title : "C-19 Resources",
-        description : "Get detailed report on nearest hospitals, ambulance services, oxygen suppliers, RT PCR, and many more.",
+        description : "View all C-19 resources including nearest hospitals, ambulance services, oxygen suppliers, RT PCR, and many more.",
         link : "/",
         target: '_self',
     },
