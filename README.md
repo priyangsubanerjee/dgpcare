@@ -23,13 +23,13 @@ From our previous experience on the same, we’ve learned a lot and we have trie
 
 Our primary categories, while we gear up & become fully operational
 
-- Ambulance services
-- Diagnostic centres
-- Hospitals
-- Oxygen suppliers
-- Pharmacy shops
-- RT PCR services
-- Food suplliers (for covid positive patients)
+- [Ambulance services](https://dgpcare.vercel.app/category/ambulance-services)
+- [Diagnostic centres](https://dgpcare.vercel.app/category/diagnostic-centres)
+- [Hospitals](https://dgpcare.vercel.app/category/hospitals)
+- [Oxygen suppliers](https://dgpcare.vercel.app/category/oxygen-suppliers)
+- [Pharmacy shops](https://dgpcare.vercel.app/category/pharmacy-shops)
+- [RT PCR services](https://dgpcare.vercel.app/category/rtpcr-services)
+- [x] Food suplliers (for covid positive patients)
 - [x] Tele consultation services
 
 ## Stacks
