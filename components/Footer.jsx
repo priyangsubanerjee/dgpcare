@@ -11,11 +11,11 @@ function Footer() {
                 <span className={styles.brandUrl}>A Crowdsourced Initiative <a className={styles.footerMail} href="">| dgpcovidresources@gmail.com</a> </span>
 
                 <div className={styles.brandSocialIcons}>
-                    <a rel='noopener noreferrer' target={"_blank"} href="mailto:dgpcovidresources@gmail.com"><FiIcons.FiMail className={styles.socialIcon}/></a>
-                    <FiIcons.FiFacebook style={{cursor:'not-allowed'}} className={styles.socialIcon}/>
-                    <FiIcons.FiTwitter style={{cursor:'not-allowed'}} className={styles.socialIcon}/>
-                    <a rel='noopener noreferrer' target={"_blank"} href="https://instagram.com/dgp_covid_resource"><BsIcons.BsInstagram className={styles.socialIcon}/></a>
-                    <a rel='noopener noreferrer' target={"_blank"} href="https://github.com/priyangsubanerjee"></a><BsIcons.BsGithub className={styles.socialIcon}/>
+                    <a rel='noopener noreferrer' target={"_blank"} title='Open email' href="mailto:dgpcovidresources@gmail.com"><FiIcons.FiMail className={styles.socialIcon}/></a>
+                    <FiIcons.FiFacebook style={{cursor:'not-allowed'}} title='Page not ready' className={styles.socialIcon}/>
+                    <FiIcons.FiTwitter style={{cursor:'not-allowed'}} title='Page not ready' className={styles.socialIcon}/>
+                    <a rel='noopener noreferrer' target={"_blank"} title='Visit instagram' href="https://instagram.com/dgp_covid_resource"><BsIcons.BsInstagram className={styles.socialIcon}/></a>
+                    <a rel='noopener noreferrer' target={"_blank"}  href="https://github.com/priyangsubanerjee/careplus"></a><BsIcons.BsGithub title='View github' className={styles.socialIcon}/>
                 </div>
             </div>
         </div>
