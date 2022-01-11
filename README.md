@@ -19,6 +19,12 @@ From our previous experience on the same, we’ve learned a lot and we have trie
 - Support for dark mode.
 - Simpified CMS and Cloud Operations.
 
+## Installation guide
+
+```bash
+    Refer to this pdf 👉 [Open](https://drive.google.com/file/d/1-R9r2qo-LryrS-ce7bjqclEBnyEpXfvx/view?usp=sharing)
+```
+
 ## Categories we serve
 
 Our primary categories, while we gear up & become fully operational
@@ -29,8 +35,8 @@ Our primary categories, while we gear up & become fully operational
 - [Oxygen suppliers](https://dgpcare.vercel.app/category/oxygen-suppliers)
 - [Pharmacy shops](https://dgpcare.vercel.app/category/pharmacy-shops)
 - [RT PCR services](https://dgpcare.vercel.app/category/rtpcr-services)
-- [ ] Food suplliers (for covid positive patients)
-- [ ] Tele consultation services
+- Food suplliers (for covid positive patients)
+- Tele consultation services
 
 ## Stacks
 
@@ -42,18 +48,10 @@ Technologies used in this project:
 - [Graph CMS](https://graphcms.com)
 - [Nodemailer](https://www.npmjs.com/package/nodemailer)
 
-## Getting Started
+## Share this project
 
-Open the url in your internet browser [Open](https://dgpcare.vercel.app)
+View live 💚 in your internet browser [Open](https://dgpcare.vercel.app)
 
 ```bash
-    Give a star if you like it !
+    Give a star if you liked it !
 ```
-
-This projects helps the users from my locality to spot emergency covid-19 resources near them,
-
-- Oxygen suppliers
-- Free food suppliers
-- Pharmacy shops
-- Ambulance services
-- Pathology labs and many more.
