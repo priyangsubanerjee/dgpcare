@@ -64,6 +64,12 @@ h6 {
   --red-primary: rgb(255, 0, 0);
   --red-secondary: rgba(255, 0, 0, 0.05);
 
+  --yellow-primary: rgb(146, 124, 0);
+  --yellow-secondary: rgba(255, 217, 0, 0.212);
+
+  --green-primary: rgb(0, 160, 0);
+  --green-secondary: rgba(0, 221, 0, 0.05);
+
   --hr-primary: rgba(0, 0, 0, 0.1);
 
   --faq-primary: rgba(0, 0, 0, 0.015);
@@ -109,6 +115,12 @@ h6 {
 
   --red-primary: rgb(255, 60, 60);
   --red-secondary: rgba(255, 60, 60, 0.05);
+
+  --yellow-primary: rgb(233, 180, 0);
+  --yellow-secondary: rgba(255, 217, 0, 0.05);
+
+  --green-primary: rgb(0, 221, 0);
+  --green-secondary: rgba(0, 221, 0, 0.05);
 
   --hr-primary: rgba(255, 255, 255, 0.1);
 

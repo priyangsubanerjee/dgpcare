@@ -8,6 +8,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import Footer from '../../components/Footer'
+import SimpleAlert from '../../components/SimpleAlert'
 
 function About() {
 

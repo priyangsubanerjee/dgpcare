@@ -12,6 +12,7 @@ import {gql, GraphQLClient} from 'graphql-request'
 import Head from 'next/head'
 import Footer from '../../components/Footer'
 import * as FcIcons from 'react-icons/fc'
+import SimpleAlert from '../../components/SimpleAlert'
 
 
 
@@ -164,10 +165,7 @@ function Category({data}) {
                     
                 </div>
                     {
-                        count == 0 && <div className={styles.noResource}>
-                            <FcIcons.FcMediumPriority className={styles.noResourceIcon}/>
-                            <span className={styles.noResourceText}>Our team is re-validating this data.</span>
-                        </div>
+                        count == 0 && <SimpleAlert props={{message:'Our team is revalidating this data.', level:'medium'}}/>
                     }
 
                 <Footer/>
