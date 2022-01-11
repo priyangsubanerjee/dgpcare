@@ -1,46 +1,48 @@
-.toastCard{
+.toastCard {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--black-primary);
+  border-radius: 5px;
+  color: var(--white-primary);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px;
+  animation: fadeIn 0.5s;
+  transition: all 0.5s;
+  font-size: 14px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 9999;
+}
 
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: var(--black-primary);
-    border-radius: 5px;
-    color: var(--white-primary);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px 20px;
-    animation: fadeIn 0.5s;
-    transition: all 0.5s;
-    font-size: 14px;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+.icon {
+  color: var(--white-primary);
+  font-size: 15px;
+  margin-right: 10px;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-    
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 768px) {
-
-    .toastCard {
-
-        width: 100%;
-        height: fit-content;
-        z-index: 9999;
-        bottom: 8%;
-        position: fixed;
-        padding: 15px 10px;
-        border-radius: 0;
-        right: 0;
-    }
-    
+  .toastCard {
+    width: 100%;
+    height: fit-content;
+    z-index: 9999;
+    bottom: 8%;
+    position: fixed;
+    padding: 15px 10px;
+    border-radius: 0;
+    right: 0;
+  }
 }

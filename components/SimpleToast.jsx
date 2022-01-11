@@ -1,11 +1,40 @@
 import React from 'react'
 import styles from '../styles/SimpleToast.module.css'
 import * as BsIcons from 'react-icons/bs'
+import * as FiIcons from 'react-icons/fi'
 
-function SimpleToast({text}) {
+import { useEffect } from 'react'
+
+function SimpleToast({props}) {
+
+
+    useEffect(() => {
+
+        setTimeout(() => {
+
+            props.setToast(false)
+
+
+        }, 3000);
+
+    }, [])
+
+    function getIcon(type){
+
+        switch(type){
+
+            case 'save':
+                return <BsIcons.BsBookmarkHeart className={styles.icon}/>
+            case 'alert':
+                return <FiIcons.FiAlertCircle className={styles.icon}/>
+        }
+    }
+
     return (
         <div className={styles.toastCard}>
-            <BsIcons.BsBookmarkHeart style={{color:'var(--white-primary)', marginRight:'10px', fontSize:'15px'}}/>{ text }
+
+            { getIcon(props.type) } { props.text }
+
         </div>
     )
 }

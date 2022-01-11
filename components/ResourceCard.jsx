@@ -51,12 +51,6 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
             setSaved(true)
             setToast(true)
 
-            setTimeout(() => {
-
-                setToast(false)
-                
-            }, 3000);
-
         }
 
     }
@@ -110,7 +104,7 @@ function ResourceCard({resource, saveCards, setSavedCard}) {
             </div>
 
             { 
-                toast && <SimpleToast text={ resource.title.length > 20 ? resource.title.substring(0, 17)+ '...  added to saved resources !' : resource.title + " added to saved resources !"} /> 
+                toast && <SimpleToast props={ {text: resource.title.length > 20 ? resource.title.substring(0, 17)+ '...  added to saved resources !' : resource.title + " added to saved resources !", type: "save", setToast}} /> 
             }
 
         </div>
