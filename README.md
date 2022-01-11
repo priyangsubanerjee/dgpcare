@@ -4,7 +4,7 @@ Hope you are doing well. Today I wanna let you know about my C-19 resource orien
 
 Since the situation has started worsening hour-by-hour, I thought this would be the right time to gear up.
 
-This time we are calling it [Dgp Care]('https://dgpcare.vercel.app') a part of dgpcovidresources team & it will be available across all your favourite operating systems. Since we chose to get platform independent, this time we integrated it as a progressive web app which gets installed in you android, iOS, iPadOs, Windows, Linux & macOs operating systems. None the less it is also serve as a standalone website and you can surely make use of it.
+This time we are calling it [Dgp Care](https://dgpcare.vercel.app) a part of dgpcovidresources team & it will be available across all your favourite operating systems. Since we chose to get platform independent, this time we integrated it as a progressive web app which gets installed in you android, iOS, iPadOs, Windows, Linux & macOs operating systems. None the less it is also serve as a standalone website and you can surely make use of it.
 
 ## What's new ?
 
@@ -30,17 +30,17 @@ Our primary categories, while we gear up & become fully operational
 - Pharmacy shops
 - RT PCR services
 - Food suplliers (for covid positive patients)
-  [x] Tele consultation services [!]
+- [x] Tele consultation services
 
 ## Stacks
 
 Technologies used in this project:
 
-- React Js
-- Next Js
-- GraphQl
-- Graph CMS
-- Nodemailer
+- [React Js](https://reactjs.org)
+- [Next Js](https://nextjs.org)
+- [GraphQl](https://graphql.org)
+- [Graph CMS](https://graphcms.com)
+- [Nodemailer](https://www.npmjs.com/package/nodemailer)
 
 ## Getting Started
 
