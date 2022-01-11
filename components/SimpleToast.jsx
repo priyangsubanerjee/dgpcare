@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/SimpleToast.module.css'
 import * as BsIcons from 'react-icons/bs'
+import * as AiIcons from 'react-icons/ai'
 import * as FiIcons from 'react-icons/fi'
 
 import { useEffect } from 'react'
@@ -26,7 +27,7 @@ function SimpleToast({props}) {
             case 'save':
                 return <BsIcons.BsBookmarkHeart className={styles.icon}/>
             case 'alert':
-                return <FiIcons.FiAlertCircle className={styles.icon}/>
+                return <AiIcons.AiOutlineAlert className={styles.icon}/>
         }
     }
 
