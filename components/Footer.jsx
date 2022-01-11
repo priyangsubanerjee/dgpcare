@@ -15,7 +15,7 @@ function Footer() {
                     <FiIcons.FiFacebook style={{cursor:'not-allowed'}} title='Page not ready' className={styles.socialIcon}/>
                     <FiIcons.FiTwitter style={{cursor:'not-allowed'}} title='Page not ready' className={styles.socialIcon}/>
                     <a rel='noopener noreferrer' target={"_blank"} title='Visit instagram' href="https://instagram.com/dgp_covid_resource"><BsIcons.BsInstagram className={styles.socialIcon}/></a>
-                    <a rel='noopener noreferrer' target={"_blank"}  href="https://github.com/priyangsubanerjee/dgpcare"></a><BsIcons.BsGithub title='View github' className={styles.socialIcon}/>
+                    <a rel='noopener noreferrer' target={"_blank"} title='View github' href="https://github.com/priyangsubanerjee/dgpcare"></a><BsIcons.BsGithub className={styles.socialIcon}/>
                 </div>
             </div>
         </div>
