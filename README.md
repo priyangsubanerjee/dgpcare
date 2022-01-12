@@ -21,7 +21,7 @@ From our previous experience on the same, we’ve learned a lot and we have trie
 
 ## Installation guide
 
-[X] Refer to this pdf 👉 [Open](https://drive.google.com/file/d/1-R9r2qo-LryrS-ce7bjqclEBnyEpXfvx/view?usp=sharing)
+- Refer to this pdf 👉 [Open](https://drive.google.com/file/d/1-R9r2qo-LryrS-ce7bjqclEBnyEpXfvx/view?usp=sharing)
 
 ## Categories we serve
 
