@@ -164,9 +164,13 @@ function Category({data}) {
 
                     
                 </div>
+
+                <div style={{marginTop:'100px'}}>
                     {
-                        count == 0 && <SimpleAlert props={{message:'Our team is revalidating this data.', level:'medium'}}/>
+                        count == 0 && <SimpleAlert  props={{message:'Our team is revalidating this data.', level:'medium'}}/>
                     }
+                </div>
+                    
 
                 <Footer/>
             </div>
