@@ -16,7 +16,7 @@ function SimpleToast({props}) {
             props.setToast(false)
 
 
-        }, 2000);
+        }, 3000);
 
     }, [])
 
