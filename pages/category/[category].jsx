@@ -14,8 +14,6 @@ import Footer from '../../components/Footer'
 import * as FcIcons from 'react-icons/fc'
 import SimpleAlert from '../../components/SimpleAlert'
 
-
-
 export async function getServerSideProps() {
 
     const url = process.env.ENDPOINT_URL

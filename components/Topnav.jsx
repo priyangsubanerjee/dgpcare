@@ -5,26 +5,29 @@ import * as VscIcons from 'react-icons/vsc'
 import * as BsIcons from 'react-icons/bs'
 import styles from '../styles/Topnav.module.css'
 import Modal from '../components/LocationModal.jsx'
-import { useState, useEffect} from 'react'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Sidenav from './Sidenav'
+import { useState, useEffect} from 'react'
+import { useRouter } from 'next/router'
+import { logEvent } from '../analytics/firebase'
 
 function Topnav({}) {
 
     const [modal, setModal] = useState(false)
     const [sidenav, setSidenav] = useState(false)
-    const [loading, setLoading] = useState(false)
 
+    const router = useRouter()
 
     const[theme, setTheme] = useState(() => {
 
         if(typeof window !== 'undefined') {
             
             if(localStorage.getItem('theme')) {
+                
                 return localStorage.getItem('theme')
             }
             else {
+
                 return 'light'
             }
         }else{
@@ -41,8 +44,6 @@ function Topnav({}) {
     }, [theme])
 
 
-    const router = useRouter()
-
     const checkActivePah = (path) => {
 
         if (router.pathname === path) {
@@ -53,13 +54,22 @@ function Topnav({}) {
     }
 
 
+
+
     return (
 
         <div className={styles.topnav}>
 
             <AiIcons.AiOutlineMenu className={styles.menu} onClick={() => setSidenav(true)}/>
             <Link href="/"><a className={styles.brand}><span>C-19 Resources</span></a></Link>
-            <span className={styles.location_flex} onClick={() => setModal(!modal)}>
+            <span className={styles.location_flex} onClick={() => {
+                
+                setModal(true);
+                logEvent('locationModal_opened', {
+                    page: router.pathname,
+                    date: new Date().toLocaleString()
+                });
+            }}>
                 <BiIcons.BiMap className={styles.location} /> 
                 <span className={styles.location_text}>Durgapur</span>
             </span>

@@ -4,7 +4,6 @@ import * as FiIcons from 'react-icons/fi'
 
 function TeamMemberCard({props}) {
 
-    console.log(props)
     return (
         <div className={styles.TeamMemberCard}>
                 <img className={styles.profileImage} src={props.image != null ? props.image.url : "https://media.graphcms.com/6UMMG0gKR1yKqiMXvD0v"}/>

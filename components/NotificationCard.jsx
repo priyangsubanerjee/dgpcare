@@ -4,9 +4,7 @@ import * as VscIcons from 'react-icons/vsc'
 import * as BiIcons from 'react-icons/bi'
 
 function NotificationCard({notification}) {
-
-    console.log(notification)
-
+    
     function getDate(time) {
 
         console.log(new Date(time).toLocaleDateString())

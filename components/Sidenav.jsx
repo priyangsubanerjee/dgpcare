@@ -11,12 +11,26 @@ import * as VscIcons from 'react-icons/vsc'
 import * as FiIcons from 'react-icons/fi'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { logEvent } from '../analytics/firebase'
+import { useRouter } from 'next/router'
 
 function Sidenav({ setSidenav, theme, setTheme}) {
 
+    const router = useRouter();
+
     function handleTheme() {
 
-        theme === 'light' ? setTheme('dark') : setTheme('light')
+        theme === 'light' ? setTheme('dark') : setTheme('light');
+        theme === 'light' ? logEvent("themeSwitch_dark", {
+
+            path: router.pathname,
+            date: new Date().toLocaleString(),
+
+        }) : logEvent("themeSwitch_light", {
+
+            path: router.pathname,
+            date: new Date().toLocaleString(),
+        })
     }
     
     return (
@@ -85,7 +99,15 @@ function Sidenav({ setSidenav, theme, setTheme}) {
 
                 </ul>
                 
-                <div className={styles.installApp}>
+                <div className={styles.installApp} onClick={() => {
+
+                    logEvent("installApp_clicked", {
+
+                        path: router.pathname,
+                        date: new Date().toLocaleString(),
+                    })
+
+                }}>
 
                     <a rel='noopener noreferrer' target={"_blank"}  href="https://drive.google.com/file/d/1-R9r2qo-LryrS-ce7bjqclEBnyEpXfvx/view?usp=sharing">
                         <div className={styles.details}>
