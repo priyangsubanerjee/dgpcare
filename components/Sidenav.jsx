@@ -97,6 +97,13 @@ function Sidenav({ setSidenav, theme, setTheme}) {
                         </a>
                     </li>
 
+
+                    <li className={styles.sidenavCardLink} onClick={() => handleTheme()}>
+                        <a href='https://anyratings.vercel.app/rate/0psefyu7py9eb8sku4qrexj' target={'_blank'} rel='noopener noreferrer' className={styles.parentLink}>
+                            <AiIcons.AiOutlineStar className={styles.sidenavCardLinkIcon}/><span className={styles.sidenavCardLinkText}>Rate us</span>
+                        </a>
+                    </li>
+
                 </ul>
                 
                 <div className={styles.installApp} onClick={() => {
