@@ -8,6 +8,9 @@ import * as BsIcons from 'react-icons/bs'
 import Head from 'next/head'
 import axios from 'axios'
 import Footer from '../components/Footer.jsx'
+import SimpleAlert from '../components/SimpleAlert'
+import RequestCategory from '../components/RequestCategory'
+import { use } from 'express/lib/router'
 
 
 export async function getStaticProps() {
@@ -58,12 +61,26 @@ export default function Home({categories}) {
     const [query, setQuery] = useState('')
     const [cData, setData] = useState([])
     const [progressBar, setProgressBar] = useState(false)
+    const [requestO2, setRequestO2] = useState(false)
 
     useEffect(() => {
 
         setData(categories)
 
     } , [categories])
+
+
+    useEffect(() => {
+
+        if(localStorage.getItem('all-support-cache-requests')){
+
+            if(JSON.parse(localStorage.getItem('all-support-cache-requests')).includes('oxygen suppliers')){
+
+                setRequestO2(true)
+            }
+        }
+
+    }, [])
 
 
     useEffect(() => {
@@ -116,6 +133,20 @@ export default function Home({categories}) {
                             <BsIcons.BsBackspace className={styles.clearQuery} onClick={() => setQuery('')}/>
                     </div>
                 </div>
+
+                {
+                    requestO2 == false ? 
+
+                    
+                    <RequestCategory setRequestO2={setRequestO2} requestO2={requestO2} category={'oxygen suppliers'}/>
+
+                    
+                    :
+
+                    null
+
+
+                }
                 
                 <div className={styles.categories_grid}>
                     
